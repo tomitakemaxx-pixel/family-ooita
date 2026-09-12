@@ -1,0 +1,913 @@
+<title>大分に行く価値はあるか</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#f1f4f4; --paper-2:#ffffff; --paper-3:#e5ebeb; --paper-4:#dae3e3;
+  --ink:#16181c; --ink-2:#3d474a; --ink-3:#6d7b7e;
+  --line:#ccd8d8; --line-2:#b3c3c3;
+  --accent:#1b7a8c; --accent-deep:#12525e; --accent-wash:#dcebee;
+  --hot:#a63a2b; --hot-wash:#f7e5e2;
+  --ochre:#9a6f24; --ochre-wash:#f4ecd9;
+  --good:#3f6f44; --good-wash:#e2eee3;
+  --sea:#cfe1e5; --sea-2:#bcd6dc; --land:#e9eeec;
+  --shadow:0 1px 2px rgba(22,24,28,.05), 0 6px 20px -12px rgba(22,24,28,.22);
+  --serif:"Zen Old Mincho",'Hiragino Mincho ProN','Yu Mincho',serif;
+  --sans:"Zen Kaku Gothic New",'Hiragino Sans','Yu Gothic',system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1416; --paper-2:#161e21; --paper-3:#1e282b; --paper-4:#263236;
+    --ink:#e8eeee; --ink-2:#aebdbf; --ink-3:#7d8f92;
+    --line:#2b373a; --line-2:#3a494d;
+    --accent:#5cbdd0; --accent-deep:#8ed6e4; --accent-wash:#123239;
+    --hot:#e8836f; --hot-wash:#33201c;
+    --ochre:#d6a95d; --ochre-wash:#2d2617;
+    --good:#83bb88; --good-wash:#1a2a1c;
+    --sea:#16323a; --sea-2:#1d414a; --land:#1a2325;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1416; --paper-2:#161e21; --paper-3:#1e282b; --paper-4:#263236;
+  --ink:#e8eeee; --ink-2:#aebdbf; --ink-3:#7d8f92;
+  --line:#2b373a; --line-2:#3a494d;
+  --accent:#5cbdd0; --accent-deep:#8ed6e4; --accent-wash:#123239;
+  --hot:#e8836f; --hot-wash:#33201c;
+  --ochre:#d6a95d; --ochre-wash:#2d2617;
+  --good:#83bb88; --good-wash:#1a2a1c;
+  --sea:#16323a; --sea-2:#1d414a; --land:#1a2325;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.85;
+  -webkit-font-smoothing:antialiased; letter-spacing:.01em;
+}
+.wrap{max-width:940px; margin:0 auto; padding-inline:20px; padding-block:0 88px}
+h1,h2,h3,h4{font-family:var(--serif); text-wrap:balance; line-height:1.4; margin:0}
+p{margin:0}
+a{color:var(--accent-deep); text-underline-offset:3px}
+:focus-visible{outline:2.5px solid var(--accent); outline-offset:3px; border-radius:3px}
+img{max-width:100%; display:block}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+.masthead{border-bottom:1px solid var(--line); background:var(--paper-2)}
+.masthead-in{max-width:940px; margin:0 auto; padding:0 20px}
+.hero-img{position:relative; margin:0 -20px; aspect-ratio:21/8; overflow:hidden; background:var(--paper-3)}
+.hero-img img{width:100%; height:100%; object-fit:cover; object-position:50% 62%}
+.hero-img figcaption{
+  position:absolute; right:8px; bottom:6px; font-size:10px; letter-spacing:.03em;
+  color:#fff; background:rgba(0,0,0,.42); padding:2px 7px; border-radius:2px;
+}
+.title-block{padding:30px 0 26px; display:flex; flex-direction:column; gap:14px}
+.eyebrow{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; flex-wrap:wrap; gap:10px 16px; align-items:baseline;
+}
+.eyebrow b{color:var(--hot); font-weight:600}
+h1{font-size:clamp(30px,6.4vw,50px); font-weight:700; letter-spacing:.02em}
+.standfirst{font-size:clamp(15px,2.2vw,17px); color:var(--ink-2); max-width:60ch}
+
+/* ---------- sections ---------- */
+section{margin-top:66px; scroll-margin-top:20px}
+.sec-head{display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--ink); padding-bottom:10px; margin-bottom:26px}
+.sec-num{font-family:var(--serif); font-size:26px; color:var(--accent); font-weight:700; line-height:1}
+.sec-head h2{font-size:clamp(20px,3.6vw,26px); font-weight:700; flex:1}
+.sec-kicker{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--ink-3); text-align:right}
+h3{font-size:17.5px; font-weight:700; margin:34px 0 12px; display:flex; align-items:baseline; gap:9px}
+h3::before{content:""; width:9px; height:9px; background:var(--accent); flex:none; transform:translateY(-1px)}
+h4{font-size:15.5px; font-weight:700; margin:22px 0 8px}
+.stack{display:flex; flex-direction:column; gap:16px}
+
+/* ---------- verdict ---------- */
+.verdict{
+  background:var(--paper-2); border:1px solid var(--line); border-top:5px solid var(--accent);
+  padding:26px 26px 24px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:18px;
+}
+.verdict-lead{font-family:var(--serif); font-size:clamp(19px,3.4vw,25px); font-weight:700; line-height:1.55}
+.verdict-lead em{font-style:normal; color:var(--accent-deep); border-bottom:3px solid var(--accent); padding-bottom:1px}
+.verdict-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(178px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.vcell{background:var(--paper-2); padding:14px 16px; display:flex; flex-direction:column; gap:3px}
+.vcell dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.11em; color:var(--ink-3); text-transform:uppercase}
+.vcell dd{margin:0; font-family:var(--serif); font-size:21px; font-weight:700; line-height:1.3}
+.vcell dd small{font-family:var(--sans); font-size:12px; font-weight:400; color:var(--ink-2); display:block; letter-spacing:0; line-height:1.6; margin-top:2px}
+.vcell .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- generic blocks ---------- */
+.note{
+  border-left:3px solid var(--line-2); padding:2px 0 2px 16px; color:var(--ink-2); font-size:14.5px;
+}
+.note.warn{border-left-color:var(--hot)}
+.note.warn strong{color:var(--hot)}
+.note.ok{border-left-color:var(--good)}
+.callout{background:var(--paper-3); border:1px solid var(--line); padding:18px 20px; display:flex; flex-direction:column; gap:9px}
+.callout.hot{background:var(--hot-wash); border-color:color-mix(in srgb,var(--hot) 34%, transparent)}
+.callout.ochre{background:var(--ochre-wash); border-color:color-mix(in srgb,var(--ochre) 40%, transparent)}
+.callout h4{margin:0; font-size:15px}
+.callout.hot h4{color:var(--hot)}
+.callout.ochre h4{color:var(--ochre)}
+.callout p, .callout li{font-size:14.5px; color:var(--ink-2)}
+.callout strong{color:var(--ink)}
+
+/* ---------- tables ---------- */
+.tbl-scroll{overflow-x:auto; border:1px solid var(--line); background:var(--paper-2)}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:14px}
+caption{caption-side:bottom; text-align:left; font-size:12.5px; color:var(--ink-3); padding:9px 2px 0; line-height:1.7}
+th,td{padding:10px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.7}
+thead th{
+  background:var(--paper-3); font-family:var(--mono); font-size:11px; letter-spacing:.07em;
+  font-weight:600; color:var(--ink-2); text-transform:uppercase; border-bottom:1.5px solid var(--line-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap}
+.nb{white-space:nowrap}
+table.t-route td:first-child{min-width:8.5em}
+table.t-opt td:first-child{min-width:8em}
+tr.pick td{background:var(--ochre-wash)}
+tr.pick td:first-child{box-shadow:inset 3px 0 0 var(--ochre)}
+td strong{font-weight:700}
+.verd{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.05em; padding:2px 7px; border-radius:2px; white-space:nowrap; display:inline-block}
+.verd.no{background:var(--hot-wash); color:var(--hot)}
+.verd.mid{background:var(--paper-4); color:var(--ink-2)}
+.verd.yes{background:var(--good-wash); color:var(--good)}
+.verd.best{background:var(--ochre); color:#fff}
+:root[data-theme="dark"] .verd.best{color:#17120a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verd.best{color:#17120a}}
+
+/* ---------- figures ---------- */
+figure{margin:0}
+.fig{border:1px solid var(--line); background:var(--paper-2); overflow:hidden}
+.fig img{width:100%; aspect-ratio:3/2; object-fit:cover}
+.fig figcaption{padding:10px 13px 11px; font-size:12.5px; color:var(--ink-2); line-height:1.65; border-top:1px solid var(--line)}
+.fig figcaption b{color:var(--ink); font-weight:700; font-size:13.5px; display:block; font-family:var(--serif)}
+.fig figcaption .cred{display:block; margin-top:5px; font-size:10px; color:var(--ink-3); letter-spacing:.02em; font-family:var(--mono)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(248px,1fr)); gap:16px}
+.grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px}
+
+/* ---------- map ---------- */
+.mapbox{border:1px solid var(--line); background:var(--paper-2); padding:6px 6px 0}
+.mapbox svg{width:100%; height:auto; display:block}
+.mapcap{padding:11px 10px 12px; font-size:12.5px; color:var(--ink-2); border-top:1px solid var(--line); margin-top:6px; line-height:1.7}
+.legend{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:8px; font-size:12px; color:var(--ink-2); font-family:var(--mono)}
+.legend span{display:inline-flex; align-items:center; gap:7px}
+.lg-swatch{width:22px; height:0; border-top-width:3px; flex:none}
+
+/* ---------- itinerary rail ---------- */
+.day{border:1px solid var(--line); background:var(--paper-2); box-shadow:var(--shadow)}
+.day-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; padding:15px 20px; background:var(--paper-3); border-bottom:1px solid var(--line)}
+.day-head .d-no{font-family:var(--mono); font-size:11px; letter-spacing:.13em; color:var(--accent-deep); font-weight:600}
+.day-head h4{font-family:var(--serif); font-size:19px; margin:0}
+.day-head .d-sum{font-size:12.5px; color:var(--ink-3); margin-left:auto; font-family:var(--mono)}
+.rail{padding:6px 20px 20px}
+.slot{display:grid; grid-template-columns:64px 1fr; gap:0 18px; position:relative}
+.slot .t{
+  font-family:var(--mono); font-size:12.5px; font-variant-numeric:tabular-nums;
+  color:var(--ink-2); padding-top:15px; text-align:right; white-space:nowrap;
+}
+.slot .b{border-left:2px solid var(--line); padding:14px 0 14px 20px; position:relative}
+.slot:last-child .b{border-left-color:transparent}
+.slot .b::before{
+  content:""; position:absolute; left:-6px; top:20px; width:10px; height:10px;
+  background:var(--paper-2); border:2px solid var(--line-2); border-radius:50%;
+}
+.slot.key .b::before{background:var(--accent); border-color:var(--accent)}
+.slot.onsen .b::before{background:var(--hot); border-color:var(--hot)}
+.slot.move .b::before{background:var(--paper-2); border-color:var(--accent); border-style:dashed}
+.slot .b h5{margin:0 0 3px; font-size:15.5px; font-weight:700; font-family:var(--sans); line-height:1.6}
+.slot .b .who{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--accent-deep); background:var(--accent-wash); padding:1px 6px; border-radius:2px; margin-left:7px; vertical-align:2px; white-space:nowrap; display:inline-block}
+.slot .b .who.hot{color:var(--hot); background:var(--hot-wash)}
+.slot .b p{font-size:14px; color:var(--ink-2); margin-top:3px}
+.slot .b .cost{font-family:var(--mono); font-size:12px; color:var(--ink-3); margin-top:5px; display:block}
+
+/* ---------- family fit ---------- */
+.fitgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(212px,1fr)); gap:14px}
+.fit{border:1px solid var(--line); background:var(--paper-2); padding:17px 18px; display:flex; flex-direction:column; gap:8px}
+.fit .name{font-family:var(--serif); font-size:17px; font-weight:700; display:flex; align-items:baseline; gap:8px}
+.fit .name small{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); font-weight:400; letter-spacing:.04em}
+.fit ul{margin:0; padding-left:17px; font-size:13.5px; color:var(--ink-2); display:flex; flex-direction:column; gap:6px}
+.fit .risk{font-size:12.5px; color:var(--hot); border-top:1px dashed var(--line-2); padding-top:8px; margin-top:auto}
+
+/* ---------- checklist ---------- */
+ol.actions{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line)}
+ol.actions li{background:var(--paper-2); padding:14px 18px; display:grid; grid-template-columns:auto 1fr; gap:4px 15px; align-items:baseline}
+ol.actions .when{font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:#fff; background:var(--ink-2); padding:2px 8px; white-space:nowrap; border-radius:2px}
+ol.actions li.now .when{background:var(--hot)}
+ol.actions .what{font-weight:700; font-size:14.5px}
+ol.actions .why{grid-column:2; font-size:13.5px; color:var(--ink-2)}
+ul.plain{margin:0; padding-left:19px; display:flex; flex-direction:column; gap:7px; font-size:14.5px; color:var(--ink-2)}
+ul.plain strong{color:var(--ink)}
+ul.plain li::marker{color:var(--accent)}
+
+/* ---------- sources ---------- */
+.src{font-size:12.5px; color:var(--ink-2); line-height:1.85}
+.src ol{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:5px}
+.src li::marker{font-family:var(--mono); color:var(--ink-3); font-size:11px}
+.credits{font-size:11px; color:var(--ink-3); line-height:1.8; font-family:var(--mono)}
+footer{margin-top:60px; border-top:1px solid var(--line); padding-top:22px; display:flex; flex-direction:column; gap:12px}
+
+@media (max-width:560px){
+  .slot{grid-template-columns:52px 1fr; gap:0 12px}
+  .slot .b{padding-left:15px}
+  .day-head .d-sum{margin-left:0; width:100%}
+  .hero-img{aspect-ratio:16/9}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <figure class="hero-img">
+      <img src="assets/photos/hero_beppu.jpg" alt="別府の市街地。山裾のあちこちから温泉の湯けむりが立ちのぼり、その先に別府湾が広がっている">
+      <figcaption>別府の湯けむり © Japanexperterna / CC BY-SA 3.0</figcaption>
+    </figure>
+    <div class="title-block">
+      <div class="eyebrow">
+        <span>検討メモ v1</span><span>2026年9月12日（土）作成</span>
+        <b>判断期限 ── 9月下旬</b>
+      </div>
+      <h1>大分に行く価値はあるか</h1>
+      <p class="standfirst">髙山家4人（38歳・38歳・4歳10か月・2歳7か月）で、2泊3日。九州ふっこう応援割が使えるうちに行くべきか、行くならいつか。引き継ぎ資料（9/12）の未確認事項を調べ直したうえでの現時点の答え。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ══════════ Ⅰ ══════════ -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">Ⅰ</span><h2>要約</h2><span class="sec-kicker">結論</span></div>
+
+  <div class="verdict">
+    <p class="verdict-lead">行く価値はある。ただし条件付きで、<em>11月20日（金）〜22日（日）</em>が最有力。動くべきは「行程を決めること」ではなく、<em>9月下旬の予約受付開始日に即予約すること</em>。</p>
+
+    <dl class="verdict-grid">
+      <div class="vcell"><dt>推奨日程</dt><dd class="num">11/20–22<small>金曜に有給1日。帰った翌日11/23（月）が勤労感謝の日で、丸1日の回復日が残る</small></dd></div>
+      <div class="vcell"><dt>割引の効き（推定）</dt><dd class="num">約10万円<small>交通付パッケージ2泊の場合。4人・総額約25万円が約15万円に</small></dd></div>
+      <div class="vcell"><dt>制度の期限</dt><dd class="num">12/25<small>宿泊分まで。ただし予算10.8億円の消化次第で早期終了</small></dd></div>
+      <div class="vcell"><dt>最大のリスク</dt><dd>予算切れ<small>受付開始日に取れなければ、この旅行の前提そのものが消える</small></dd></div>
+    </dl>
+
+    <div class="stack">
+      <h4 style="margin:4px 0 0">結論の根拠（4点）</h4>
+      <ul class="plain">
+        <li><strong>9月は検討対象から外れる。</strong>応援割の対象は10月1日宿泊分から。9月に行っても1円も引かれない（<a href="https://www.pref.oita.jp/soshiki/14180/kyushu-oita.html">大分県公式</a>）。</li>
+        <li><strong>大分は「温泉だけの県」ではない。</strong>日本で唯一のホーバークラフト、サルの群れ、ジャングルバスからの餌やり、ケーブルカーで登る遊園地──<strong>乗り物と生き物が異様に密集している</strong>。長男の「生き物が好き・釣りが好き」、次男の「乗り物が好き」に、偶然とは思えないほど噛み合う。</li>
+        <li><strong>11月でないと成立しないものが2つある。</strong>①子どもに釣らせる釣り堀は<strong>12〜2月が休業</strong>（12月はアウト）。②杉乃井ホテルの水着温泉アクアガーデンは<strong>10/1〜11/1が17時開始の短縮営業</strong>（10月は日中に遊べない）。この2つが、11月を10月・12月の両方より上に押し上げる。</li>
+        <li><strong>ただし本当の勝負は9月下旬。</strong>対象期間が12/25までと短く、予算は10.8億円。受付開始直後に人気宿から埋まる想定で、<strong>日程を決めることより、開始日を捕まえることのほうが重要</strong>。</li>
+      </ul>
+    </div>
+
+    <div class="callout hot">
+      <h4>この資料の弱いところ（先に言っておく）</h4>
+      <p>①<strong>大分県の予約受付開始日はまだ発表されていない</strong>（9/12時点で公式は「9月下旬を予定」のみ）。②<strong>2歳の次男が補助対象の「1人」に数えられるかは未確認</strong>。旅行代金0円の膝上幼児の扱いで、割引額が約2.6万円変わる。③宿・航空券の価格はすべて推定で、実売価格は見ていない。④奥様が大分に行きたいという話は記憶ベースで、ご本人の意向として確認されていない。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ Ⅱ ══════════ -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">Ⅱ</span><h2>大分には何があるのか</h2><span class="sec-kicker">前提の共有</span></div>
+
+  <p style="max-width:62ch; color:var(--ink-2); margin-bottom:22px">「大分＝温泉」は合っている。ただしそれは半分で、家族旅行として効いてくるのは<strong style="color:var(--ink)">別府湾を囲む半径25kmに、乗り物・生き物・温泉・食が密集している</strong>という一点。移動が短く、4歳と2歳を連れても1日に2〜3本の柱が立つ。</p>
+
+  <h3>(1) 乗り物 ── ここが想定外に強い</h3>
+  <div class="grid2">
+    <figure class="fig">
+      <img src="assets/photos/hovercraft.jpg" alt="大分空港のホーバーターミナルに停泊するホーバークラフト「梅園」">
+      <figcaption><b>ホーバークラフト（日本唯一）</b>2024年に16年ぶり復活。大分空港から別府湾を時速80kmで横断し、西大分まで35分。世界で英国ワイト島とここだけ。<strong>空港に着いた30分後にこれに乗れる</strong>のが大分の特異なところ。
+      <span class="cred">© Aixips / CC BY-SA 4.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/slopecar.jpg" alt="高崎山自然動物園のモノレール「さるっこレール」">
+      <figcaption><b>さるっこレール（高崎山）</b>入口からサル寄せ場まで山を登るモノレール。一般160円、<strong>小学生未満は無料</strong>。登った先に野生のニホンザルの群れがいるので、乗り物と生き物が1本につながる。
+      <span class="cred">© ブルーノ・プラス / CC BY 4.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/rakutenchi.jpg" alt="別府ラクテンチのケーブルカー">
+      <figcaption><b>別府ラクテンチのケーブルカー</b>山の上の遊園地へ、入園券にケーブルカー往復が含まれる（大人1,300円／3歳〜小学生600円／<strong>2歳以下無料</strong>）。園内はゾウの背中に乗る遊具、パンダ・アヒル・くまの空中サイクリング、パトカー、アンパンマン電車と、幼児向けが主戦場。
+      <span class="cred">© Suikotei / CC BY-SA 4.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/ropeway.jpg" alt="鶴見岳へ登る別府ロープウェイのゴンドラ">
+      <figcaption><b>別府ロープウェイ（鶴見岳）</b>九州最大級101人乗りで標高1,375mへ約10分。往復 大人1,800円／4歳〜小学生900円。<strong>11月15日から冬季ダイヤ</strong>に切り替わり上り最終が16:30に繰り上がる。
+      <span class="cred">© Zero_1_k / CC BY-SA 3.0</span></figcaption>
+    </figure>
+  </div>
+  <p class="note" style="margin-top:14px">このほかに由布院の<strong>観光辻馬車</strong>（本物の馬が引く、約60分・大人2,500円／4歳〜小学生1,800円・4歳未満は膝の上）がある。ケアンズで「動く・触れる・乗れる」が刺さり、「座って説明を聞く」が退屈だった長男の傾向に、大分の主要コンテンツはほぼ全部が前者側に寄っている。</p>
+
+  <h3>(2) 生き物 ── ケアンズのカンガルー餌やりの再現ができる</h3>
+  <div class="grid2">
+    <figure class="fig">
+      <img src="assets/photos/safaribus.jpg" alt="アフリカンサファリの動物園バス、金網越しに動物へ餌をやる乗客">
+      <figcaption><b>九州自然動物公園アフリカンサファリ（宇佐市）</b>ジャングルバスの窓からライオン・キリン・ゾウに直接餌をやる。大人3,500円／4歳〜中学生2,300円（入園料別）。JR別府駅からバス50分。<strong>ケアンズで最大のヒットだったカンガルー餌やりと、体験の構造が同じ</strong>。
+      <span class="cred">© Gordon Cheung from Hong Kong / CC BY 2.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/monkey.jpg" alt="高崎山で観光客の足の間を駆け抜けるニホンザル">
+      <figcaption><b>高崎山自然動物園</b>野生のニホンザル約1,000頭が群れで山から下りてくる。柵がなく、サルが足元を走り抜ける。入園 一般500円・<strong>小学生未満無料</strong>。向かいが水族館うみたまご。
+      <span class="cred">© Bpcon98 / CC0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/umitamago.jpg" alt="大分マリーンパレス水族館うみたまごの外観">
+      <figcaption><b>うみたまご（大分マリーンパレス水族館）</b>別府湾に溶け込む屋外タッチプールが3種類（小さなサメ・エイに触れる魚プール、波を再現した大タッチプール）。ひと通りで約1.5時間、ショーと ふれあい込みで3時間、子連れなら4〜5時間。
+      <span class="cred">© 大分帰省中 / CC BY-SA 3.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/kinrinko.jpg" alt="湯布院の金鱗湖">
+      <figcaption><b>釣り堀フィッシングゆふ（由布市湯布院町）</b>手ぶらで行け、ヤマメ・ニジマス・テナガエビが1匹500円。釣った魚は受付に持っていくと20分ほどで焼き上がる。<strong>ケアンズで4セッション釣果ゼロだった件の、最短の回収先</strong>。写真は近くの金鱗湖。
+      <span class="cred">Lake Kinrinko © そらみみ / CC BY-SA 4.0</span></figcaption>
+    </figure>
+  </div>
+
+  <h3>(3) 温泉とサウナ ── 「大浴場だけでは物足りない」への答え</h3>
+  <div class="grid3">
+    <figure class="fig">
+      <img src="assets/photos/umi_jigoku.jpg" alt="別府の海地獄。コバルトブルーの熱湯の池から湯気が立つ">
+      <figcaption><b>海地獄</b>コバルトブルーの熱湯池。共通観覧券は大人2,400円／小中学生1,200円。<strong>無料の足湯</strong>があり、手すり付きで子どもも入れる。
+      <span class="cred">© 663highland / CC BY 2.5</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/mushiyu.jpg" alt="鉄輪の蒸し湯">
+      <figcaption><b>鉄輪の蒸し湯・地獄蒸し</b>石菖を敷いた石室に横たわる鎌倉期からの蒸し風呂。ひょうたん温泉には55℃の天然蒸し湯と、竹製冷却装置「湯雨竹」を通した源泉かけ流しの水風呂がある。
+      <span class="cred">© STA3816 / CC BY-SA 3.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/takegawara.jpg" alt="別府の竹瓦温泉の木造建築">
+      <figcaption><b>竹瓦温泉の砂湯</b>明治12年創業。浴衣を着て横たわり、熱い砂をかけてもらう。別府には海浜砂湯もある。
+      <span class="cred">© 大分帰省中 / CC BY 3.0</span></figcaption>
+    </figure>
+  </div>
+  <div class="callout ochre" style="margin-top:16px">
+    <h4>杉乃井ホテル「棚湯」── ビジネスホテル不満の裏返しとして</h4>
+    <p>棚田状に段が連なる大展望露天風呂。2023年7月リニューアルで、別府の市街地から別府湾まで見渡せる。<strong>ロウリュウサウナを含む複数の温浴スタイルが併設</strong>。「大浴場だけでは物足りない、外気を積極的に取り込める露天が欲しい」という条件に対しては、大分県内でここが最も直球の答えになる。<br>
+    加えて<strong>水着で家族全員一緒に入れる屋外温泉プール「ザ アクアガーデン」</strong>（通年営業・37〜39℃・宿泊者無料・水遊びパンツで乳幼児も可・噴水ショー19:30〜）がある。父が1人でサウナに行っている間、母子3人が待つのではなく遊べる、という構造が作れる。</p>
+  </div>
+
+  <h3>(4) 食事 ── 「勝手に美味しいイメージ」は概ね当たり</h3>
+  <div class="grid3">
+    <figure class="fig">
+      <img src="assets/photos/toriten.jpg" alt="大分名物のとり天">
+      <figcaption><b>とり天</b>鶏の天ぷらにポン酢と辛子。発祥は別府の<strong>レストラン東洋軒</strong>（大正15年創業、「鶏ノカマボコノ天麩羅」として登場）。揚げ物なので<strong>幼児2人が確実に食べる</strong>のが実務的に大きい。
+      <span class="cred">© Asturio Cantabrio / CC BY-SA 4.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/ryukyu.jpg" alt="大分のりゅうきゅう丼">
+      <figcaption><b>りゅうきゅう</b>アジ・ブリなどの刺身を醤油・ごま・生姜のたれで和えた郷土料理。丼にもできる。関あじ・関さばと並ぶ大分の海側の柱。
+      <span class="cred">© 大分帰省中 / CC BY-SA 4.0</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/photos/reimen.jpg" alt="別府冷麺">
+      <figcaption><b>別府冷麺</b>別府独自に発展した冷麺。ほかに<strong>だんご汁</strong>（平打ち団子の味噌汁／幼児が食べやすい）、<strong>地獄蒸し</strong>（鉄輪で食材を温泉蒸気で自分で蒸す・体験型）。
+      <span class="cred">© 聖石大戦ぶぅぶぅ / CC BY-SA 4.0</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ Ⅲ ══════════ -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">Ⅲ</span><h2>復興割はいつまでで、いくら効くか</h2><span class="sec-kicker">制度</span></div>
+
+  <h3>(1) 残された時間</h3>
+  <div class="mapbox">
+    <svg viewBox="0 0 880 190" role="img" aria-label="2026年9月12日から12月25日までの九州ふっこう応援割のスケジュール。10月1日から対象期間が始まり12月25日の宿泊分で終了。予算切れによる早期終了リスクは後半ほど高い">
+      <defs>
+        <linearGradient id="riskg" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="var(--hot)" stop-opacity="0.05"/>
+          <stop offset="55%" stop-color="var(--hot)" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="var(--hot)" stop-opacity="0.48"/>
+        </linearGradient>
+      </defs>
+      <!-- 対象期間バー -->
+      <rect x="199" y="66" width="621" height="30" fill="var(--accent-wash)" stroke="var(--accent)" stroke-width="1.2"/>
+      <rect x="199" y="66" width="621" height="30" fill="url(#riskg)"/>
+      <text x="209" y="86" font-family="var(--mono)" font-size="12" fill="var(--accent-deep)" font-weight="600">対象宿泊期間　10/1 → 12/25</text>
+      <text x="812" y="86" font-family="var(--mono)" font-size="11" fill="var(--hot)" font-weight="600" text-anchor="end">予算切れリスク →</text>
+      <!-- 予約できない期間 -->
+      <rect x="60" y="66" width="95" height="30" fill="var(--paper-4)" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="107" y="86" font-family="var(--mono)" font-size="10.5" fill="var(--ink-3)" text-anchor="middle">予約不可</text>
+      <!-- 軸 -->
+      <line x1="60" y1="112" x2="820" y2="112" stroke="var(--line-2)" stroke-width="1.4"/>
+      <!-- 目盛 -->
+      <g font-family="var(--mono)" font-size="10.5" fill="var(--ink-3)" text-anchor="middle">
+        <line x1="60"  y1="112" x2="60"  y2="119" stroke="var(--line-2)"/><text x="60"  y="134">9/12</text>
+        <line x1="199" y1="112" x2="199" y2="119" stroke="var(--line-2)"/><text x="199" y="134">10/1</text>
+        <line x1="425" y1="112" x2="425" y2="119" stroke="var(--line-2)"/><text x="425" y="134">11/1</text>
+        <line x1="644" y1="112" x2="644" y2="119" stroke="var(--line-2)"/><text x="644" y="134">12/1</text>
+        <line x1="820" y1="112" x2="820" y2="119" stroke="var(--line-2)"/><text x="820" y="134">12/25</text>
+      </g>
+      <!-- 今日 -->
+      <line x1="60" y1="30" x2="60" y2="112" stroke="var(--ink)" stroke-width="2"/>
+      <circle cx="60" cy="30" r="4.5" fill="var(--ink)"/>
+      <text x="60" y="20" font-family="var(--mono)" font-size="11" fill="var(--ink)" font-weight="600" text-anchor="middle">今日</text>
+      <!-- 受付開始めやす -->
+      <line x1="155" y1="42" x2="155" y2="66" stroke="var(--hot)" stroke-width="2" stroke-dasharray="4 3"/>
+      <circle cx="155" cy="42" r="4.5" fill="var(--hot)"/>
+      <text x="163" y="38" font-family="var(--mono)" font-size="11.5" fill="var(--hot)" font-weight="600">予約受付開始「9月下旬」＝日付未発表</text>
+      <!-- 推奨日程 -->
+      <rect x="564" y="152" width="15" height="15" fill="var(--ochre)"/>
+      <line x1="571" y1="96" x2="571" y2="152" stroke="var(--ochre)" stroke-width="2"/>
+      <text x="586" y="165" font-family="var(--mono)" font-size="11.5" fill="var(--ochre)" font-weight="600">推奨 11/20–22</text>
+      <!-- 釣り堀終了 -->
+      <line x1="644" y1="96" x2="644" y2="146" stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <text x="652" y="152" font-family="var(--mono)" font-size="10.5" fill="var(--ink-3)">12/1 釣り堀 休業入り</text>
+    </svg>
+    <p class="mapcap">大分県の予算は<strong>約10.8億円</strong>（九州7県合計 約151億円の約7％）。対象期間が約3か月しかないのに対し、予約は受付開始日に集中する。<strong>「12月25日まである」は実質的な期限ではない</strong>と考えておくのが安全。</p>
+  </div>
+
+  <h3>(2) 制度の中身（大分県公式・9月3日更新版）</h3>
+  <div class="tbl-scroll">
+    <table>
+      <caption>出典：大分県ホームページ「九州ふっこう応援割」（2026年9月3日更新）。2026年7月28日の令和8年熊本地震を受けた観光庁の支援策で、国の予備費が財源。</caption>
+      <thead><tr><th>項目</th><th>内容</th><th>髙山家への効き方</th></tr></thead>
+      <tbody>
+        <tr><td>補助率</td><td class="num">50%</td><td>宿泊地が2県以上の周遊型なら60%だが、熊本側は行かない方針なので50%で設計</td></tr>
+        <tr><td>上限（1予約1人あたり）</td><td>宿泊のみ1泊 <span class="mono">2.0万</span><br>交通付1泊 <span class="mono">2.0万</span><br><strong>交通付2泊以上 <span class="mono">3.0万</span></strong><br>周遊型 <span class="mono">3.5万</span></td><td><strong>2泊3日＋交通付パッケージが、器がいちばん大きい。</strong>1泊にすると1人1万円ぶん器が縮む</td></tr>
+        <tr><td>対象商品</td><td>本県を含む九州地方に目的地が限定される、宿泊を伴う旅行商品または宿泊サービス</td><td>公式表記上、航空券＋宿のパッケージも対象と読める（北陸応援割では交通付が対象外だった経緯があるため、予約画面で最終確認）</td></tr>
+        <tr><td>対象宿泊期間</td><td class="num">10/1 – 12/25</td><td>9月はゼロ。10月〜12月25日のみ</td></tr>
+        <tr><td>予約受付開始</td><td><strong>令和8年9月下旬を予定</strong>（日付未発表）</td><td>「キャンペーンサイト開設後に案内」とのみ。<strong>ここを毎日見張る必要がある</strong></td></tr>
+        <tr><td>既存予約の扱い</td><td>販売・予約開始前の予約は<strong>対象外</strong></td><td>今フライングで押さえると割引が消える。<strong>先に取ってはいけない</strong></td></tr>
+        <tr><td>終了条件</td><td>予算の執行状況に応じて早期終了の可能性</td><td>最大のリスク</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note warn" style="margin-top:14px"><strong>未確認：</strong>子ども・幼児の人数カウント。旅行会社（ニーズツアー）のFAQは「旅行代金の有無にかかわらず0歳児から対象」と案内しているが、これは事業者の説明であって大分県の要項原文では確認できていない。膝上無料の次男（2歳）が1人として数えられるかで、上限が12万円と9万円の間で動く。</p>
+</section>
+
+<!-- ══════════ Ⅳ ══════════ -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">Ⅳ</span><h2>いつ行くか</h2><span class="sec-kicker">9月／10月／11月／12月</span></div>
+
+  <h3>(1) 月ごとの判定</h3>
+  <div class="tbl-scroll">
+    <table>
+      <caption>「9月・10月のほうがいい理由があるか」への回答。9月は制度上ありえず、10月の唯一の利点は予算切れリスクの回避。それを上回る不利が3つある。</caption>
+      <thead><tr><th>時期</th><th>有利</th><th>不利</th><th class="num">判定</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>9月</strong></td>
+          <td>─</td>
+          <td><strong>応援割の対象外</strong>（10/1宿泊分から）。そもそも予約受付が9月下旬開始なので物理的に不可能</td>
+          <td class="num"><span class="verd no">除外</span></td>
+        </tr>
+        <tr>
+          <td><strong>10月</strong><br><small style="color:var(--ink-3)">10/10–12, 10/17–19 ほか</small></td>
+          <td>予算が潤沢で<strong>確実に取れる</strong>／アフリカンサファリが9:00–16:30とフル営業／台風明けで気候良好</td>
+          <td>杉乃井アクアガーデンが<strong>10/1–11/1は17:00–22:00の短縮営業</strong>で日中に遊べない／秩父旅行（9/21–22）の直後で間隔が3週間／紅葉には早い</td>
+          <td class="num"><span class="verd mid">次善</span></td>
+        </tr>
+        <tr class="pick">
+          <td><strong>11月</strong><br><small style="color:var(--ink-3)">11/20–22 推奨</small></td>
+          <td><strong>釣り堀が営業中の最終月</strong>／アクアガーデンが11:00–22:00の通常営業に戻る／11月上中旬は日中20℃超もあり過ごしやすい／金鱗湖の紅葉と朝霧が下旬から／<strong>11/23（月・祝）を回復日に使える</strong></td>
+          <td>予算切れの可能性が10月より上がる／3連休を含む週末は宿・航空券が高い／下旬から冷え込む</td>
+          <td class="num"><span class="verd best">最有力</span></td>
+        </tr>
+        <tr>
+          <td><strong>12月</strong><br><small style="color:var(--ink-3)">12/4–6, 12/11–13</small></td>
+          <td>通常週末で最も空いていて安い可能性</td>
+          <td><strong>釣り堀フィッシングゆふが12〜2月休業</strong>／予算切れリスクが最大／屋外の選択肢が狭い／12/25で制度終了、直前は駆け込みで混む</td>
+          <td class="num"><span class="verd no">非推奨</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>(2) 11月のどの週末か</h3>
+  <div class="tbl-scroll">
+    <table>
+      <caption>いずれも金曜に有給1日を充てる2泊3日（金・土泊）。2026年11月23日（月）は勤労感謝の日。</caption>
+      <thead><tr><th>候補</th><th>この案の意味</th><th>弱点</th><th class="num">判定</th></tr></thead>
+      <tbody>
+        <tr><td class="mono"><strong>11/6–8</strong><br><small>金土日</small></td><td>予算切れリスクが11月内で最小。気候も安定</td><td>紅葉はまだ。月曜から通常運転で、次男の生活リズム回復が厳しい</td><td class="num"><span class="verd yes">可</span></td></tr>
+        <tr><td class="mono"><strong>11/13–15</strong><br><small>金土日</small></td><td>通常週末なので宿・航空券がいちばん取りやすく安い。別府ロープウェイが夏季ダイヤ最終日（11/14）まで</td><td>同上。翌月曜が平日</td><td class="num"><span class="verd yes">対抗</span></td></tr>
+        <tr class="pick"><td class="mono"><strong>11/20–22</strong><br><small>金土日</small></td><td><strong>帰宅翌日の11/23が祝日。</strong>丸1日の予備日があり、疲労・体調・洗濯・保育園準備をすべて吸収できる。金鱗湖の紅葉が見頃に入る</td><td>宿泊2泊とも3連休の中に入るので価格が高い。応援割の50%がこれを相殺できるかが勝負</td><td class="num"><span class="verd best">推奨</span></td></tr>
+        <tr><td class="mono"><strong>11/21–23</strong><br><small>土日月祝</small></td><td>有給ゼロで3日間成立</td><td>3連休初日発で航空券・宿とも最激戦。土曜午前の習い事を全部捨てることになる</td><td class="num"><span class="verd mid">条件付</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout" style="margin-top:16px">
+    <h4>11/20–22を推す理由をひとつに絞ると</h4>
+    <p>2歳7か月を連れた飛行機2泊3日は、<strong>帰った翌日が一番きつい</strong>。11/20発なら、帰宅した翌日の11/23が勤労感謝の日で、家族全員が家にいられる。この構造を持っている週末は11月に他になく、価格差を払う価値がある、というのが判断。<br>価格が想定を超えて折り合わなければ、<strong>11/13–15に逃げる</strong>のが次善。この2案は同時に検討して、受付開始日に取れたほうを採る形にしておくのが現実的。</p>
+  </div>
+</section>
+
+<!-- ══════════ Ⅴ ══════════ -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">Ⅴ</span><h2>どう動くか</h2><span class="sec-kicker">地図と交通</span></div>
+
+  <h3>(1) 別府湾まわりの位置関係</h3>
+  <div class="mapbox">
+    <svg viewBox="0 0 900 700" role="img" aria-label="大分県北部の模式図。別府湾を囲んで、北東の国東半島に大分空港、西岸に別府、南岸に大分市。空港からはホーバークラフトが湾を横断して西大分へ35分、空港バスは湾の北岸を回って別府駅へ約50分。内陸西に湯布院、内陸北に アフリカンサファリ。">
+      <rect x="0" y="0" width="900" height="700" fill="var(--land)"/>
+      <!-- 別府湾・周防灘 -->
+      <path d="M900,36 L800,62 C807,110 800,140 782,158 C745,196 690,236 630,272 C560,312 480,334 420,362 C392,392 378,440 372,492 C400,520 440,540 470,552 C500,566 528,578 548,592 C574,620 600,636 640,648 L900,668 Z"
+            fill="var(--sea)" stroke="var(--sea-2)" stroke-width="2"/>
+      <text x="640" y="440" font-family="var(--serif)" font-size="27" fill="var(--sea-2)" letter-spacing="8" opacity="0.95">別府湾</text>
+      <!-- 山 -->
+      <g fill="none" stroke="var(--line-2)" stroke-width="2.2" stroke-linecap="round">
+        <path d="M150,520 l26,-34 l26,34"/><path d="M218,512 l26,-36 l26,36"/>
+      </g>
+      <text x="176" y="552" font-family="var(--sans)" font-size="13" fill="var(--ink-3)" text-anchor="middle">由布岳</text>
+      <text x="252" y="552" font-family="var(--sans)" font-size="13" fill="var(--ink-3)" text-anchor="middle">鶴見岳</text>
+
+      <!-- ルート：ホーバークラフト -->
+      <path d="M772,118 C700,230 610,400 520,556" fill="none" stroke="var(--accent)" stroke-width="3.6" stroke-dasharray="11 7" stroke-linecap="round"/>
+      <!-- ルート：空港バス -->
+      <path d="M766,126 C660,236 500,320 420,390 C388,424 368,466 358,498" fill="none" stroke="var(--ochre)" stroke-width="3.2" stroke-linecap="round"/>
+      <!-- ルート：別府-大分の海岸線交通 -->
+      <path d="M352,510 C400,532 432,545 457,553 C480,562 500,568 546,593" fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-dasharray="2 5" stroke-linecap="round"/>
+      <!-- ルート：別府-湯布院 -->
+      <path d="M340,512 C270,530 200,536 130,537" fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-dasharray="2 5" stroke-linecap="round"/>
+      <!-- ルート：別府-サファリ -->
+      <path d="M336,496 C300,430 268,330 248,252" fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-dasharray="2 5" stroke-linecap="round"/>
+
+      <!-- 所要時間ラベル -->
+      <g font-family="var(--mono)" font-size="13" font-weight="600">
+        <rect x="596" y="288" width="112" height="24" rx="2" fill="var(--paper-2)" stroke="var(--accent)" stroke-width="1.2"/>
+        <text x="652" y="305" fill="var(--accent-deep)" text-anchor="middle">ホーバー35分</text>
+        <rect x="452" y="322" width="104" height="24" rx="2" fill="var(--paper-2)" stroke="var(--ochre)" stroke-width="1.2"/>
+        <text x="504" y="339" fill="var(--ochre)" text-anchor="middle">バス約50分</text>
+      </g>
+      <g font-family="var(--mono)" font-size="12" fill="var(--ink-3)">
+        <text x="404" y="588">バス20分</text>
+        <text x="112" y="576" text-anchor="middle">バス約50分</text>
+        <text x="258" y="344" text-anchor="end">バス50分</text>
+      </g>
+
+      <!-- 地点 -->
+      <g font-family="var(--sans)" font-size="14.5" font-weight="700" fill="var(--ink)">
+        <circle cx="772" cy="107" r="8" fill="var(--accent)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="758" y="94" text-anchor="end">大分空港</text>
+        <circle cx="350" cy="507" r="8" fill="var(--accent)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="336" y="512" text-anchor="end">別府</text>
+        <circle cx="510" cy="567" r="6.5" fill="var(--accent)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="522" y="586">西大分</text>
+        <circle cx="457" cy="553" r="6.5" fill="var(--hot)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="447" y="540" text-anchor="end" fill="var(--hot)">高崎山・うみたまご</text>
+        <circle cx="548" cy="595" r="6" fill="var(--ink-3)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="560" y="614" font-weight="400" fill="var(--ink-2)" font-size="13">大分市</text>
+        <circle cx="116" cy="535" r="7" fill="var(--hot)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="116" y="518" text-anchor="middle" fill="var(--hot)">湯布院</text>
+        <circle cx="242" cy="239" r="7" fill="var(--hot)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="256" y="232" fill="var(--hot)">アフリカンサファリ</text>
+        <circle cx="319" cy="443" r="5.5" fill="var(--ink-3)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="308" y="434" text-anchor="end" font-weight="400" fill="var(--ink-2)" font-size="13">鉄輪（地獄めぐり）</text>
+        <circle cx="421" cy="323" r="5" fill="var(--ink-3)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="409" y="318" text-anchor="end" font-weight="400" fill="var(--ink-2)" font-size="13">ハーモニーランド</text>
+      </g>
+      <text x="24" y="676" font-family="var(--mono)" font-size="11" fill="var(--ink-3)">位置関係の模式図。海岸線は簡略化してあり実際の形状とは異なる。所要時間は各社公表値。</text>
+    </svg>
+    <div class="legend">
+      <span><span class="lg-swatch" style="border-top-style:dashed; border-top-color:var(--accent)"></span>ホーバークラフト（日本唯一）</span>
+      <span><span class="lg-swatch" style="border-top-style:solid; border-top-color:var(--ochre)"></span>空港連絡バス エアライナー</span>
+      <span><span class="lg-swatch" style="border-top-style:dotted; border-top-color:var(--ink-3)"></span>路線バス・JR</span>
+    </div>
+    <p class="mapcap"><strong>読み取ってほしいのは一点。</strong>大分空港は別府から見て湾の反対側（国東半島）にあり、陸路だと湾をぐるっと回って約50分かかる。ところが<strong>ホーバークラフトは湾をまっすぐ横断して35分</strong>で、しかも到着地の西大分から高崎山・うみたまごまでは目と鼻の先。<strong>「移動そのものが最初のアトラクションになり、かつ最短」</strong>という珍しい構図が成立している。</p>
+  </div>
+
+  <h3>(2) 別府市内</h3>
+  <div class="mapbox">
+    <svg viewBox="0 0 900 620" role="img" aria-label="別府市内の模式図。海岸沿いに別府駅、その北の山側に鉄輪温泉と地獄めぐり、駅の西の山手に杉乃井ホテルと別府ラクテンチ、さらに西に別府ロープウェイ、南東の海沿いに高崎山とうみたまご。">
+      <rect x="0" y="0" width="900" height="620" fill="var(--land)"/>
+      <path d="M470,0 C474,120 480,250 500,330 C540,400 620,450 720,486 C790,510 850,524 900,534 L900,620 L470,620 Z"
+            fill="var(--sea)" stroke="var(--sea-2)" stroke-width="2"/>
+      <text x="700" y="580" font-family="var(--serif)" font-size="22" fill="var(--sea-2)" letter-spacing="6">別府湾</text>
+      <!-- 山 -->
+      <path d="M38,400 l44,-72 l44,72" fill="none" stroke="var(--line-2)" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="82" y="422" font-family="var(--sans)" font-size="13" fill="var(--ink-3)" text-anchor="middle">鶴見岳 1,375m</text>
+      <!-- ロープウェイ -->
+      <path d="M110,342 L82,336" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-dasharray="6 4"/>
+      <!-- 動線 -->
+      <g fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-dasharray="2 5" stroke-linecap="round">
+        <path d="M401,376 C370,330 330,240 292,172"/>
+        <path d="M395,372 C370,356 340,342 317,332"/>
+        <path d="M401,372 C380,350 350,320 336,300"/>
+        <path d="M414,386 C500,430 640,500 770,540"/>
+      </g>
+      <g font-family="var(--mono)" font-size="12" fill="var(--ink-3)">
+        <text x="352" y="262" text-anchor="end">バス25分</text>
+        <text x="606" y="466">バス20分</text>
+      </g>
+      <!-- 地点 -->
+      <g font-family="var(--sans)" font-size="15" font-weight="700" fill="var(--ink)">
+        <circle cx="401" cy="384" r="9" fill="var(--ink)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="416" y="404">別府駅</text>
+        <circle cx="292" cy="162" r="8" fill="var(--hot)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="306" y="156" fill="var(--hot)">鉄輪 ── 地獄めぐり</text>
+        <text x="306" y="180" font-size="12.5" font-weight="400" fill="var(--ink-2)" font-family="var(--mono)">海地獄／かまど地獄／鬼石坊主地獄</text>
+        <circle cx="270" cy="160" r="5.5" fill="var(--ink-3)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="258" y="146" text-anchor="end" font-size="12.5" font-weight="400" fill="var(--ink-2)">ひょうたん温泉</text>
+        <circle cx="313" cy="330" r="9" fill="var(--accent)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="300" y="326" text-anchor="end" fill="var(--accent-deep)">杉乃井ホテル</text>
+        <text x="300" y="348" text-anchor="end" font-size="12.5" font-weight="400" fill="var(--ink-2)" font-family="var(--mono)">棚湯・アクアガーデン</text>
+        <circle cx="334" cy="298" r="7" fill="var(--hot)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="348" y="292" fill="var(--hot)">別府ラクテンチ</text>
+        <text x="348" y="314" font-size="12.5" font-weight="400" fill="var(--ink-2)" font-family="var(--mono)">ケーブルカーで登る遊園地</text>
+        <circle cx="110" cy="342" r="6.5" fill="var(--accent)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="124" y="394" font-size="13" font-weight="400" fill="var(--ink-2)">別府ロープウェイ</text>
+        <circle cx="450" cy="401" r="5.5" fill="var(--ink-3)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="466" y="446" font-size="12.5" font-weight="400" fill="var(--ink-2)">竹瓦温泉（砂湯）</text>
+        <circle cx="777" cy="548" r="8" fill="var(--hot)" stroke="var(--paper-2)" stroke-width="2.5"/>
+        <text x="764" y="542" text-anchor="end" fill="var(--hot)">高崎山・うみたまご</text>
+      </g>
+      <text x="24" y="600" font-family="var(--mono)" font-size="11" fill="var(--ink-3)">位置関係の模式図。縮尺・海岸線は簡略化。</text>
+    </svg>
+    <p class="mapcap">別府は<strong>「海沿いの駅 → 山手に宿 → さらに山の上に鉄輪の地獄」</strong>という単純な縦の構造。宿を杉乃井に置くと、地獄めぐり（バス25分）、ラクテンチ（すぐ隣の山）、高崎山・うみたまご（バス20分）がすべて片道30分圏に入る。<strong>2泊とも同じ宿に置けるので、幼児2人を連れての荷造りが1回で済む</strong>。</p>
+  </div>
+
+  <h3>(3) 便とバスの実数</h3>
+  <div class="tbl-scroll">
+    <table class="t-route">
+      <caption>航空便は2026年9月1日〜10月31日ダイヤ（駅探）。<strong>11月は冬ダイヤに切り替わるため時刻が変わる可能性がある</strong>。ホーバークラフトは2026年8月1日〜10月15日の運航スケジュール（大分第一ホーバードライブ公式PDF）で、こちらも11月のダイヤは未発表。</caption>
+      <thead><tr><th>区間</th><th>便・手段</th><th class="num">時刻</th><th class="num">所要</th><th>料金</th></tr></thead>
+      <tbody>
+        <tr><td><span class="nb">木場 → 羽田</span></td><td>東西線＋京急／またはタクシー</td><td class="num">─</td><td class="num">約40分</td><td>電車で4人 約2,000円／タクシー 約7,000円</td></tr>
+        <tr class="pick"><td><span class="nb">羽田 → 大分</span></td><td>ANA791</td><td class="num">07:55 → 09:30</td><td class="num">1h35m</td><td rowspan="2">大人往復 約3.5〜5万円／人（時期・予約時期で大きく変動）</td></tr>
+        <tr><td><span class="nb">羽田 → 大分</span></td><td>JAL661</td><td class="num">08:00 → 09:35</td><td class="num">1h35m</td></tr>
+        <tr class="pick"><td><span class="nb">大分空港 → 西大分</span></td><td><strong>ホーバークラフト</strong></td><td class="num">10:15 → 10:50</td><td class="num">35m</td><td>アプリ 大人2,000円／3歳〜小学生1,000円（窓口は2,500／1,250円）。3歳未満は大人1人につき1名無料</td></tr>
+        <tr><td><span class="nb">大分空港 → 別府駅</span></td><td>エアライナー（大分交通）</td><td class="num">到着便接続</td><td class="num">約45〜50分</td><td>約1,600円</td></tr>
+        <tr><td><span class="nb">西大分 → 大分駅</span></td><td>ホーバータクシー（相乗り可）</td><td class="num">─</td><td class="num">約2.5km</td><td>600円</td></tr>
+        <tr><td><span class="nb">別府北浜 → 高崎山</span></td><td>大分交通 別大線</td><td class="num">─</td><td class="num">約20分</td><td>モンキー・マリーンチケット（高崎山＋うみたまご＋バスのセット券）あり</td></tr>
+        <tr class="pick"><td><span class="nb">大分 → 羽田</span></td><td>ANA2496 / SNA96</td><td class="num">16:50 → 18:35</td><td class="num">1h45m</td><td>─</td></tr>
+        <tr><td><span class="nb">大分 → 羽田</span></td><td>JAL672</td><td class="num">17:20 → 19:00</td><td class="num">1h40m</td><td>─</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ochre" style="margin-top:16px">
+    <h4>接続の要（ここが今回いちばん気持ちのいい発見）</h4>
+    <p><strong>羽田07:55発 → 大分09:30着 → ホーバークラフト10:15発 → 西大分10:50着。</strong>乗り継ぎに45分の余裕があり、幼児2人でも慌てずに済む。日本で唯一のホーバークラフトに、旅の開始30分後に乗れる。<br>
+    帰りは西大分まで戻らず、<strong>別府駅からエアライナーで空港へ直行</strong>（約50分）するのが自然。行きは船・帰りはバスで、往復の景色も変わる。</p>
+  </div>
+  <p class="note warn"><strong>要確認：</strong>11月のホーバークラフト運航ダイヤ（現在公表されているのは10月15日まで）と、11月の航空便ダイヤ。ホーバーは波・風による欠航があるため、<strong>欠航時はエアライナーに切り替える前提</strong>で組むこと。予約はLINE公式・専用アプリから利用日の30日前より。</p>
+</section>
+
+<!-- ══════════ Ⅵ ══════════ -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">Ⅵ</span><h2>2泊3日の行程案</h2><span class="sec-kicker">11/20（金）–22（日）</span></div>
+
+  <p style="max-width:62ch; color:var(--ink-2); margin-bottom:8px">杉乃井ホテルに2泊固定、荷造りは1回。<strong>就寝21〜22時を崩さない</strong>ことを制約条件として組んだ。2日目だけ中身の選択肢が3つある。</p>
+
+  <div class="stack" style="gap:26px; margin-top:22px">
+
+    <!-- DAY 1 -->
+    <article class="day">
+      <div class="day-head">
+        <span class="d-no">DAY 1</span><h4>11月20日（金）── 船で入り、海の生き物と猿</h4>
+        <span class="d-sum">有給1日／移動3.5h</span>
+      </div>
+      <div class="rail">
+        <div class="slot move"><div class="t">05:45</div><div class="b"><h5>自宅（木場5-8-41）発<span class="who">全員</span></h5><p>幼児2人＋荷物なので、この日だけはタクシーを推奨。電車なら木場→日本橋→浅草線直通で羽田第1・第2へ、約40分。</p><span class="cost">タクシー 約7,000円／電車 4人 約2,000円</span></div></div>
+        <div class="slot"><div class="t">06:40</div><div class="b"><h5>羽田空港着・搭乗手続き</h5><p>2歳の次男は膝上で座席なし（国内線は3歳未満無料）。</p></div></div>
+        <div class="slot key"><div class="t">07:55</div><div class="b"><h5>ANA791 羽田 → 大分<span class="who">長男・次男</span></h5><p>09:30着。1時間35分で、幼児が保つ範囲。</p></div></div>
+        <div class="slot key"><div class="t">10:15</div><div class="b"><h5>ホーバークラフトで別府湾を横断<span class="who">長男・次男</span></h5><p>大分空港10:15発 → 西大分10:50着。日本唯一・時速80km。ベビーカー持ち込み可。<strong>旅の1本目の柱をここに置く</strong>のが今回の設計。欠航時はエアライナーで別府へ直行に切り替え。</p><span class="cost">アプリ決済 大人2,000×2＋小児1,000＝5,000円（次男は無料）</span></div></div>
+        <div class="slot move"><div class="t">11:00</div><div class="b"><h5>西大分 → 高崎山・うみたまご</h5><p>海岸沿いを北へ。バスまたはタクシーで10分程度。</p></div></div>
+        <div class="slot key"><div class="t">11:30</div><div class="b"><h5>うみたまご（昼食含む）<span class="who">長男</span></h5><p>屋外タッチプールでサメ・エイに触る。セイウチ・イルカのパフォーマンス。館内に食事あり。</p><span class="cost">大人約2,600円×2（WEBチケットで最大150円引き）／幼児の料金区分は要確認</span></div></div>
+        <div class="slot key"><div class="t">14:30</div><div class="b"><h5>高崎山自然動物園<span class="who">長男</span></h5><p>「さるっこレール」で山を登り、野生のニホンザル約1,000頭の群れへ。柵なしで足元を走り抜ける。<strong>2歳の次男は抱っこ推奨</strong>（サルに触らない・目を合わせない・食べ物を持たないの3点は現地で必ず確認）。</p><span class="cost">入園 一般500円×2＝1,000円／さるっこレール 160円×2＝320円。<strong>小学生未満は入園・レールとも無料</strong></span></div></div>
+        <div class="slot move"><div class="t">16:00</div><div class="b"><h5>バスで別府へ（約20分）→ 杉乃井ホテル チェックイン</h5></div></div>
+        <div class="slot onsen"><div class="t">17:00</div><div class="b"><h5>棚湯 ＋ ロウリュウサウナ<span class="who hot">本人</span></h5><p>棚田状の大展望露天から別府湾。<strong>この時間帯に単独で入る</strong>のが現実的。その間、母子3人はアクアガーデン（水着・37〜39℃・通年営業）で待たずに遊べる。</p><span class="cost">宿泊者は無料</span></div></div>
+        <div class="slot"><div class="t">18:30</div><div class="b"><h5>夕食（ホテルビュッフェ）</h5><p>とり天・だんご汁・りゅうきゅうは館内ビュッフェでも出ることが多い。要確認。</p></div></div>
+        <div class="slot"><div class="t">19:30</div><div class="b"><h5>アクアガーデンの噴水ショー（約10分）<span class="who">次男</span></h5><p>19:30／20:00／20:45／21:30の4回。<strong>最初の回に行って21時前に部屋へ戻る</strong>のが就寝時間を守る唯一のやり方。</p></div></div>
+        <div class="slot"><div class="t">21:00</div><div class="b"><h5>就寝</h5></div></div>
+      </div>
+    </article>
+
+    <!-- DAY 2 -->
+    <article class="day">
+      <div class="day-head">
+        <span class="d-no">DAY 2</span><h4>11月21日（土）── ここだけ3案から選ぶ</h4>
+        <span class="d-sum">選択日</span>
+      </div>
+      <div class="rail">
+        <div class="slot onsen"><div class="t">06:30</div><div class="b"><h5>朝風呂（棚湯）<span class="who hot">本人</span></h5><p>朝の別府湾。混雑前。</p></div></div>
+        <div class="slot"><div class="t">08:00</div><div class="b"><h5>朝食</h5></div></div>
+        <div class="slot key"><div class="t">09:00</div><div class="b"><h5>ここから3案（下の比較表で選ぶ）</h5><p>①別府に留まる／②湯布院へ出る／③アフリカンサファリへ出る。<strong>どれを選んでも夕方には杉乃井に戻り、棚湯 → 夕食 → 21時就寝の型は同じ</strong>。</p></div></div>
+        <div class="slot onsen"><div class="t">17:00</div><div class="b"><h5>棚湯／アクアガーデン<span class="who hot">本人</span><span class="who">次男</span></h5></div></div>
+        <div class="slot"><div class="t">18:30</div><div class="b"><h5>夕食 → 21:00 就寝</h5></div></div>
+      </div>
+    </article>
+
+    <div class="tbl-scroll">
+      <table class="t-opt">
+        <caption>2日目の3案。長男の「生き物・釣り」志向を最優先するなら②、体力温存と確実性なら①、ケアンズのカンガルー餌やりの再現を狙うなら③。</caption>
+        <thead><tr><th>案</th><th>中身</th><th>移動</th><th>刺さる相手</th><th>難点</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong class="nb">① 別府に留まる</strong></td>
+            <td>午前：地獄めぐり（<strong>鉄輪エリアの海地獄・かまど地獄・鬼石坊主地獄の3か所に絞る</strong>）→ 海地獄の無料足湯<br>昼：地獄蒸し工房 鉄輪で、自分で食材を蒸す<br>午後：別府ラクテンチ（ケーブルカー＋幼児向け乗り物）</td>
+            <td class="num">片道25分</td>
+            <td>次男（乗り物）<br>本人（足湯・蒸し）</td>
+            <td><strong>地獄は熱湯と蒸気の設備が多い。</strong>2歳連れでは常時手を離せない。7か所全部は無理と割り切る</td>
+          </tr>
+          <tr class="pick">
+            <td><strong class="nb">② 湯布院へ出る</strong></td>
+            <td>午前：<strong>釣り堀フィッシングゆふ</strong>（手ぶら可・竿200円＋エサ100円・ヤマメ／ニジマス／テナガエビ1匹500円・焼き代100円で20分ほどで焼き上がる）<br>午後：観光辻馬車（約60分）→ 金鱗湖の紅葉</td>
+            <td class="num">片道50分</td>
+            <td><strong>長男（釣り・馬）</strong><br>妻（湯の坪街道）</td>
+            <td>辻馬車は<strong>当日9時から現地窓口で先着順</strong>。別府から着く頃には売り切れの可能性。釣り堀は<strong>水曜定休・12〜2月休業</strong>（11/21は土曜なので営業日）</td>
+          </tr>
+          <tr>
+            <td><strong>③ アフリカン<span class="nb">サファリ</span></strong></td>
+            <td>ジャングルバスで、ライオン・キリン・ゾウに窓から直接餌やり</td>
+            <td class="num">片道50分</td>
+            <td><strong>長男（餌やり）</strong></td>
+            <td><strong>11/1〜2月末は10:00〜16:00に短縮</strong>。ジャングルバスは先着順（ネット予約枠あり）。片道50分＋滞在3時間で1日が丸ごと埋まる</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>推奨は②。</strong>理由は、引き継ぎ資料に明示された「子どもたちに魚を釣る成功体験をさせたい」という意向に、大分で唯一きれいに応えられるのが釣り堀フィッシングゆふで、しかも<strong>12月に入ると休業する</strong>から。管理釣り堀なので、ケアンズのような釣果ゼロにはならない。辻馬車が取れなければ金鱗湖の散策に振り替えればよく、②は失敗しても致命傷にならない。</p>
+
+    <!-- DAY 3 -->
+    <article class="day">
+      <div class="day-head">
+        <span class="d-no">DAY 3</span><h4>11月22日（日）── 最後に乗り物を1本置いて帰る</h4>
+        <span class="d-sum">移動3.5h／翌日は祝日</span>
+      </div>
+      <div class="rail">
+        <div class="slot onsen"><div class="t">06:30</div><div class="b"><h5>最後の棚湯<span class="who hot">本人</span></h5></div></div>
+        <div class="slot"><div class="t">08:00</div><div class="b"><h5>朝食 → 荷造り</h5></div></div>
+        <div class="slot"><div class="t">10:00</div><div class="b"><h5>チェックアウト（荷物はホテルに預ける）</h5></div></div>
+        <div class="slot key"><div class="t">10:30</div><div class="b"><h5>別府ラクテンチ<span class="who">次男</span><span class="who">長男</span></h5><p>ケーブルカーで山上へ。ゾウの背中、パンダ・アヒル・くまの空中サイクリング、パトカー、アンパンマン電車。<strong>4歳と2歳の両方が同じ場所で成立する数少ない施設</strong>。2日目に①を選んだ場合は、ここを別府ロープウェイ（鶴見岳・往復大人1,800円）に差し替える。</p><span class="cost">入園＋ケーブルカー往復 大人1,300円×2＋小人600円＝3,200円（2歳以下無料）。のりもの券は別途400円／枚</span></div></div>
+        <div class="slot"><div class="t">13:00</div><div class="b"><h5>昼食 ── レストラン東洋軒でとり天</h5><p>大正15年創業、とり天発祥の店。揚げ物なので幼児2人が確実に食べる。</p></div></div>
+        <div class="slot move"><div class="t">15:00</div><div class="b"><h5>別府駅 → エアライナーで大分空港（約50分）</h5><p>ホテルで荷物を受け取ってから乗車。</p><span class="cost">約1,600円×2＋小児</span></div></div>
+        <div class="slot key"><div class="t">16:50</div><div class="b"><h5>ANA2496 大分 → 羽田</h5><p>18:35着。空港から自宅まで約1時間で、<strong>20時前後の帰宅</strong>。22時就寝の制約を崩さない。</p></div></div>
+        <div class="slot"><div class="t">20:00</div><div class="b"><h5>帰宅 ── 翌11月23日（月）は勤労感謝の日</h5><p>洗濯・片付け・体調回復・保育園の準備に丸1日使える。<strong>この日程を推す最大の理由がここ</strong>。</p></div></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ Ⅶ ══════════ -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">Ⅶ</span><h2>いくらかかるか</h2><span class="sec-kicker">推定・4人2泊</span></div>
+
+  <div class="callout hot">
+    <h4>この章の数字はすべて推定です</h4>
+    <p>実際の宿泊料金・航空券価格は確認していません。杉乃井ホテルの11月の4人1室料金も、応援割対象プランの有無も未確認。<strong>下の表は「桁と構造」を見るためのもの</strong>で、予約時の実額とは必ずずれます。</p>
+  </div>
+
+  <h3>(1) 予約のかたちで割引額が変わる</h3>
+  <div class="tbl-scroll">
+    <table>
+      <caption>大人2名＋4歳＋2歳。次男が補助対象の「1人」に数えられる前提での試算（未確認）。数えられない場合、上限は3人分に下がる。</caption>
+      <thead><tr><th>予約のかたち</th><th class="num">旅行代金（推定）</th><th class="num">補助率</th><th class="num">上限</th><th class="num">割引額</th><th class="num">実質負担</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>航空券と宿を<strong>別々に</strong>取る<br><small style="color:var(--ink-3)">宿のみが対象</small></td>
+          <td class="num">宿 11万<br>交通 10万</td>
+          <td class="num">50%<br>（宿のみ）</td>
+          <td class="num">2万×4人×2泊<br>＝16万</td>
+          <td class="num">▲5.5万</td>
+          <td class="num">約15.5万</td>
+        </tr>
+        <tr class="pick">
+          <td><strong>交通付パッケージで2泊</strong><br><small style="color:var(--ink-3)">航空券＋宿をまとめて予約</small></td>
+          <td class="num">21万</td>
+          <td class="num">50%</td>
+          <td class="num">3万×4人<br>＝12万</td>
+          <td class="num"><strong>▲10.5万</strong></td>
+          <td class="num"><strong>約10.5万</strong></td>
+        </tr>
+        <tr>
+          <td>交通付パッケージで<strong>1泊</strong>にする</td>
+          <td class="num">15万</td>
+          <td class="num">50%</td>
+          <td class="num">2万×4人<br>＝8万</td>
+          <td class="num">▲7.5万</td>
+          <td class="num">約7.5万</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note ok"><strong>設計上の結論：交通付パッケージ・2泊以上が最も有利。</strong>1泊にすると1人あたりの器が3万円から2万円に縮み、2泊との差額（宿1泊ぶん約6万円）に対して割引の伸びが3万円しかない。<strong>「2泊3日にする」という今回のご判断は、制度設計上も正しい</strong>。</p>
+
+  <h3>(2) 総額のイメージ</h3>
+  <div class="tbl-scroll">
+    <table>
+      <caption>現地費用は Ⅵ章の行程案（ホーバー・うみたまご・高崎山・湯布院の釣り堀・辻馬車・ラクテンチ・食事・バス）を積み上げた概算。応援割は交通・宿にのみ効き、現地費用には効きません。</caption>
+      <thead><tr><th>項目</th><th class="num">応援割なし</th><th class="num">応援割あり</th></tr></thead>
+      <tbody>
+        <tr><td>航空券＋宿（交通付パッケージ・2泊）</td><td class="num">約 21万円</td><td class="num">約 10.5万円</td></tr>
+        <tr><td>現地の交通・入園・食事</td><td class="num">約 4万円</td><td class="num">約 4万円</td></tr>
+        <tr><td>自宅⇔羽田</td><td class="num">約 1.4万円</td><td class="num">約 1.4万円</td></tr>
+        <tr style="border-top:2px solid var(--line-2)"><td><strong>合計（推定）</strong></td><td class="num"><strong>約 26万円</strong></td><td class="num"><strong>約 16万円</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ochre" style="margin-top:16px">
+    <h4>「リーズナブルな旅行をする価値があるか」への答え</h4>
+    <p>差は<strong>およそ10万円</strong>。これは4人家族の国内2泊3日としては、同じ内容を通常期にやるより<strong>4割安く済む</strong>という意味になる。<br>
+    ただし注意が1つ。応援割は<strong>旅行代金が高いほど絶対額が増える</strong>（上限まで）ので、「割引があるから普段より良い宿にする」という判断は制度と噛み合っている一方、<strong>1人1泊4万円を超える宿では上限に当たって実質割引率が下がる</strong>。1人1.5〜2万円クラスの宿がもっとも効率がよく、杉乃井ホテルはちょうどその帯に入る想定。</p>
+  </div>
+</section>
+
+<!-- ══════════ Ⅷ ══════════ -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">Ⅷ</span><h2>家族4人それぞれに何が残るか</h2><span class="sec-kicker">適合の検証</span></div>
+  <div class="fitgrid">
+    <div class="fit">
+      <div class="name">和希 <small>4歳10か月</small></div>
+      <ul>
+        <li><strong>釣り堀フィッシングゆふ</strong>──管理釣り場なので、ケアンズの釣果ゼロは繰り返さない。釣った魚をその場で焼いて食べるところまで完結する</li>
+        <li><strong>高崎山</strong>──野生のサルの群れが足元を走り抜ける。柵越しではない</li>
+        <li><strong>うみたまごのタッチプール</strong>──サメ・エイに手で触れる</li>
+        <li><strong>アフリカンサファリ</strong>（案③）──バスの窓から直接餌をやる。ケアンズのカンガルーと同型の体験</li>
+      </ul>
+      <p class="risk">注意：座って説明を聞く形式は退屈だったという実績あり。イルカショーなど「見るだけ」の時間は長く取らない。</p>
+    </div>
+    <div class="fit">
+      <div class="name">浩希 <small>2歳7か月</small></div>
+      <ul>
+        <li><strong>ホーバークラフト</strong>──ふわりと浮いて走る船。3歳未満は運賃無料</li>
+        <li><strong>さるっこレール</strong>──山を登るモノレール。小学生未満無料</li>
+        <li><strong>ラクテンチのケーブルカー</strong>と幼児向け乗り物（2歳以下入園無料。パトカー、アンパンマン電車の実績あり）</li>
+        <li><strong>アクアガーデン</strong>──水遊びパンツで入れる37〜39℃の温泉プール</li>
+      </ul>
+      <p class="risk">注意：地獄めぐりは熱湯・蒸気の設備が多く、常時手を離せない。3か所に絞る前提。</p>
+    </div>
+    <div class="fit">
+      <div class="name">浩和 <small>本人</small></div>
+      <ul>
+        <li><strong>杉乃井ホテル「棚湯」</strong>──棚田状の大展望露天から別府湾。「大浴場だけでは物足りない／外気を取り込める露天が欲しい」への直球の答え</li>
+        <li><strong>ロウリュウサウナ</strong>が併設。棚湯でととのう動線が宿の中で完結する</li>
+        <li><strong>ひょうたん温泉</strong>（別府駅からバス25分）──55℃の天然蒸し湯＋「湯雨竹」を通した源泉かけ流しの水風呂。2日目の①案に組み込める</li>
+        <li>とり天・りゅうきゅう・地獄蒸し</li>
+      </ul>
+      <p class="risk">注意：サウナの単独行動は、母子3人がアクアガーデンで遊べる17:00〜18:30の枠に寄せる。</p>
+    </div>
+    <div class="fit">
+      <div class="name">YUKI <small>妻</small></div>
+      <ul>
+        <li><strong>棚湯・アクアガーデン</strong>（水着なので子ども2人と一緒に入れる）</li>
+        <li><strong>湯布院の湯の坪街道・金鱗湖</strong>（案②の午後）──11月下旬から紅葉の見頃</li>
+        <li>ホテル内で完結する時間が長いので、移動の負担が小さい</li>
+      </ul>
+      <p class="risk">前提が弱い：「大分に行きたいと言っていた気がする」は記憶ベースで、意向として確認できていない。<strong>この資料を見せる前に、行き先そのものの合意を取ること。</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ Ⅸ ══════════ -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">Ⅸ</span><h2>次にやること</h2><span class="sec-kicker">9月中</span></div>
+
+  <ol class="actions">
+    <li class="now"><span class="when">今週</span><span class="what">奥様に「大分でいいか」を確認する</span><span class="why">この資料の前提でいちばん弱いところ。行き先の合意がないまま予約日だけ迫るのが最悪の形。</span></li>
+    <li class="now"><span class="when">今週</span><span class="what">11/20（金）の有給と、保育園・療育の欠席を確定できるか確認</span><span class="why">妻の時短勤務での11/20の休暇取得可否も未確認。ここが取れないなら11/21–23（有給ゼロ）に切り替える。</span></li>
+    <li class="now"><span class="when">今週</span><span class="what">大分県公式ページをブックマークして毎日見る</span><span class="why"><a href="https://www.pref.oita.jp/soshiki/14180/kyushu-oita.html">pref.oita.jp の九州ふっこう応援割ページ</a>。「キャンペーンサイト開設後に案内」とあるので、開設＝受付開始の合図。観光政策課 097-506-2116。</span></li>
+    <li><span class="when">9月下旬</span><span class="what">受付開始と同時に、交通付パッケージ2泊で予約</span><span class="why">第1希望 11/20–22、第2希望 11/13–15。じゃらんパック・楽天トラベル等のうち、どこが対象事業者になるかは発表待ち。<strong>開始前に予約すると対象外になるので、フライングしない。</strong></span></li>
+    <li><span class="when">予約後</span><span class="what">ホーバークラフトの11月ダイヤを確認し、30日前に予約</span><span class="why">LINE公式または専用アプリから利用日の30日前に受付開始。11/20発なら10/21が予約解禁日。</span></li>
+    <li><span class="when">予約後</span><span class="what">2日目を①②③のどれにするか決める</span><span class="why">②（湯布院）を選ぶなら、辻馬車は当日9時に現地窓口で先着順なので、朝いちで由布院に着く動線に組み替える必要がある。</span></li>
+    <li><span class="when">決定後</span><span class="what">しおりを本文化する</span><span class="why">このHTMLを、開園時間・バス時刻・緊急連絡先まで入った「見れば完結する」しおりに書き換える。</span></li>
+  </ol>
+
+  <h3>まだ分かっていないこと</h3>
+  <ul class="plain">
+    <li><strong>大分県の予約受付開始日</strong>──「9月下旬」としか出ていない</li>
+    <li><strong>対象となる予約経路</strong>──OTA／旅行会社／宿の直接予約のどれが対象か未発表</li>
+    <li><strong>2歳児の人数カウント</strong>──割引額が約2.6万円変わる</li>
+    <li><strong>交通付パッケージの対象可否</strong>──公式表記からは対象と読めるが、北陸応援割では交通付が対象外だった前例がある</li>
+    <li><strong>杉乃井ホテルの11月の4人1室料金</strong>と、応援割対象プランの有無</li>
+    <li><strong>11月のホーバークラフト運航ダイヤと航空便ダイヤ</strong>──現行の公表は10月15日／10月31日まで</li>
+    <li><strong>うみたまごの幼児料金区分</strong>と、地獄めぐりの未就学児料金（公式ページに明記なし）</li>
+    <li><strong>各施設の地震後の営業状況</strong>──大分県内は本震で震度4（別府・湯布院は震度3）だが、個別施設の状況は未確認。なお熊本側（阿蘇・黒川）は観光交通が復旧途上のため、今回は大分県内で完結させる前提</li>
+  </ul>
+</section>
+
+<!-- ══════════ Ⅹ ══════════ -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">Ⅹ</span><h2>出典</h2><span class="sec-kicker">確認日 2026/9/12</span></div>
+  <div class="src">
+    <ol>
+      <li>大分県ホームページ「九州ふっこう応援割」（2026年9月3日更新）── 補助率・上限・対象期間・受付開始予定・既存予約の扱い　<a href="https://www.pref.oita.jp/soshiki/14180/kyushu-oita.html">pref.oita.jp</a></li>
+      <li>トラベルWatch「大分県の九州ふっこう応援割 対象期間は12月末まで」── 予算規模・早期終了　<a href="https://travel.watch.impress.co.jp/docs/news/2138128.html">travel.watch.impress.co.jp</a></li>
+      <li>大分第一ホーバードライブ 運航スケジュール（2026年8月1日〜10月15日）── 空港アクセス便・周遊便の時刻　<a href="https://hoverdrive.jp/ja/">hoverdrive.jp</a></li>
+      <li>大分県観光情報公式サイト「ホーバークラフト完全ガイド」── 所要時間・運賃・ベビーカー可否　<a href="https://www.visit-oita.jp/magazines/detail/1246">visit-oita.jp</a></li>
+      <li>駅探 羽田⇔大分 時刻表（2026年9月1日〜10月31日ダイヤ）　<a href="https://ekitan.com/timetable/airplane/domestic/section/all/sf-22/st-50">ekitan.com</a></li>
+      <li>別府地獄めぐり公式（別府地獄組合）営業案内 ── 共通観覧券2,400円／1,200円、8:00〜17:00、年中無休　<a href="https://beppu-jigoku.com/fee/index.html">beppu-jigoku.com</a></li>
+      <li>杉乃井ホテル公式「ザ アクアガーデン」── 通年営業、2026/10/1〜11/1は17:00〜22:00、宿泊者無料、噴水ショー時刻　<a href="https://suginoi.orixhotelsandresorts.com/contents/aquagarden/">suginoi.orixhotelsandresorts.com</a></li>
+      <li>高崎山自然動物園 公式 営業案内 ── 入園 一般500円・小学生未満無料、さるっこレール160円　<a href="https://www.takasakiyama.jp/guidance/">takasakiyama.jp</a></li>
+      <li>アフリカンサファリ公式 営業時間・料金 ── ジャングルバス3,500円／2,300円、11/1〜2月末は10:00〜16:00　<a href="https://africansafari.co.jp/information/">africansafari.co.jp</a></li>
+      <li>別府ラクテンチ公式 ── 入園＋ケーブルカー往復 1,300円／600円／2歳以下無料　<a href="https://rakutenchi.jp/">rakutenchi.jp</a></li>
+      <li>釣り堀フィッシングゆふ ── 10:00〜17:00（最終受付16:00）、水曜定休、12〜2月休業、竿200円・エサ100円・1匹500円・焼き100円　<a href="https://fishing-yufu.wixsite.com/index/about">fishing-yufu.wixsite.com</a></li>
+      <li>YUFUINFO／じゃらん 観光辻馬車 ── 大人2,500円・4歳〜小学生1,800円、約60分、当日9時から先着順　<a href="https://yufuin.gr.jp/feature/feature-3231/">yufuin.gr.jp</a></li>
+      <li>別府ロープウェイ（じゃらん・るるぶ）── 往復 大人1,800円／4歳〜小学生900円、夏季3/15〜11/14・冬季11/15〜3/14　<a href="https://www.jalan.net/kankou/spt_guide000000164909/">jalan.net</a></li>
+      <li>大分交通 エアライナー ── 大分空港〜別府駅 約45〜50分・約1,600円　<a href="https://www.oitakotsu.co.jp/bus/airport/">oitakotsu.co.jp</a></li>
+      <li>温泉カレンダー／じゃらんニュース ── 別府・湯布院の11〜12月の気温、金鱗湖の紅葉時期　<a href="https://onsen-calendar.com/archives/63">onsen-calendar.com</a></li>
+      <li>ニーズツアー FAQ ── 「旅行代金の有無にかかわらず0歳児から対象」（事業者の説明であり大分県の要項原文ではない）</li>
+    </ol>
+    <p style="margin-top:14px; color:var(--ink-3)">令和8年熊本地震（2026年7月28日、Mj7.1）の規模・大分県内の震度、および熊本側の交通復旧状況については、引き継ぎ資料（2026年9月12日）記載の内容を前提としており、本資料では再確認していません。</p>
+  </div>
+</section>
+
+<footer>
+  <p class="credits">写真はすべてWikimedia Commonsの自由利用可能なライセンスによる。<br>
+  別府市街 © Japanexperterna (CC BY-SA 3.0)／ホーバークラフト「梅園」 © Aixips (CC BY-SA 4.0)／海地獄 © 663highland (CC BY 2.5)／かまど地獄 © ブルーノ・プラス (CC BY-SA 4.0)／さるっこレール © ブルーノ・プラス (CC BY 4.0)／高崎山のサル © Bpcon98 (CC0)／うみたまご © 大分帰省中 (CC BY-SA 3.0)／ラクテンチ・ケーブルカー © Suikotei (CC BY-SA 4.0)／動物園バス © Gordon Cheung from Hong Kong (CC BY 2.0)／金鱗湖 © そらみみ (CC BY-SA 4.0)／由布岳 © Suicasmo (CC BY-SA 4.0)／とり天 © Asturio Cantabrio (CC BY-SA 4.0)／りゅうきゅう © 大分帰省中 (CC BY-SA 4.0)／別府冷麺 © 聖石大戦ぶぅぶぅ (CC BY-SA 4.0)／別府ロープウェイ © Zero_1_k (CC BY-SA 3.0)／鉄輪蒸し湯 © STA3816 (CC BY-SA 3.0)／竹瓦温泉 © 大分帰省中 (CC BY 3.0)／大分空港 © Project Kei (CC BY-SA 4.0)</p>
+  <p class="credits">大分 家族旅行 検討メモ v1 ── 2026年9月12日（土）作成。地図は位置関係の模式図であり、海岸線・縮尺は簡略化してある。金額はすべて推定。</p>
+</footer>
+
+</div>
