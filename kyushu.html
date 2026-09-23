@@ -1,0 +1,1062 @@
+<title>大分以外に行く価値はあるか</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#f1f4f4; --paper-2:#ffffff; --paper-3:#e5ebeb; --paper-4:#dae3e3;
+  --ink:#16181c; --ink-2:#3d474a; --ink-3:#6d7b7e;
+  --line:#ccd8d8; --line-2:#b3c3c3;
+  --accent:#1b7a8c; --accent-deep:#12525e; --accent-wash:#dcebee;
+  --hot:#a63a2b; --hot-wash:#f7e5e2;
+  --ochre:#9a6f24; --ochre-wash:#f4ecd9;
+  --good:#3f6f44; --good-wash:#e2eee3;
+  --sea:#cfe1e5; --sea-2:#bcd6dc; --land:#e9eeec;
+  --shadow:0 1px 2px rgba(22,24,28,.05), 0 6px 20px -12px rgba(22,24,28,.22);
+  --c1:#00809c; --c2:#c08a2a;
+  --serif:"Zen Old Mincho",'Hiragino Mincho ProN','Yu Mincho',serif;
+  --sans:"Zen Kaku Gothic New",'Hiragino Sans','Yu Gothic',system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1416; --paper-2:#161e21; --paper-3:#1e282b; --paper-4:#263236;
+    --ink:#e8eeee; --ink-2:#aebdbf; --ink-3:#7d8f92;
+    --line:#2b373a; --line-2:#3a494d;
+    --accent:#5cbdd0; --accent-deep:#8ed6e4; --accent-wash:#123239;
+    --hot:#e8836f; --hot-wash:#33201c;
+    --ochre:#d6a95d; --ochre-wash:#2d2617;
+    --good:#83bb88; --good-wash:#1a2a1c;
+    --sea:#16323a; --sea-2:#1d414a; --land:#1a2325;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+    --c1:#1b9ab5; --c2:#b3872f; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1416; --paper-2:#161e21; --paper-3:#1e282b; --paper-4:#263236;
+  --ink:#e8eeee; --ink-2:#aebdbf; --ink-3:#7d8f92;
+  --line:#2b373a; --line-2:#3a494d;
+  --accent:#5cbdd0; --accent-deep:#8ed6e4; --accent-wash:#123239;
+  --hot:#e8836f; --hot-wash:#33201c;
+  --ochre:#d6a95d; --ochre-wash:#2d2617;
+  --good:#83bb88; --good-wash:#1a2a1c;
+  --sea:#16323a; --sea-2:#1d414a; --land:#1a2325;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+    --c1:#1b9ab5; --c2:#b3872f; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.85;
+  -webkit-font-smoothing:antialiased; letter-spacing:.01em;
+}
+.wrap{max-width:940px; margin:0 auto; padding-inline:20px; padding-block:0 88px}
+h1,h2,h3,h4{font-family:var(--serif); text-wrap:balance; line-height:1.4; margin:0}
+p{margin:0}
+a{color:var(--accent-deep); text-underline-offset:3px}
+:focus-visible{outline:2.5px solid var(--accent); outline-offset:3px; border-radius:3px}
+img{max-width:100%; display:block}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+.masthead{border-bottom:1px solid var(--line); background:var(--paper-2)}
+.masthead-in{max-width:940px; margin:0 auto; padding:0 20px}
+.hero-img{position:relative; margin:0 -20px; aspect-ratio:21/8; overflow:hidden; background:var(--paper-3)}
+.hero-img img{width:100%; height:100%; object-fit:cover; object-position:50% 62%}
+.hero-img figcaption{
+  position:absolute; right:8px; bottom:6px; font-size:10px; letter-spacing:.03em;
+  color:#fff; background:rgba(0,0,0,.42); padding:2px 7px; border-radius:2px;
+}
+.title-block{padding:30px 0 26px; display:flex; flex-direction:column; gap:14px}
+.eyebrow{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; flex-wrap:wrap; gap:10px 16px; align-items:baseline;
+}
+.eyebrow b{color:var(--hot); font-weight:600}
+h1{font-size:clamp(30px,6.4vw,50px); font-weight:700; letter-spacing:.02em}
+.standfirst{font-size:clamp(15px,2.2vw,17px); color:var(--ink-2); max-width:60ch}
+
+/* ---------- sections ---------- */
+section{margin-top:66px; scroll-margin-top:20px}
+.sec-head{display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--ink); padding-bottom:10px; margin-bottom:26px}
+.sec-num{font-family:var(--serif); font-size:26px; color:var(--accent); font-weight:700; line-height:1}
+.sec-head h2{font-size:clamp(20px,3.6vw,26px); font-weight:700; flex:1}
+.sec-kicker{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--ink-3); text-align:right}
+h3{font-size:17.5px; font-weight:700; margin:34px 0 12px; display:flex; align-items:baseline; gap:9px}
+h3::before{content:""; width:9px; height:9px; background:var(--accent); flex:none; transform:translateY(-1px)}
+h4{font-size:15.5px; font-weight:700; margin:22px 0 8px}
+.stack{display:flex; flex-direction:column; gap:16px}
+
+/* ---------- verdict ---------- */
+.verdict{
+  background:var(--paper-2); border:1px solid var(--line); border-top:5px solid var(--accent);
+  padding:26px 26px 24px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:18px;
+}
+.verdict-lead{font-family:var(--serif); font-size:clamp(19px,3.4vw,25px); font-weight:700; line-height:1.55}
+.verdict-lead em{font-style:normal; color:var(--accent-deep); border-bottom:3px solid var(--accent); padding-bottom:1px}
+.verdict-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(178px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.vcell{background:var(--paper-2); padding:14px 16px; display:flex; flex-direction:column; gap:3px}
+.vcell dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.11em; color:var(--ink-3); text-transform:uppercase}
+.vcell dd{margin:0; font-family:var(--serif); font-size:21px; font-weight:700; line-height:1.3}
+.vcell dd small{font-family:var(--sans); font-size:12px; font-weight:400; color:var(--ink-2); display:block; letter-spacing:0; line-height:1.6; margin-top:2px}
+.vcell .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- generic blocks ---------- */
+.note{
+  border-left:3px solid var(--line-2); padding:2px 0 2px 16px; color:var(--ink-2); font-size:14.5px;
+}
+.note.warn{border-left-color:var(--hot)}
+.note.warn strong{color:var(--hot)}
+.note.ok{border-left-color:var(--good)}
+.callout{background:var(--paper-3); border:1px solid var(--line); padding:18px 20px; display:flex; flex-direction:column; gap:9px}
+.callout.hot{background:var(--hot-wash); border-color:color-mix(in srgb,var(--hot) 34%, transparent)}
+.callout.ochre{background:var(--ochre-wash); border-color:color-mix(in srgb,var(--ochre) 40%, transparent)}
+.callout h4{margin:0; font-size:15px}
+.callout.hot h4{color:var(--hot)}
+.callout.ochre h4{color:var(--ochre)}
+.callout p, .callout li{font-size:14.5px; color:var(--ink-2)}
+.callout strong{color:var(--ink)}
+
+/* ---------- tables ---------- */
+.tbl-scroll{overflow-x:auto; border:1px solid var(--line); background:var(--paper-2)}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:14px}
+caption{caption-side:bottom; text-align:left; font-size:12.5px; color:var(--ink-3); padding:9px 2px 0; line-height:1.7}
+th,td{padding:10px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.7}
+thead th{
+  background:var(--paper-3); font-family:var(--mono); font-size:11px; letter-spacing:.07em;
+  font-weight:600; color:var(--ink-2); text-transform:uppercase; border-bottom:1.5px solid var(--line-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap}
+.nb{white-space:nowrap}
+table.t-route td:first-child{min-width:8.5em}
+table.t-opt td:first-child{min-width:8em}
+tr.pick td{background:var(--ochre-wash)}
+tr.pick td:first-child{box-shadow:inset 3px 0 0 var(--ochre)}
+td strong{font-weight:700}
+.verd{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.05em; padding:2px 7px; border-radius:2px; white-space:nowrap; display:inline-block}
+.verd.no{background:var(--hot-wash); color:var(--hot)}
+.verd.mid{background:var(--paper-4); color:var(--ink-2)}
+.verd.yes{background:var(--good-wash); color:var(--good)}
+.verd.best{background:var(--ochre); color:#fff}
+:root[data-theme="dark"] .verd.best{color:#17120a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verd.best{color:#17120a}}
+
+/* ---------- figures ---------- */
+figure{margin:0}
+.fig{border:1px solid var(--line); background:var(--paper-2); overflow:hidden}
+.fig img{width:100%; aspect-ratio:3/2; object-fit:cover}
+.fig figcaption{padding:10px 13px 11px; font-size:12.5px; color:var(--ink-2); line-height:1.65; border-top:1px solid var(--line)}
+.fig figcaption b{color:var(--ink); font-weight:700; font-size:13.5px; display:block; font-family:var(--serif)}
+.fig figcaption .cred{display:block; margin-top:5px; font-size:10px; color:var(--ink-3); letter-spacing:.02em; font-family:var(--mono)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(248px,1fr)); gap:16px}
+.grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px}
+
+/* ---------- map ---------- */
+.mapbox{border:1px solid var(--line); background:var(--paper-2); padding:6px 6px 0}
+.mapbox svg{width:100%; height:auto; display:block}
+.mapcap{padding:11px 10px 12px; font-size:12.5px; color:var(--ink-2); border-top:1px solid var(--line); margin-top:6px; line-height:1.7}
+.legend{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:8px; font-size:12px; color:var(--ink-2); font-family:var(--mono)}
+.legend span{display:inline-flex; align-items:center; gap:7px}
+.lg-swatch{width:22px; height:0; border-top-width:3px; flex:none}
+
+/* ---------- itinerary rail ---------- */
+.day{border:1px solid var(--line); background:var(--paper-2); box-shadow:var(--shadow)}
+.day-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; padding:15px 20px; background:var(--paper-3); border-bottom:1px solid var(--line)}
+.day-head .d-no{font-family:var(--mono); font-size:11px; letter-spacing:.13em; color:var(--accent-deep); font-weight:600}
+.day-head h4{font-family:var(--serif); font-size:19px; margin:0}
+.day-head .d-sum{font-size:12.5px; color:var(--ink-3); margin-left:auto; font-family:var(--mono)}
+.rail{padding:6px 20px 20px}
+.slot{display:grid; grid-template-columns:64px 1fr; gap:0 18px; position:relative}
+.slot .t{
+  font-family:var(--mono); font-size:12.5px; font-variant-numeric:tabular-nums;
+  color:var(--ink-2); padding-top:15px; text-align:right; white-space:nowrap;
+}
+.slot .b{border-left:2px solid var(--line); padding:14px 0 14px 20px; position:relative}
+.slot:last-child .b{border-left-color:transparent}
+.slot .b::before{
+  content:""; position:absolute; left:-6px; top:20px; width:10px; height:10px;
+  background:var(--paper-2); border:2px solid var(--line-2); border-radius:50%;
+}
+.slot.key .b::before{background:var(--accent); border-color:var(--accent)}
+.slot.onsen .b::before{background:var(--hot); border-color:var(--hot)}
+.slot.move .b::before{background:var(--paper-2); border-color:var(--accent); border-style:dashed}
+.slot .b h5{margin:0 0 3px; font-size:15.5px; font-weight:700; font-family:var(--sans); line-height:1.6}
+.slot .b .who{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--accent-deep); background:var(--accent-wash); padding:1px 6px; border-radius:2px; margin-left:7px; vertical-align:2px; white-space:nowrap; display:inline-block}
+.slot .b .who.hot{color:var(--hot); background:var(--hot-wash)}
+.slot .b p{font-size:14px; color:var(--ink-2); margin-top:3px}
+.slot .b .cost{font-family:var(--mono); font-size:12px; color:var(--ink-3); margin-top:5px; display:block}
+
+/* ---------- family fit ---------- */
+.fitgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(212px,1fr)); gap:14px}
+.fit{border:1px solid var(--line); background:var(--paper-2); padding:17px 18px; display:flex; flex-direction:column; gap:8px}
+.fit .name{font-family:var(--serif); font-size:17px; font-weight:700; display:flex; align-items:baseline; gap:8px}
+.fit .name small{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); font-weight:400; letter-spacing:.04em}
+.fit ul{margin:0; padding-left:17px; font-size:13.5px; color:var(--ink-2); display:flex; flex-direction:column; gap:6px}
+.fit .risk{font-size:12.5px; color:var(--hot); border-top:1px dashed var(--line-2); padding-top:8px; margin-top:auto}
+
+/* ---------- checklist ---------- */
+ol.actions{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line)}
+ol.actions li{background:var(--paper-2); padding:14px 18px; display:grid; grid-template-columns:auto 1fr; gap:4px 15px; align-items:baseline}
+ol.actions .when{font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:#fff; background:var(--ink-2); padding:2px 8px; white-space:nowrap; border-radius:2px}
+ol.actions li.now .when{background:var(--hot)}
+ol.actions .what{font-weight:700; font-size:14.5px}
+ol.actions .why{grid-column:2; font-size:13.5px; color:var(--ink-2)}
+ul.plain{margin:0; padding-left:19px; display:flex; flex-direction:column; gap:7px; font-size:14.5px; color:var(--ink-2)}
+ul.plain strong{color:var(--ink)}
+ul.plain li::marker{color:var(--accent)}
+
+/* ---------- sources ---------- */
+.src{font-size:12.5px; color:var(--ink-2); line-height:1.85}
+.src ol{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:5px}
+.src li::marker{font-family:var(--mono); color:var(--ink-3); font-size:11px}
+.credits{font-size:11px; color:var(--ink-3); line-height:1.8; font-family:var(--mono)}
+footer{margin-top:60px; border-top:1px solid var(--line); padding-top:22px; display:flex; flex-direction:column; gap:12px}
+
+@media (max-width:560px){
+  .slot{grid-template-columns:52px 1fr; gap:0 12px}
+  .slot .b{padding-left:15px}
+  .day-head .d-sum{margin-left:0; width:100%}
+  .hero-img{aspect-ratio:16/9}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+/* ================= この別冊で足した部品 ================= */
+.mosaic{display:grid; grid-template-columns:repeat(5,1fr); gap:3px; margin:0 -20px; background:var(--paper-2)}
+.mosaic figure{position:relative; aspect-ratio:3/4; overflow:hidden; background:var(--paper-3)}
+.mosaic img{width:100%; height:100%; object-fit:cover}
+.mosaic figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:26px 10px 9px;
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62));
+  color:#fff; font-family:var(--serif); font-weight:700; font-size:clamp(14px,2.4vw,19px); line-height:1.3;
+}
+.mosaic figcaption small{display:block; font-family:var(--mono); font-weight:400; font-size:10px; letter-spacing:.08em; opacity:.88; margin-top:2px}
+@media (max-width:560px){
+  .mosaic{grid-template-columns:repeat(6,1fr)}
+  .mosaic figure{aspect-ratio:4/5}
+  .mosaic figure:nth-child(-n+3){grid-column:span 2}
+  .mosaic figure:nth-child(n+4){grid-column:span 3; aspect-ratio:16/10}
+}
+
+/* 状況チップ */
+.chip{display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.05em; padding:3px 9px; border-radius:2px; white-space:nowrap; line-height:1.5}
+.chip::before{content:""; width:7px; height:7px; border-radius:50%; background:currentColor; flex:none}
+.chip.pre{background:var(--ochre-wash); color:var(--ochre)}
+.chip.out{background:var(--hot-wash); color:var(--hot)}
+.chip.open{background:var(--good-wash); color:var(--good)}
+.chip.home{background:var(--accent-wash); color:var(--accent-deep)}
+
+/* 判定の記号 */
+.mark{display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; font-family:var(--serif); font-weight:700; font-size:17px; line-height:1; flex:none}
+.mark.m-a{background:var(--good); color:#fff}
+.mark.m-b{background:var(--good-wash); color:var(--good); box-shadow:inset 0 0 0 1.5px var(--good)}
+.mark.m-c{background:var(--paper-4); color:var(--ink-2)}
+.mark.m-d{background:var(--hot-wash); color:var(--hot)}
+:root[data-theme="dark"] .mark.m-a{color:#0f1416}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mark.m-a{color:#0f1416}}
+td .mark{width:26px; height:26px; font-size:15px; vertical-align:middle}
+.mark-row{display:flex; align-items:center; gap:9px}
+
+/* 県の見出し */
+.pref-head{display:grid; grid-template-columns:1.25fr 1fr; gap:0; border:1px solid var(--line); background:var(--paper-2); box-shadow:var(--shadow)}
+.pref-head .ph-img{position:relative; min-height:260px; background:var(--paper-3)}
+.pref-head .ph-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.pref-head .ph-img figcaption{position:absolute; right:8px; bottom:6px; font-size:10px; color:#fff; background:rgba(0,0,0,.45); padding:2px 7px; border-radius:2px; font-family:var(--mono)}
+.pref-facts{padding:18px 20px 16px; display:flex; flex-direction:column; gap:12px}
+.pref-facts .pf-top{display:flex; flex-wrap:wrap; align-items:center; gap:8px}
+.pref-facts dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:6px 14px; font-size:13.5px}
+.pref-facts dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; color:var(--ink-3); padding-top:3px; white-space:nowrap}
+.pref-facts dd{margin:0; color:var(--ink); line-height:1.6}
+.pref-facts dd b{font-family:var(--mono); font-variant-numeric:tabular-nums}
+.pref-facts .pf-say{font-family:var(--serif); font-size:16px; font-weight:700; line-height:1.6; border-top:1px solid var(--line); padding-top:11px; margin-top:auto}
+@media (max-width:700px){
+  .pref-head{grid-template-columns:1fr}
+  .pref-head .ph-img{min-height:0; aspect-ratio:16/9}
+}
+
+/* プラン（家族／父1人）*/
+.plan{border:1px solid var(--line); background:var(--paper-2); display:flex; flex-direction:column}
+.plan-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; padding:14px 18px; background:var(--paper-3); border-bottom:1px solid var(--line)}
+.plan-head .who-tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:var(--accent-deep); font-weight:600}
+.plan-head.solo .who-tag{color:var(--hot)}
+.plan-head h4{margin:0; font-size:17px}
+.plan-head .span{margin-left:auto; font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+.plan-photos{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:3px; background:var(--paper-2)}
+.plan-photos figure{position:relative}
+.plan-photos img{width:100%; aspect-ratio:3/2; object-fit:cover}
+.plan-photos figcaption{padding:7px 12px 8px; font-size:12px; color:var(--ink-2); line-height:1.55}
+.plan-photos figcaption b{color:var(--ink); font-family:var(--serif); font-size:13.5px}
+.plan-photos figcaption .cred{display:block; font-family:var(--mono); font-size:9.5px; color:var(--ink-3); margin-top:2px}
+.plan-body{padding:14px 18px 18px; display:flex; flex-direction:column; gap:14px}
+.steps{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0}
+.steps li{display:grid; grid-template-columns:4.6em 1fr; gap:0 14px; padding:8px 0; border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:none}
+.steps .when{font-family:var(--mono); font-size:11.5px; color:var(--accent-deep); padding-top:2px; font-weight:600; white-space:nowrap}
+.plan-head.solo + .plan-photos + .plan-body .steps .when, .plan.solo .steps .when{color:var(--hot)}
+.steps .what{font-size:14px; color:var(--ink-2); line-height:1.7}
+.steps .what b{color:var(--ink)}
+.steps .what .fee{display:block; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); margin-top:2px}
+
+/* 金額表（小） */
+table.money{min-width:520px; font-size:13.5px}
+table.money td.num b{font-size:14.5px}
+table.money td.save{color:var(--good); font-weight:600}
+table.money tr.sum td{background:var(--paper-3); font-weight:700}
+.two-col{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr)); gap:16px; align-items:start}
+
+/* 判定のまとめ行 */
+.judge{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.judge > div{background:var(--paper-2); padding:14px 16px; display:grid; grid-template-columns:auto 1fr; gap:4px 12px; align-items:start}
+.judge .j-lab{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--ink-3); grid-column:2}
+.judge .j-txt{grid-column:2; font-size:14px; color:var(--ink-2); line-height:1.7}
+.judge .j-txt b{color:var(--ink)}
+.judge .mark{grid-row:1 / span 2}
+
+/* 時間軸チャート */
+.chart{border:1px solid var(--line); background:var(--paper-2); padding:14px 12px 6px}
+.chart-scroll{overflow-x:auto}
+.chart svg{display:block; width:100%; min-width:640px; height:auto}
+.chart svg text{font-family:var(--sans)}
+.chart .c-grid{stroke:var(--line); stroke-width:1}
+.chart .c-axis{fill:var(--ink-3); font-family:var(--mono); font-size:11px}
+.chart .c-pref{fill:var(--ink); font-size:13.5px; font-weight:700}
+.chart .c-note{fill:var(--ink-2); font-size:11.5px}
+.chart .c-bar{fill:var(--c1)}
+.chart .c-net{fill:var(--c1)}
+.chart .c-disc{fill:var(--c2)}
+.chart .c-val{fill:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:600}
+.chart .c-sale{fill:var(--c2); stroke:var(--paper-2); stroke-width:2}
+.chart .c-sold{fill:var(--hot); stroke:var(--paper-2); stroke-width:2}
+.chart .c-today{stroke:var(--hot); stroke-width:1.5}
+.chart .c-trip{fill:var(--ink); opacity:.10}
+.chart .c-trip-l{fill:var(--ink-2); font-family:var(--mono); font-size:10.5px}
+.chart .c-today-l{fill:var(--hot); font-family:var(--mono); font-size:11px; font-weight:600}
+.chart .hit:hover .c-bar, .chart .hit:focus .c-bar{opacity:.85}
+.chart-legend{display:flex; flex-wrap:wrap; gap:6px 18px; padding:10px 6px 8px; font-size:12px; color:var(--ink-2); font-family:var(--mono)}
+.chart-legend span{display:inline-flex; align-items:center; gap:7px}
+.chart-legend i{display:block; flex:none}
+.lg-bar{width:22px; height:9px; border-radius:0 3px 3px 0; background:var(--c1)}
+.lg-dot{width:10px; height:10px; border-radius:50%}
+
+/* 大きめの数字行 */
+.big-num{font-family:var(--mono); font-variant-numeric:tabular-nums; font-weight:600}
+.pill-row{display:flex; flex-wrap:wrap; gap:8px}
+
+/* 表の幅と折り返し */
+.tbl-scroll td:first-child{white-space:nowrap}
+table.t-rank{min-width:720px}
+table.t-rank td:nth-child(2){min-width:11em}
+table.t-rank .mark-row{min-width:9.5em}
+table.t-wide{min-width:820px}
+table.t-wide td:nth-child(4){min-width:14em}
+.plan-photos figure:only-child img{aspect-ratio:21/9}
+</style>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="mosaic">
+      <figure><img src="assets/photos/kyushu/fk_yufuinnomori.jpg" alt="緑色の特急ゆふいんの森が線路を走る"><figcaption>福岡<small>50% ・ 9/24〜</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_mifuneyama.jpg" alt="御船山楽園の庭園と、背後にそびえる御船山の岩壁"><figcaption>佐賀<small>50% ・ 9/24〜</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/ng_huistenbosch.jpg" alt="ハウステンボスの風車と運河"><figcaption>長崎<small>50% ・ 9/28 直販</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/km_amakusa_dolphin.jpg" alt="船のすぐ横を泳ぐ天草の野生のイルカの群れ"><figcaption>熊本<small>60% ・ 直販 拡大中</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/kg_sakurajima.jpg" alt="錦江湾越しに見る桜島"><figcaption>鹿児島<small>60% ・ 10月中旬〜</small></figcaption></figure>
+    </div>
+    <div class="title-block">
+      <div class="eyebrow">
+        <span>検討メモ 別冊</span><span>9月23日（水・祝）作成</span>
+        <b>福岡・佐賀 9/24（木）正午 → 大分 9/25（金）12:00</b>
+      </div>
+      <h1>大分以外に行く価値はあるか</h1>
+      <p class="standfirst">妻の希望は湯布院なので、家族旅行の本命は大分のまま。そのうえで、福岡・佐賀・長崎・熊本・鹿児島に<strong>家族で</strong>、あるいは<strong>父1人で</strong>行く価値があるかを、中身と割引額の両方から確かめた。金額はすべて推定。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ══════════ Ⅰ ══════════ -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">Ⅰ</span><h2>要約</h2><span class="sec-kicker">結論</span></div>
+
+  <div class="verdict">
+    <p class="verdict-lead">家族で、大分の<em>代わりになる県はない</em>。本命は本編v3の形（杉乃井1泊＋湯布院・夢想園1泊）のまま。ほかの県で意味があるのは、<strong>福岡</strong>（9/25に大分が取れなかったときの受け皿）と、<strong>鹿児島</strong>（冬の2回目）。父1人なら<strong>熊本</strong>（湯らっくす＋黒川温泉、60%引き）が最有力。</p>
+    <dl class="verdict-grid">
+      <div class="vcell"><dt>家族 ── 福岡は受け皿</dt><dd class="num">▲5.5万<small>福岡1泊＋湯布院1泊（案C）。本編（▲6.0万）とほぼ同じ割引で、別府の代わりにゆふいんの森と水族館。福岡の予算は大分の約2倍</small></dd></div>
+      <div class="vcell"><dt>家族 ── 冬の2回目</dt><dd class="num">▲4.2万<small>鹿児島2泊3日（1〜2月）。60%引きで2027年2月末まで。7県で唯一、年明けも割引が続く</small></dd></div>
+      <div class="vcell"><dt>父1人 ── 熊本</dt><dd class="num">▲1.8万<small>1泊2日の総額 約7.7万 → 約5.9万。熊本は予算が7県最大で、宿への直接予約がこれから増える</small></dd></div>
+      <div class="vcell"><dt>訂正 ── 大分の割引</dt><dd class="num">11万→6万<small>本編の「楽パックで約11万円引き」は、先行県のクーポンの形からみて我が家に合わない可能性が高い。宿泊のみで約6万円（下の囲み）</small></dd></div>
+    </dl>
+
+    <div class="stack" style="gap:10px">
+      <h4 style="margin:4px 0 0">県別の判定</h4>
+      <div class="tbl-scroll">
+        <table class="t-rank">
+          <thead><tr><th>県</th><th>9/23 時点</th><th>家族で</th><th>父1人で</th><th class="num">家族の割引</th><th class="num">1人の割引</th></tr></thead>
+          <tbody>
+            <tr><td><strong>福岡</strong></td><td><span class="chip pre">販売前</span> 9/24 正午ごろ</td><td><div class="mark-row"><span class="mark m-b" aria-label="◯">◯</span>大分の受け皿・別ルート</div></td><td><div class="mark-row"><span class="mark m-d" aria-label="✕">✕</span>3月に行く</div></td><td class="num">▲2.0万<br><small>1泊</small></td><td class="num">▲0.7万</td></tr>
+            <tr><td><strong>佐賀</strong></td><td><span class="chip pre">販売前</span> 9/24 正午</td><td><div class="mark-row"><span class="mark m-d" aria-label="✕">✕</span>車なしでは散らばる</div></td><td><div class="mark-row"><span class="mark m-c" aria-label="△">△</span>中身は最高。3月に行く</div></td><td class="num">▲2.0万<br><small>1泊</small></td><td class="num">▲1.5万</td></tr>
+            <tr><td><strong>長崎</strong></td><td><span class="chip out">第1弾完売</span> 9/28 宿の直販</td><td><div class="mark-row"><span class="mark m-c" aria-label="△">△</span>湯布院と両立しない</div></td><td><div class="mark-row"><span class="mark m-c" aria-label="△">△</span></div></td><td class="num">▲2.5万<br><small>1泊</small></td><td class="num">▲1.3万</td></tr>
+            <tr><td><strong>熊本</strong></td><td><span class="chip open">直販 拡大中</span> 予算は7県最大</td><td><div class="mark-row"><span class="mark m-c" aria-label="△">△</span>車があれば◯</div></td><td><div class="mark-row"><span class="mark m-a" aria-label="◎">◎</span>最有力</div></td><td class="num">▲4.8万<br><small>2泊</small></td><td class="num">▲1.8万</td></tr>
+            <tr><td><strong>鹿児島</strong></td><td><span class="chip pre">販売前</span> 10月中旬見込み</td><td><div class="mark-row"><span class="mark m-b" aria-label="◯">◯</span>冬の2回目</div></td><td><div class="mark-row"><span class="mark m-b" aria-label="◯">◯</span></div></td><td class="num">▲4.2万<br><small>2泊</small></td><td class="num">▲1.3万</td></tr>
+            <tr><td><strong>宮崎</strong></td><td><span class="chip pre">販売前</span> 9/25 10:00</td><td><div class="mark-row"><span class="mark m-c" aria-label="△">△</span></div></td><td><div class="mark-row"><span class="mark m-c" aria-label="△">△</span></div></td><td class="num">─</td><td class="num">─</td></tr>
+          </tbody>
+          <caption>大分は本命のため表に含めない。◎ 行く価値が高い ／ ◯ 条件つきで価値がある ／ △ 行ってもよいが優先度は低い ／ ✕ 今回は不要。割引額は各章のモデル行程で試算した推定値。</caption>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout hot" style="margin-top:22px" id="fix">
+    <h4>前提の訂正が3つあります（9/22版の大分メモを含む）</h4>
+    <ul class="plain">
+      <li><strong>① 熊本・長崎は「終わって」いない。</strong>9/15に売り切れたのは、楽天・じゃらんに割り当てられた最初の枠だけでした。熊本は県の担当者が「予算はまだまだあります」と説明し、宿への直接予約を約300施設から約1,100施設へ順次広げる予定です。長崎は<strong>9/28（月）10:00から宿の直接予約</strong>、9/30から旅行会社と他の予約サイトが始まります。</li>
+      <li><strong>② 宿泊のみの上限は「1人1泊2万円」ではなく「1人1旅行2万円」。</strong>楽天の2泊用クーポンは、上限が1人1泊1万円です。さらに楽天の交通付き（楽パック）2泊以上のクーポンは、<strong>「1名3万円」「2名6万円」の定額型しかなく、枚数も県あたり数十枚</strong>（熊本80枚・長崎60枚・佐賀25枚）でした。9/22版で私が「楽天の国内ツアーなら1人3万円×4人＝12万円」と書いたのは誤りです。申し訳ありません。本日のv3（楽パックで確定する案）にもこの前提が残っていたため、<a href="https://claude.ai/artifact/KF46TrBNtYdfauiPYRSYn1">大分メモ</a>をv3.1として直しました。有料3名（大人2＋4歳）の我が家に合うクーポンがあるかは、9/25の12時直前に分かります。</li>
+      <li><strong>③ 子どもは予約の人数に入れれば「1名」。</strong>福岡・佐賀・長崎・熊本の各県が明記しています。じゃらんでは予約の宿泊人数に入れることが条件です。</li>
+    </ul>
+    <p><strong>9/25の動き方が変わります。</strong>楽パックで確定するのは、3名以上で使えるクーポンがある場合だけ。なければ最初から「宿泊のみ」で夢想園と杉乃井を1件ずつ取り、航空券は別に買います。どちらでも割引は約6万円で、ほとんど変わりません（第Ⅹ章）。</p>
+  </div>
+</section>
+
+<!-- ══════════ Ⅱ ══════════ -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">Ⅱ</span><h2>7県はいまどうなっているか</h2><span class="sec-kicker">9/23 時点</span></div>
+
+  <h3>(1) 割引の効く期間と販売開始日</h3>
+  <figure class="chart">
+    <div class="chart-scroll"><svg viewBox="0 0 900 424" role="img" aria-labelledby="chart-t chart-d">
+<title id="chart-t">九州7県の応援割 対象宿泊期間と販売開始日</title>
+<desc id="chart-d">横軸は2026年9月中旬から2027年3月末。各県の帯が割引の効く宿泊期間、丸印が販売開始日、赤い丸は楽天・じゃらんの最初の枠が完売した日。福岡は12月15日まで、鹿児島だけが2027年2月末まで続く。大分の候補日11月20〜22日と、三十路会の3月20〜22日を網掛けで示す。</desc>
+<line class="c-grid" x1="183.1" y1="44" x2="183.1" y2="384"/>
+<text class="c-axis" x="187.1" y="38">10月</text>
+<line class="c-grid" x1="301.8" y1="44" x2="301.8" y2="384"/>
+<text class="c-axis" x="305.8" y="38">11月</text>
+<line class="c-grid" x1="416.6" y1="44" x2="416.6" y2="384"/>
+<text class="c-axis" x="420.6" y="38">12月</text>
+<line class="c-grid" x1="535.3" y1="44" x2="535.3" y2="384"/>
+<text class="c-axis" x="539.3" y="38">2027年1月</text>
+<line class="c-grid" x1="654.0" y1="44" x2="654.0" y2="384"/>
+<text class="c-axis" x="658.0" y="38">2月</text>
+<line class="c-grid" x1="761.2" y1="44" x2="761.2" y2="384"/>
+<text class="c-axis" x="765.2" y="38">3月</text>
+<rect class="c-trip" x="374.5" y="50" width="11.5" height="328"/>
+<text class="c-trip-l" x="380.2" y="400" text-anchor="middle">大分候補 11/20–22</text>
+<rect class="c-trip" x="833.9" y="50" width="11.5" height="328"/>
+<text class="c-trip-l" x="845.4" y="400" text-anchor="end">三十路会 3/20–22（対象外）</text>
+<line class="c-today" x1="152.5" y1="44" x2="152.5" y2="384"/>
+<text class="c-today-l" x="148.5" y="400" text-anchor="end">今日 9/23</text>
+<g class="hit" tabindex="0">
+<title>熊本（60%）宿泊 10/1–12/25 ／ OTA 9/15 30分以内に上限 ／ 施設直販を順次拡大</title>
+<text class="c-pref" x="10" y="80.0">熊本</text>
+<text class="c-axis" x="104" y="80.0" text-anchor="end">60%</text>
+<path class="c-bar" d="M183.1,69.0 H504.5 a4,4 0 0 1 4,4 V77.0 a4,4 0 0 1 -4,4 H183.1 Z"/>
+<text class="c-note" x="514.5" y="79.0">〜12/25</text>
+<circle class="c-sold" cx="121.8" cy="75.0" r="5"/>
+<circle class="c-sale" cx="133.3" cy="75.0" r="5"/>
+<text class="c-note" x="117.8" y="95.0">OTA 9/15 30分以内に上限</text>
+</g>
+<g class="hit" tabindex="0">
+<title>長崎（50%）宿泊 10/1–12/25 ／ OTA第1弾 完売 ／ 施設直販 9/28 ／ 旅行会社 9/30〜</title>
+<text class="c-pref" x="10" y="126.0">長崎</text>
+<text class="c-axis" x="104" y="126.0" text-anchor="end">50%</text>
+<path class="c-bar" d="M183.1,115.0 H504.5 a4,4 0 0 1 4,4 V123.0 a4,4 0 0 1 -4,4 H183.1 Z"/>
+<text class="c-note" x="514.5" y="125.0">〜12/25</text>
+<circle class="c-sold" cx="121.8" cy="121.0" r="5"/>
+<circle class="c-sale" cx="171.6" cy="121.0" r="5"/>
+<circle class="c-sale" cx="179.3" cy="121.0" r="5"/>
+<text class="c-note" x="117.8" y="141.0">OTA第1弾 完売</text>
+</g>
+<g class="hit" tabindex="0">
+<title>福岡（50%）宿泊 10/1–12/15 ／ 9/24 正午ごろ</title>
+<text class="c-pref" x="10" y="172.0">福岡</text>
+<text class="c-axis" x="104" y="172.0" text-anchor="end">50%</text>
+<path class="c-bar" d="M183.1,161.0 H466.2 a4,4 0 0 1 4,4 V169.0 a4,4 0 0 1 -4,4 H183.1 Z"/>
+<text class="c-note" x="476.2" y="171.0">〜12/15</text>
+<circle class="c-sale" cx="156.3" cy="167.0" r="5"/>
+<text class="c-note" x="152.3" y="187.0">9/24 正午ごろ</text>
+</g>
+<g class="hit" tabindex="0">
+<title>佐賀（50%）宿泊 10/1–12/25 ／ OTA 9/24 正午 ／ 旅行会社 10/2</title>
+<text class="c-pref" x="10" y="218.0">佐賀</text>
+<text class="c-axis" x="104" y="218.0" text-anchor="end">50%</text>
+<path class="c-bar" d="M183.1,207.0 H504.5 a4,4 0 0 1 4,4 V215.0 a4,4 0 0 1 -4,4 H183.1 Z"/>
+<text class="c-note" x="514.5" y="217.0">〜12/25</text>
+<circle class="c-sale" cx="156.3" cy="213.0" r="5"/>
+<circle class="c-sale" cx="186.9" cy="213.0" r="5"/>
+<text class="c-note" x="152.3" y="233.0">OTA 9/24 正午</text>
+</g>
+<g class="hit" tabindex="0">
+<title>大分（50%）宿泊 10/1–12/25 ／ OTA 9/25 12:00 ／ 旅行会社 10/9 ／ 直販 10/16</title>
+<text class="c-pref" x="10" y="264.0">大分</text>
+<text class="c-axis" x="104" y="264.0" text-anchor="end">50%</text>
+<path class="c-bar" d="M183.1,253.0 H504.5 a4,4 0 0 1 4,4 V261.0 a4,4 0 0 1 -4,4 H183.1 Z"/>
+<text class="c-note" x="514.5" y="263.0">〜12/25</text>
+<circle class="c-sale" cx="160.1" cy="259.0" r="5"/>
+<circle class="c-sale" cx="213.7" cy="259.0" r="5"/>
+<circle class="c-sale" cx="240.5" cy="259.0" r="5"/>
+<text class="c-note" x="156.1" y="279.0">OTA 9/25 12:00</text>
+</g>
+<g class="hit" tabindex="0">
+<title>宮崎（50%）宿泊 10/1–12/25 ／ OTA 9/25 10:00 ／ 直販・旅行会社 9/28〜</title>
+<text class="c-pref" x="10" y="310.0">宮崎</text>
+<text class="c-axis" x="104" y="310.0" text-anchor="end">50%</text>
+<path class="c-bar" d="M183.1,299.0 H504.5 a4,4 0 0 1 4,4 V307.0 a4,4 0 0 1 -4,4 H183.1 Z"/>
+<text class="c-note" x="514.5" y="309.0">〜12/25</text>
+<circle class="c-sale" cx="160.1" cy="305.0" r="5"/>
+<circle class="c-sale" cx="171.6" cy="305.0" r="5"/>
+<text class="c-note" x="156.1" y="325.0">OTA 9/25 10:00</text>
+</g>
+<g class="hit" tabindex="0">
+<title>鹿児島（60%）宿泊 10/15–12/25・1/4–2027/2/28 ／ 10月中旬（見込み）</title>
+<text class="c-pref" x="10" y="356.0">鹿児島</text>
+<text class="c-axis" x="104" y="356.0" text-anchor="end">60%</text>
+<path class="c-bar" d="M236.7,345.0 H504.5 a4,4 0 0 1 4,4 V353.0 a4,4 0 0 1 -4,4 H236.7 Z"/>
+<path class="c-bar" d="M546.8,345.0 H753.3 a4,4 0 0 1 4,4 V353.0 a4,4 0 0 1 -4,4 H546.8 Z"/>
+<text class="c-note" x="763.3" y="355.0">〜2027/2/28</text>
+<circle cx="236.7" cy="351.0" r="5" fill="var(--paper-2)" stroke="var(--c2)" stroke-width="2"/>
+<text class="c-note" x="232.7" y="371.0">10月中旬（見込み）</text>
+</g>
+</svg></div>
+    <div class="chart-legend">
+      <span><i class="lg-bar"></i>割引の効く宿泊期間</span>
+      <span><i class="lg-dot" style="background:var(--c2)"></i>販売開始</span>
+      <span><i class="lg-dot" style="background:var(--hot)"></i>楽天・じゃらんの最初の枠が完売</span>
+      <span><i class="lg-dot" style="border:2px solid var(--c2); background:var(--paper-2)"></i>見込み</span>
+    </div>
+  </figure>
+  <p class="note" style="margin-top:14px">読み取ってほしいのは2点です。<strong>福岡は12/15で終わり</strong>、7県でいちばん短い（11/20泊は間に合う）。<strong>鹿児島だけが2027年2月末まで続く</strong>（12/26〜1/3は除く）。3月の三十路会は、どの県の期間にも入りません。</p>
+
+  <h3>(2) 県ごとの中身</h3>
+  <div class="tbl-scroll">
+    <table class="t-wide">
+      <thead><tr><th>県</th><th>割引率</th><th>対象宿泊</th><th>販売の入口</th><th class="num">予算</th><th>いまの状態</th></tr></thead>
+      <tbody>
+        <tr><td><strong>熊本</strong></td><td class="num">60%</td><td>10/1–12/25</td><td>OTA 9/15〜／宿の直販は準備ができた宿から順次／旅行会社は予定</td><td class="num">68.7億円</td><td>楽天・じゃらんは開始30分以内に上限。キャンセル分の再販売も約5分で終了。県の担当者は「まだまだあります」、OTAへの配分は「ほんの一部」</td></tr>
+        <tr><td><strong>長崎</strong></td><td class="num">50%</td><td>10/1–12/25</td><td>OTA第1弾 9/15（12/1チェックアウト分まで）／<strong>宿の直販 9/28 10:00</strong>／旅行会社・他OTA 9/30〜／12月分のOTAは11月中旬〜</td><td class="num">10.0億円</td><td>OTA第1弾は10〜20分で完売。県の担当者は「予約が取れない方は出てくる」</td></tr>
+        <tr><td><strong>福岡</strong></td><td class="num">50%</td><td>10/1–<strong>12/15</strong></td><td>9/24 正午ごろ〜。OTA・県内旅行会社・宿の直販（現地払いのみ）。準備が整った事業者から順次</td><td class="num">19.6億円</td><td>9/23時点でOTAのバナーは未公開。じゃらんの福岡欄は「準備中」</td></tr>
+        <tr><td><strong>佐賀</strong></td><td class="num">50%</td><td>10/1–12/25</td><td>OTA 9/24 正午／旅行会社 10/2／宿の直販 10月上旬</td><td class="num">2.3億円</td><td>7県で最少。楽天のクーポンは全部で740枚</td></tr>
+        <tr><td><strong>大分</strong></td><td class="num">50%</td><td>10/1–12/25</td><td>OTA 9/25 12:00（楽天・じゃらん・一休・Yahoo!）／旅行会社 10/9／宿の直販 10/16</td><td class="num">10.8億円</td><td>未開始。10月前半の宿泊を割引で取れるのはOTAだけ</td></tr>
+        <tr><td><strong>宮崎</strong></td><td class="num">50%</td><td>10/1–12/25</td><td>OTA <strong>9/25 10:00</strong>（大分より2時間早い）／宿・旅行会社 9/28〜</td><td class="num">7.9億円</td><td>未開始。1月からは県独自の「ひなタビ」第2期（詳細は11月以降）</td></tr>
+        <tr><td><strong>鹿児島</strong></td><td class="num">60%</td><td>10月中旬–<strong>2027/2/28</strong><br><small>12/26–1/3は除く</small></td><td>10月中旬の見込み。宿の直販・県内旅行会社・OTA（楽天・じゃらん・Yahoo!・一休）</td><td class="num">30.2億円</td><td>開始日の正式発表は10月上旬以降。予算は10/9の県議会で採決の見通し</td></tr>
+      </tbody>
+      <caption>全県共通：同じ人が何度でも、複数の県で使える（福岡・長崎・熊本・大分は「利用回数の制限なし」と明記）。宿泊地が2県以上の「周遊型」は上限3.5万円だが、楽天は対象外、じゃらんは宿泊単体のみで、扱う旅行会社は確認できなかった。九州の外で1泊でもすると全体が対象外。</caption>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════ Ⅲ ══════════ -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">Ⅲ</span><h2>割引はいくらになるのか</h2><span class="sec-kicker">計算のルール</span></div>
+
+  <h3>(1) 式はひとつだけ</h3>
+  <div class="callout">
+    <p style="font-family:var(--serif); font-size:17px; color:var(--ink); line-height:1.7"><strong>割引額 ＝ 宿泊代 × 50%（熊本・鹿児島は60%）</strong>。ただし<strong>1予約あたり「2万円 × 人数」</strong>が上限。</p>
+    <p>航空券は割引されない前提で考える。交通付きのクーポンは定額で枚数が数十枚しかなく、当てにできないため。</p>
+  </div>
+
+  <h3>(2) 家族4人と1人で、効き方が違う</h3>
+  <div class="two-col">
+    <div class="fit">
+      <div class="name">家族4人 <small>上限 8万円／1予約</small></div>
+      <ul>
+        <li>上限にはまず届かない。1泊16万円の宿でようやく8万円に当たる</li>
+        <li>だから<strong>宿代の半分（熊本・鹿児島は6割）がそのまま引かれる</strong>と考えてよい</li>
+        <li>1泊ずつ別々に予約しても、2泊まとめても、割引額はほぼ変わらない</li>
+      </ul>
+      <p class="risk">ただし航空券（大人2＋4歳で往復6〜9万円）には効かないので、総額に対しては1〜2割台になる。</p>
+    </div>
+    <div class="fit">
+      <div class="name">父1人 <small>上限 2万円／1予約</small></div>
+      <ul>
+        <li>50%の県では宿代4万円、60%の県では約3.3万円を超えると上限に当たる</li>
+        <li>1泊2〜3万円の宿なら、割引は<strong>1〜1.8万円</strong></li>
+        <li>楽天の1泊用クーポンなら上限2万円。2泊用は1泊1万円まで</li>
+      </ul>
+      <p class="risk">往復の航空券（2〜3万円）がそのまま残るので、1人旅の割引は総額の2割前後にとどまる。</p>
+    </div>
+  </div>
+
+  <h3>(3) 総額のうち、割引はどれくらいか（家族4人）</h3>
+  <figure class="chart">
+    <div class="chart-scroll"><svg viewBox="0 0 900 344" role="img" aria-labelledby="bars-t bars-d">
+<title id="bars-t">家族4人の旅行総額と、そのうち応援割で引かれる額（推定）</title>
+<desc id="bars-d">7つの案の総額（宿・航空券・現地費）を横棒で示し、右端の色違いの部分が割引額。割引は総額の9〜23%で、最大でも約6万円。</desc>
+<line class="c-grid" x1="250.0" y1="26" x2="250.0" y2="318"/>
+<text class="c-axis" x="250.0" y="336" text-anchor="middle">0万</text>
+<line class="c-grid" x1="346.2" y1="26" x2="346.2" y2="318"/>
+<text class="c-axis" x="346.2" y="336" text-anchor="middle">5万</text>
+<line class="c-grid" x1="442.3" y1="26" x2="442.3" y2="318"/>
+<text class="c-axis" x="442.3" y="336" text-anchor="middle">10万</text>
+<line class="c-grid" x1="538.5" y1="26" x2="538.5" y2="318"/>
+<text class="c-axis" x="538.5" y="336" text-anchor="middle">15万</text>
+<line class="c-grid" x1="634.6" y1="26" x2="634.6" y2="318"/>
+<text class="c-axis" x="634.6" y="336" text-anchor="middle">20万</text>
+<line class="c-grid" x1="730.8" y1="26" x2="730.8" y2="318"/>
+<text class="c-axis" x="730.8" y="336" text-anchor="middle">25万</text>
+<g class="hit" tabindex="0"><title>大分 杉乃井1泊＋夢想園1泊：総額 約25.8万円 → 割引 約6.0万円（23%）→ 負担 約19.8万円</title>
+<text class="c-pref" x="0" y="50.0" style="font-size:13px">大分 杉乃井1泊＋夢想園1泊</text>
+<text class="c-axis" x="0" y="65.0">本編v3.1・宿泊のみで取った場合</text>
+<rect class="c-net" x="250.0" y="41.0" width="378.8" height="18"/>
+<path class="c-disc" d="M630.8,41.0 H741.2 a4,4 0 0 1 4,4 V55.0 a4,4 0 0 1 -4,4 H630.8 Z"/>
+<text class="c-val" x="753.2" y="55.0">▲6.0万 <tspan class="c-axis">（23%）</tspan></text>
+</g>
+<g class="hit" tabindex="0"><title>福岡1泊＋湯布院1泊：総額 約25.6万円 → 割引 約5.5万円（21%）→ 負担 約20.1万円</title>
+<text class="c-pref" x="0" y="90.0" style="font-size:13px">福岡1泊＋湯布院1泊</text>
+<text class="c-axis" x="0" y="105.0">案C・ゆふいんの森で移動</text>
+<rect class="c-net" x="250.0" y="81.0" width="385.5" height="18"/>
+<path class="c-disc" d="M637.5,81.0 H738.3 a4,4 0 0 1 4,4 V95.0 a4,4 0 0 1 -4,4 H637.5 Z"/>
+<text class="c-val" x="750.3" y="95.0">▲5.5万 <tspan class="c-axis">（21%）</tspan></text>
+</g>
+<g class="hit" tabindex="0"><title>熊本 天草 2泊3日：総額 約24.0万円 → 割引 約4.8万円（20%）→ 負担 約19.2万円</title>
+<text class="c-pref" x="0" y="130.0" style="font-size:13px">熊本 天草 2泊3日</text>
+<text class="c-axis" x="0" y="145.0">レンタカー</text>
+<rect class="c-net" x="250.0" y="121.0" width="368.2" height="18"/>
+<path class="c-disc" d="M620.2,121.0 H707.5 a4,4 0 0 1 4,4 V135.0 a4,4 0 0 1 -4,4 H620.2 Z"/>
+<text class="c-val" x="719.5" y="135.0">▲4.8万 <tspan class="c-axis">（20%）</tspan></text>
+</g>
+<g class="hit" tabindex="0"><title>鹿児島 冬 2泊3日：総額 約18.0万円 → 割引 約4.2万円（23%）→ 負担 約13.8万円</title>
+<text class="c-pref" x="0" y="170.0" style="font-size:13px">鹿児島 冬 2泊3日</text>
+<text class="c-axis" x="0" y="185.0">1〜2月・60%</text>
+<rect class="c-net" x="250.0" y="161.0" width="263.4" height="18"/>
+<path class="c-disc" d="M515.4,161.0 H591.2 a4,4 0 0 1 4,4 V175.0 a4,4 0 0 1 -4,4 H515.4 Z"/>
+<text class="c-val" x="603.2" y="175.0">▲4.2万 <tspan class="c-axis">（23%）</tspan></text>
+</g>
+<g class="hit" tabindex="0"><title>長崎 ハウステンボス 1泊2日：総額 約17.8万円 → 割引 約2.5万円（14%）→ 負担 約15.3万円</title>
+<text class="c-pref" x="0" y="215.0" style="font-size:13px">長崎 ハウステンボス 1泊2日</text>
+<rect class="c-net" x="250.0" y="201.0" width="292.3" height="18"/>
+<path class="c-disc" d="M544.3,201.0 H587.3 a4,4 0 0 1 4,4 V215.0 a4,4 0 0 1 -4,4 H544.3 Z"/>
+<text class="c-val" x="599.3" y="215.0">▲2.5万 <tspan class="c-axis">（14%）</tspan></text>
+</g>
+<g class="hit" tabindex="0"><title>福岡だけ 1泊2日：総額 約14.2万円 → 割引 約2.0万円（14%）→ 負担 約12.2万円</title>
+<text class="c-pref" x="0" y="255.0" style="font-size:13px">福岡だけ 1泊2日</text>
+<rect class="c-net" x="250.0" y="241.0" width="233.6" height="18"/>
+<path class="c-disc" d="M485.6,241.0 H519.1 a4,4 0 0 1 4,4 V255.0 a4,4 0 0 1 -4,4 H485.6 Z"/>
+<text class="c-val" x="531.1" y="255.0">▲2.0万 <tspan class="c-axis">（14%）</tspan></text>
+</g>
+<g class="hit" tabindex="0"><title>佐賀 唐津・呼子 1泊2日：総額 約14.7万円 → 割引 約2.0万円（14%）→ 負担 約12.7万円</title>
+<text class="c-pref" x="0" y="295.0" style="font-size:13px">佐賀 唐津・呼子 1泊2日</text>
+<rect class="c-net" x="250.0" y="281.0" width="243.2" height="18"/>
+<path class="c-disc" d="M495.2,281.0 H528.7 a4,4 0 0 1 4,4 V295.0 a4,4 0 0 1 -4,4 H495.2 Z"/>
+<text class="c-val" x="540.7" y="295.0">▲2.0万 <tspan class="c-axis">（14%）</tspan></text>
+</g>
+</svg></div>
+    <div class="chart-legend">
+      <span><i class="lg-bar" style="background:var(--c1)"></i>割引後に払う額</span>
+      <span><i class="lg-bar" style="background:var(--c2)"></i>応援割で引かれる額</span>
+    </div>
+  </figure>
+  <p class="note" style="margin-top:14px">総額＝宿泊＋航空券（大人2人と4歳。4歳の運賃は大人の75%と仮定、2歳は膝の上で無料）＋現地の入場料・食事・交通。自宅⇔羽田は含めていない。宿泊代は1泊あたり、杉乃井5万・湯布院（夢想園）7万・福岡4万・唐津4万・長崎5万・天草5万・熊本市3万・指宿4.5万・鹿児島市2.5万円と置いた。本編のレンタカー代1.5万円も含む。<strong>実際の料金は見ていない。</strong></p>
+  <div class="callout ochre" style="margin-top:14px">
+    <h4>「割引があるから行く」にはならない</h4>
+    <p>家族旅行の割引は、いちばん大きい案でも<strong>約6万円</strong>。1人旅なら<strong>1〜2万円</strong>です。これは「行くと決めた旅が2割ほど安くなる」という大きさで、行く理由そのものにはなりません。各県の価値は、下の章で<strong>中身</strong>から判定しています。</p>
+  </div>
+</section>
+
+<!-- ══════════ Ⅳ 福岡 ══════════ -->
+<section id="fukuoka">
+  <div class="sec-head"><span class="sec-num">Ⅳ</span><h2>福岡県</h2><span class="sec-kicker">湯布院への入口</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/fk_marineworld.jpg" alt="マリンワールド海の中道のイルカが、博多湾を背に輪をくぐって跳ぶ" loading="lazy"><figcaption>© project Kei / CC BY-SA 4.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip pre">販売前 9/24 正午ごろ</span><span class="chip home">50%</span></div>
+      <dl>
+        <dt>対象宿泊</dt><dd><b>10/1 – 12/15</b>（7県で最短。11/20泊は間に合う）</dd>
+        <dt>予算</dt><dd><b>19.6億円</b>（熊本・鹿児島に次ぐ3番目）</dd>
+        <dt>羽田から</dt><dd>1時間45〜55分。1日60便以上。11月の週末で片道13,090円〜</dd>
+        <dt>地震</dt><dd>観光施設は概ね平常どおり（観光庁）</dd>
+      </dl>
+      <p class="pf-say">単独で行く県ではない。9/25に大分が取れなかったときの受け皿、またはゆふいんの森で湯布院に入る別ルートとして効く。</p>
+    </div>
+  </div>
+
+  <h3>(1) 家族で行くなら ── 福岡から入り、ゆふいんの森で湯布院へ</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>11/20（金）– 22（日）2泊3日 ／ 案C</h4><span class="span">福岡1泊＋湯布院1泊</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/fk_yufuinnomori.jpg" alt="緑の車体の特急ゆふいんの森" loading="lazy"><figcaption><b>特急ゆふいんの森</b>博多→由布院 2時間14分。制服と帽子を借りて記念撮影できる<span class="cred">© MaedaAkihiko / CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kinrinko.jpg" alt="湯布院の金鱗湖と周囲の木々" loading="lazy"><figcaption><b>湯布院に泊まる</b>本編と同じく、湯布院で1泊する<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1 金</span><span class="what"><b>7:05 羽田 → 8:50 福岡</b>（JAL305。9/23時点のダイヤ）→ 地下鉄で博多、ベイサイドプレイスから<b>高速船うみなかライン</b>で海の中道へ（約20分）<span class="fee">船 大人1,300円・幼児は大人1人につき1人無料</span></span></li>
+        <li><span class="when">11:00</span><span class="what"><b>マリンワールド海の中道</b>。アザラシの餌やり（毎日・3歳以上・500円）。隣の<b>海の中道「動物の森」</b>でモルモット、ヤギ・ヒツジの餌やり（1個100円）<span class="fee">水族館 大人2,500円・3歳以上700円・3歳未満無料／動物の森 大人450円・中学生以下無料。イルカの餌やりとサメタッチは土日祝のみで、金曜は不可</span></span></li>
+        <li><span class="when">夕方</span><span class="what">JRで博多へ（約30分）→ <b>博多泊</b>（福岡の割引）</span></li>
+        <li><span class="when">DAY2 土</span><span class="what"><b>9:17 ゆふいんの森1号 → 11:31 由布院</b>。前面展望、ビュッフェ、記念撮影<span class="fee">大人5,600円（ネットきっぷ）。幼児は膝の上なら無料。乗車1か月前の10:00発売＝10/21。ボックス席は駅の窓口のみ</span></span></li>
+        <li><span class="when">午後</span><span class="what">本編と同じ。<b>湯布院フローラルヴィレッジ</b>でフクロウを腕に乗せる → 湯の坪街道 → 金鱗湖 → <b>夢想園などの湯布院の宿</b>（大分の割引）<span class="fee">フクロウの森 大人700円・子ども500円。9/12版の本編にあった「釣り堀フィッシングゆふ」は閉業していた</span></span></li>
+        <li><span class="when">DAY3 日</span><span class="what">金鱗湖の朝霧 → 由布院でレンタカー → <b>アフリカンサファリ</b>（ジャングルバス）→ 大分空港で返却 → <b>16:50 / 17:20発で羽田</b>。3日目は本編と同じ<span class="fee">湯布院の店で借りて大分空港へ乗り捨て（乗り捨て料 約6,500円の例）。車を使わないなら、由布院から直行バスで空港へ（約55分・1,550円）</span></span></li>
+      </ol>
+      <div class="tbl-scroll">
+        <table class="money">
+          <thead><tr><th>項目</th><th class="num">金額（推定）</th><th class="num">応援割</th><th>メモ</th></tr></thead>
+          <tbody>
+            <tr><td>福岡の宿 1泊（4人1室）</td><td class="num">4.0万</td><td class="num save">▲2.0万</td><td>9/24に福岡の枠で</td></tr>
+            <tr><td>湯布院の宿 1泊2食</td><td class="num">7.0万</td><td class="num save">▲3.5万</td><td>9/25に大分の枠で</td></tr>
+            <tr><td>航空券 羽田→福岡・大分→羽田</td><td class="num">8.0万</td><td class="num">─</td><td>割引なし</td></tr>
+            <tr><td>ゆふいんの森・入場料・食事・バス</td><td class="num">5.4万</td><td class="num">─</td><td></td></tr>
+            <tr><td>レンタカー（3日目・乗り捨て）</td><td class="num">1.2万</td><td class="num">─</td><td></td></tr>
+            <tr class="sum"><td>合計</td><td class="num">25.6万</td><td class="num save">▲5.5万</td><td>払う額 <b class="big-num">約20.1万</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">同じ置き方で本編（杉乃井1泊＋夢想園1泊・2〜3日目レンタカー・宿泊のみ）を計算すると<strong>約19.8万</strong>（▲6.0万）。差は数千円で、<strong>選ぶ基準はお金ではなく中身</strong>になる（第Ⅸ章）。</p>
+    </div>
+  </div>
+
+  <h3>(2) 父1人で行くなら</h3>
+  <div class="plan solo">
+    <div class="plan-head solo"><span class="who-tag">父1人</span><h4>博多・天神 1泊2日</h4><span class="span">▲0.7万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/fk_yatai.jpg" alt="夜の中洲、川沿いに並ぶ屋台の灯り" loading="lazy"><figcaption><b>中洲の屋台</b>3月の三十路会で行く予定の場所そのもの<span class="cred">© Yoshikazu TAKADA from Tokyo, Japan / CC BY 2.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ul class="plain">
+        <li><strong>筑紫野 天拝の郷</strong>：露天から宝満山を一望、セルフロウリュのサウナ、水風呂2種（14〜17℃／18〜20℃）。1,090円</li>
+        <li><strong>サウナヨーガン福岡天神</strong>：100℃の溶岩サウナ、屋上の外気浴。1,900〜2,100円</li>
+        <li>総額 約5.2万（航空券2.8万・宿1.4万・現地1.0万）→ 割引後 <strong>約4.5万</strong></li>
+      </ul>
+      <p class="note warn"><strong>不要と判定。</strong>2027年3月21日の三十路会で、天神のカンデオ（スカイスパ）・中洲の屋台・もつ鍋を回る予定になっている。半年前に同じことをしに行く理由がない。</p>
+    </div>
+  </div>
+
+  <h3>(3) 判定</h3>
+  <div class="judge">
+    <div><span class="mark m-b">◯</span><span class="j-lab">家族で</span><p class="j-txt"><strong>大分の受け皿・別ルートとして価値がある。</strong>本編の形が組み上がっているので、置き換えるほどではない。ただし①9/25に大分の宿が取れなかった場合（福岡の予算19.6億円は大分の約2倍で、枠が長く残る見込み）、②次男をゆふいんの森に乗せたい場合は、案Cが有力になる。単独（1泊2日で総額約14万→約12万）なら△。</p></div>
+    <div><span class="mark m-d">✕</span><span class="j-lab">父1人で</span><p class="j-txt">3月の三十路会と重なる。割引も1万円未満。</p></div>
+  </div>
+</section>
+
+<!-- ══════════ Ⅴ 佐賀 ══════════ -->
+<section id="saga">
+  <div class="sec-head"><span class="sec-num">Ⅴ</span><h2>佐賀県</h2><span class="sec-kicker">父1人なら九州一。ただし3月に行く</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/sg_mifuneyama.jpg" alt="御船山楽園のつつじ谷と、背後の御船山の断崖" loading="lazy"><figcaption>© そらみみ / CC BY-SA 4.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip pre">販売前 OTA 9/24 正午</span><span class="chip home">50%</span></div>
+      <dl>
+        <dt>対象宿泊</dt><dd><b>10/1 – 12/25</b>（楽天の予約受付は12/21まで）</dd>
+        <dt>予算</dt><dd><b>2.3億円</b>（7県で最少）。楽天のクーポンは全部で740枚</dd>
+        <dt>販売</dt><dd>OTA 9/24／旅行会社 10/2／宿の直販 10月上旬</dd>
+        <dt>羽田から</dt><dd>佐賀空港はANAのみ1日5便（片道13,890円〜）。空港と博多を結ぶバスは休止中なので、福岡空港から入るのが現実的</dd>
+      </dl>
+      <p class="pf-say">中身は父1人向けに偏っている。家族で行く県ではなく、父の本命は3月に予約済み。</p>
+    </div>
+  </div>
+
+  <h3>(1) 家族で行くなら ── 唐津・呼子</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>1泊2日</h4><span class="span">▲2.0万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/sg_yobuko_ika.jpg" alt="呼子の港で干されるイカ" loading="lazy"><figcaption><b>呼子</b>朝市とイカの活き造り。海中展望船ジーラで海の中も見える<span class="cred">© nesnad / CC BY 3.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_balloon.jpg" alt="佐賀の空に浮かぶたくさんの熱気球" loading="lazy"><figcaption><b>バルーンフェスタ</b>競技は10/30–11/3。早朝に一斉に上がる<span class="cred">© jewell willett / CC BY 2.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_karatsu.jpg" alt="海越しに見る唐津城" loading="lazy"><figcaption><b>唐津</b>泊まるならここ。海上釣り堀へはバスで約40分<span class="cred">© SuperTaiyaki from Osaka, Japan / CC BY 2.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1</span><span class="what">羽田 → 福岡 → 地下鉄から直通の筑肥線で唐津（約1.5時間）→ バス40分で呼子。<b>海中展望船ジーラ</b>（40分）とイカの活き造り<span class="fee">ジーラ 大人2,200円・小学生1,100円・幼児は大人1人につき1人無料／活き造り定食 3,480円前後</span></span></li>
+        <li><span class="when">夜</span><span class="what">唐津泊。<b>唐津シーサイドホテル</b>なら屋上に天然温泉のインフィニティ露天とサウナ（宿泊料金は未確認）</span></li>
+        <li><span class="when">DAY2</span><span class="what"><b>仮屋湾遊漁センター</b>（屋根とトイレのあるイカダの海上釣り堀。真鯛・青物以外は釣り放題）→ 博多 → 羽田<span class="fee">入場500円（小学生以上）・2時間 大人3,000円〜・高校生以下2,000円〜・貸し竿500円。木曜休み。唐津からバス約40分</span></span></li>
+      </ol>
+      <p class="note">総額 約14.7万（宿4.0万・航空券7.7万・現地3.0万）→ 割引後 <strong>約12.7万</strong>（▲2.0万、14%）。泊まりを嬉野の<strong>初音荘</strong>（子連れ特化・大人1人につき未就学児1人の食事無料・お風呂は畳敷き）にする手もある。</p>
+      <p class="note warn"><strong>弱点。</strong>唐津・呼子・嬉野・武雄が互いに離れていて、車なしでは1泊で1エリアしか回れない。父が一番行きたい御船山楽園ホテルは<strong>小学生以上しか泊まれない</strong>。</p>
+    </div>
+  </div>
+
+  <h3>(2) 父1人で行くなら ── らかんの湯</h3>
+  <div class="plan solo">
+    <div class="plan-head solo"><span class="who-tag">父1人</span><h4>武雄温泉 1泊2日</h4><span class="span">▲1.5万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/sg_takeo_romon.jpg" alt="武雄温泉の朱塗りの楼門" loading="lazy"><figcaption><b>武雄温泉の楼門</b>博多から特急で約1時間<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_ureshino.jpg" alt="嬉野温泉のシーボルトの湯の洋館" loading="lazy"><figcaption><b>嬉野温泉</b>武雄から新幹線で5分。和多屋別荘には川を水風呂にするテントサウナがある<span class="cred">© STA3816 / CC BY-SA 4.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ul class="plain">
+        <li><strong>御船山楽園ホテル「らかんの湯」</strong>：薪サウナ（セルフロウリュ）、屋外の水風呂16℃・深さ120cm、外気浴。サウナシュラン3年連続1位で殿堂入り。宿泊者は無料、男女入れ替えで両方に入れる</li>
+        <li>日帰りも可：2.5時間 4,250〜5,450円・5部制・2か月前から予約</li>
+        <li>総額 約6.8万（航空券と特急3.0万・宿3.0万・現地0.8万）→ 割引後 <strong>約5.3万</strong></li>
+      </ul>
+      <div class="callout ochre">
+        <h4>三十路会（2027年3月20–22日）は割引の対象外</h4>
+        <p>佐賀は12/25、福岡は12/15で終わるため、3月の三十路会には使えません。仮に12/15以前へ前倒しすると、らかんの湯（▲2万）とカンデオ（▲1.2万）で1人約3.2万円、5人で約16万円安くなる計算です。ただし<strong>カンデオは予約済みで取り直しが必要</strong>、<strong>桜の時期を手放す</strong>、<strong>メンバーの日程を組み直す</strong>、<strong>佐賀の枠は7県最少</strong>の4点から、<strong>動かす理由にはならない</strong>と判断しました。</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>(3) 判定</h3>
+  <div class="judge">
+    <div><span class="mark m-d">✕</span><span class="j-lab">家族で</span><p class="j-txt">羽田便が少なく、見どころが散らばり、目玉の宿に子連れで泊まれない。大分を上回る点がない。</p></div>
+    <div><span class="mark m-c">△</span><span class="j-lab">父1人で</span><p class="j-txt"><strong>中身は九州一</strong>だが、3月に同じ宿へ泊まる。今行くなら、らかんの湯ではなく嬉野の河畔サウナなど別の目的が要る。</p></div>
+  </div>
+</section>
+
+<!-- ══════════ Ⅵ 長崎 ══════════ -->
+<section id="nagasaki">
+  <div class="sec-head"><span class="sec-num">Ⅵ</span><h2>長崎県</h2><span class="sec-kicker">終わっていない。ただし湯布院と両立しない</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/ng_huistenbosch.jpg" alt="ハウステンボスの風車" loading="lazy"><figcaption>© STA3816 / CC BY-SA 3.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip out">OTA第1弾 完売</span><span class="chip open">宿の直販 9/28 10:00</span><span class="chip home">50%</span></div>
+      <dl>
+        <dt>対象宿泊</dt><dd><b>10/1 – 12/25</b></dd>
+        <dt>これから</dt><dd>宿の直販 9/28（月）10:00〜／旅行会社・他OTA 9/30〜／12月分の楽天・じゃらん 11月中旬〜</dd>
+        <dt>予算</dt><dd><b>10.0億円</b>。販売の入口ごとに予算を確保</dd>
+        <dt>羽田から</dt><dd>1時間45〜55分。11/20・22は片道15,760円〜</dd>
+      </dl>
+      <p class="pf-say">子ども向けの中身は厚い。ただ大分と同じ週末には並べられないので、今年は見送りが妥当。</p>
+    </div>
+  </div>
+
+  <h3>(1) 家族で行くなら ── ハウステンボスと九十九島</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>1泊2日（土日祝）</h4><span class="span">▲2.5万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/ng_kujukushima.jpg" alt="佐世保の九十九島、無数の小島が浮かぶ海" loading="lazy"><figcaption><b>九十九島</b>遊覧船パールクィーン約50分。3歳以下無料<span class="cred">© At by At / CC BY-SA 3.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/ng_penguin.jpg" alt="長崎ペンギン水族館の砂浜を歩くペンギン" loading="lazy"><figcaption><b>長崎ペンギン水族館</b>ペンギンが自然の海の砂浜に出てくる。未就学児無料<span class="cred">© pelican from Tokyo, Japan / CC BY-SA 2.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1</span><span class="what">7:05 羽田 → 8:55 長崎 → <b>10:30 高速船でハウステンボス</b>（約50分・土日祝のみ）→ ハウステンボス1日。ミッフィー・ワンダースクエア、運河のクルーザー。11/6からクリスマス<span class="fee">高速船 大人2,500円・小人1,250円・幼児は大人1人につき1人無料／1DAY 大人7,600円〜・4歳以上の未就学児3,800円〜・3歳以下無料</span></span></li>
+        <li><span class="when">DAY2</span><span class="what">九十九島パールシーリゾート。<b>遊覧船</b>、水族館「海きらら」、動植物園「森きらら」で<b>キリンのおやつ</b>（土日祝11:10〜・200円）と<b>対州馬の乗馬</b>（土日祝14:00〜・3歳〜・300円）→ 長崎空港 → 羽田</span></li>
+      </ol>
+      <p class="note">総額 約17.8万（宿5.0万・航空券8.8万・現地4.0万）→ 割引後 <strong>約15.3万</strong>（▲2.5万、14%）。</p>
+      <p class="note warn"><strong>弱点。</strong>確実に釣れる釣り堀は車が必要（佐世保のジャンボフィッシング村）。軍艦島クルーズは2歳が乗れない。バイオパークのザリガニ釣りは10/31で終了。ハウステンボス直営ホテルの10〜11月分の割引は販売終了。</p>
+    </div>
+  </div>
+
+  <h3>(2) 父1人で行くなら</h3>
+  <div class="plan solo">
+    <div class="plan-head solo"><span class="who-tag">父1人</span><h4>長崎市・雲仙 1泊2日</h4><span class="span">▲1.3万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/ng_inasayama.jpg" alt="稲佐山ロープウェイのゴンドラ" loading="lazy"><figcaption><b>稲佐山ロープウェイ</b>6歳未満無料。同じ稲佐山に、夜景の見える露天「ふくの湯」がある<span class="cred">© Masoud Akbari / CC BY-SA 3.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/ng_unzen.jpg" alt="雲仙地獄の遊歩道と立ちのぼる噴気" loading="lazy"><figcaption><b>雲仙</b>地獄の噴気の先に、清流を水風呂にするテントサウナがある<span class="cred">© 663highland / CC BY 2.5</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ul class="plain">
+        <li><strong>稲佐山温泉ふくの湯</strong>：夜景の見える露天、2種類のロウリュ、外気浴。長崎駅から無料送迎（料金未確認・現金のみ）</li>
+        <li><strong>アクティビティプラネット雲仙</strong>：清流をそのまま水風呂にするテントサウナ。4,350円〜</li>
+        <li>総額 約6.9万（航空券3.2万・宿2.5万・現地1.2万）→ 割引後 <strong>約5.7万</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>(3) 判定</h3>
+  <div class="judge">
+    <div><span class="mark m-c">△</span><span class="j-lab">家族で</span><p class="j-txt">船・ペンギン・キリン・遊園地と<strong>中身は大分に負けない</strong>。ただし湯布院の代わりにはならず、釣りは車頼み。行くなら来年以降、割引とは切り離して検討すればよい。</p></div>
+    <div><span class="mark m-c">△</span><span class="j-lab">父1人で</span><p class="j-txt">テントサウナは魅力だが、熊本（60%・湯らっくす・黒川）に比べて決め手が弱い。</p></div>
+  </div>
+</section>
+
+<!-- ══════════ Ⅶ 熊本 ══════════ -->
+<section id="kumamoto">
+  <div class="sec-head"><span class="sec-num">Ⅶ</span><h2>熊本県</h2><span class="sec-kicker">7県でいちばん「まだ取れる」</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/km_amakusa_dolphin.jpg" alt="天草の海で、船のすぐそばを泳ぐ野生のイルカの群れ" loading="lazy"><figcaption>© Totti / CC BY-SA 4.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip open">宿の直販 拡大中</span><span class="chip home">60%</span></div>
+      <dl>
+        <dt>対象宿泊</dt><dd><b>10/1 – 12/25</b></dd>
+        <dt>予算</dt><dd><b>68.7億円</b>。国の総額の5割弱で7県最大。楽天・じゃらんへの配分は「ほんの一部」</dd>
+        <dt>これから</dt><dd>宿の直販を約300→約1,100施設へ順次拡大。旅行会社での販売も予定（いずれも日付は未発表）</dd>
+        <dt>地震</dt><dd>熊本城（9/18時点で通常営業）・阿蘇（火口見学以外）・天草・黒川は営業。<b>宇城・氷川・八代</b>は観光では避ける</dd>
+        <dt>羽田から</dt><dd>始発6:20→8:00着。11/20–22は片道16,190円〜</dd>
+      </dl>
+      <p class="pf-say">「終わった県」ではなく、これから宿の直販で取れる県。父1人なら第一候補。</p>
+    </div>
+  </div>
+
+  <h3>(1) 家族で行くなら ── 天草でイルカと釣り堀</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>2泊3日（レンタカー）</h4><span class="span">▲4.8万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/km_castle.jpg" alt="熊本城の天守" loading="lazy"><figcaption><b>熊本城</b>地震で石垣が崩れたが8/13に公開再開、9/18時点で通常営業。高校生以上800円・未就学児無料<span class="cred">© 663highland / CC BY 2.5</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1</span><span class="what">6:20 羽田 → 8:00 熊本。レンタカー（チャイルドシート2台）→ 熊本城 → 熊本市内泊</span></li>
+        <li><span class="when">DAY2</span><span class="what">車で天草・五和町へ（約2〜2.5時間）→ <b>天草観光ドルフィンクルーズ</b>：野生のイルカ約50分と、<b>同じ場所の釣り堀1時間</b>のセット → 天草泊<span class="fee">セット 大人4,700円・子ども3,300円・幼児（2歳以上）2,400円。当日予約可</span></span></li>
+        <li><span class="when">DAY3</span><span class="what">上天草の海中水族館シードーナツ（イルカとハイタッチ）→ 熊本空港 → 羽田</span></li>
+      </ol>
+      <p class="note">総額 約24.0万（宿8.0万・航空券9.1万・レンタカー2.5万・現地4.4万）→ 割引後 <strong>約19.2万</strong>（▲4.8万、20%）。車を使わないなら、上天草の<strong>シークルーズ</strong>（約2時間、イルカに会えなければ1年有効の無料乗船券）を特急「A列車で行こう」と天草宝島ラインで。</p>
+      <p class="note ok"><strong>長男への刺さり方は7県で最強。</strong>「生き物」「確実に釣りたい」「船」が1か所でそろう。ケアンズで果たせなかった「釣れた」を、イルカと同じ日に回収できる。</p>
+      <p class="note warn"><strong>弱点。</strong>熊本市から五和まで車で2時間以上、しかも震源に近い宇城市を通る。湯布院には行けない。</p>
+    </div>
+  </div>
+
+  <h3>(2) 父1人で行くなら ── 湯らっくす と 黒川温泉</h3>
+  <div class="plan solo">
+    <div class="plan-head solo"><span class="who-tag">父1人</span><h4>1泊2日</h4><span class="span">▲1.8万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/km_kurokawa.jpg" alt="夜の黒川温泉。灯りに照らされた温泉街" loading="lazy"><figcaption><b>黒川温泉</b>入湯手形1,500円で約25か所の露天から3か所。由布院からもバスで約100分<span class="cred">© MaedaAkihiko / CC0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1</span><span class="what"><b>6:20 羽田 → 8:00 熊本</b> → リムジンバスで市内（約50分）→ <b>サウナと天然温泉 湯らっくす</b>：深さ171cmの水風呂と「MADMAXボタン」、毎時のアウフグース、外気浴<span class="fee">入浴 平日900円・土日祝1,000円。24時間営業。11/16（月）10時〜11/20（金）17時はメンテナンス休館</span></span></li>
+        <li><span class="when">午後</span><span class="what">九州横断バスで黒川へ（要予約・約150分）→ <b>黒川の宿</b>（応援割参加：いこい旅館・やまびこ旅館・奥の湯・美里・黒川荘など）</span></li>
+        <li><span class="when">DAY2</span><span class="what"><b>入湯手形</b>で露天3か所 → バスで熊本空港 → 羽田</span></li>
+      </ol>
+      <p class="note">総額 約7.7万（航空券3.3万・宿3.0万・バスと入浴1.4万）→ 割引後 <strong>約5.9万</strong>（▲1.8万、24%）。60%なので、同じ宿代でも50%の県より3,000円多く引かれる。湯らっくすのドミトリー（4,800円〜）に泊まれば宿代そのものが小さい（応援割の対象かは未確認）。</p>
+      <p class="note warn"><strong>要確認。</strong>九州横断バスの運行状況（地震後に減便していた時期がある）。楽天・じゃらんは停止中なので、<strong>県の特設サイトの参加宿一覧から宿に直接</strong>予約する形になる。</p>
+    </div>
+  </div>
+
+  <h3>(3) 判定</h3>
+  <div class="judge">
+    <div><span class="mark m-c">△</span><span class="j-lab">家族で</span><p class="j-txt">天草は長男にとって最高の中身。ただし<strong>車が前提</strong>で移動が長く、湯布院とも両立しない。運転に抵抗がなければ◯。</p></div>
+    <div><span class="mark m-a">◎</span><span class="j-lab">父1人で</span><p class="j-txt"><strong>最有力。</strong>全国屈指のサウナと露天の聖地が1泊で両方回れて、60%引き、予算も7県最大。10月か12月前半に（11/16–20の休館と11/20–22の家族旅行を避けて）。</p></div>
+  </div>
+</section>
+
+<!-- ══════════ Ⅷ 鹿児島 ══════════ -->
+<section id="kagoshima">
+  <div class="sec-head"><span class="sec-num">Ⅷ</span><h2>鹿児島県</h2><span class="sec-kicker">年明けも使える唯一の県</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/kg_sakurajima.jpg" alt="錦江湾越しに見る桜島" loading="lazy"><figcaption>© Yoshikazu TAKADA from Tokyo, Japan / CC BY 2.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip pre">販売前 10月中旬見込み</span><span class="chip home">60%</span></div>
+      <dl>
+        <dt>対象宿泊</dt><dd><b>10月中旬 – 2027/2/28</b>（12/26–1/3は除く）</dd>
+        <dt>予算</dt><dd><b>30.2億円</b>（10/9の県議会で採決の見通し）</dd>
+        <dt>販売</dt><dd>宿の直販・県内旅行会社・OTA（楽天・じゃらん・Yahoo!・一休）。開始日の正式発表は10月上旬以降</dd>
+        <dt>羽田から</dt><dd>1時間40〜50分。1〜2月は片道8,500円〜（最安の表示）</dd>
+        <dt>桜島</dt><dd>噴火警戒レベル3（火口から約2km）。冬は北西風で、灰は市街地の反対側に流れやすい</dd>
+      </dl>
+      <p class="pf-say">11月の大分と重ならない時期に、60%で行ける。家族の2回目にも父1人にも効く。</p>
+    </div>
+  </div>
+
+  <h3>(1) 家族で行くなら ── 冬の2泊3日</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>2/21（日）– 23（火・祝）など</h4><span class="span">▲4.2万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/kg_aquarium.jpg" alt="いおワールドかごしま水族館の大水槽を泳ぐジンベエザメ" loading="lazy"><figcaption><b>いおワールドかごしま水族館</b>ジンベエザメ。未就学児無料、屋外のイルカ水路は無料ゾーン<span class="cred">© Totti / CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/kg_ferry.jpg" alt="錦江湾を渡る桜島フェリーと桜島" loading="lazy"><figcaption><b>桜島フェリー</b>15分・大人250円・未就学児は大人1人につき1人無料。水族館から歩ける<span class="cred">© Yoshikazu TAKADA from Tokyo, Japan / CC BY 2.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/kg_tamatebako.jpg" alt="白と黒に塗り分けられた特急指宿のたまて箱が鹿児島中央駅に停まっている" loading="lazy"><figcaption><b>特急 指宿のたまて箱</b>海側のカウンター席、キッズチェア。乗降時にミストが出る<span class="cred">© Gordon Cheung from Hong Kong / CC BY 2.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1</span><span class="what">羽田 → 鹿児島 → バスで市内（40〜55分）→ <b>いおワールド</b>（タッチの時間10:45〜16:15）→ <b>桜島フェリー</b> → 溶岩なぎさ公園の足湯（全長約100m・無料）→ 市内泊</span></li>
+        <li><span class="when">DAY2</span><span class="what"><b>指宿のたまて箱</b>で指宿へ（約51分）→ <b>長崎鼻パーキングガーデン</b>：インコを手に乗せる、白鳥・ヤギの餌やり → <b>指宿白水館</b>（砂むし・プール）<span class="fee">たまて箱 大人2,950円・1か月前10:00発売。2026年12月以降の運転日は10月中旬発表／パーキングガーデン 大人1,200円・4歳以上600円</span></span></li>
+        <li><span class="when">DAY3</span><span class="what">指宿 → 鹿児島中央 → 空港 → 羽田。2/23は天皇誕生日で、帰った翌日は平日</span></li>
+      </ol>
+      <p class="note">総額 約18.0万（宿7.0万・航空券6.1万・現地4.9万）→ 割引後 <strong>約13.8万</strong>（▲4.2万、23%）。<strong>家族の2泊3日では、比べた案の中でいちばん安い。</strong>冬の航空券が安く、割引が60%だから。</p>
+      <p class="note warn"><strong>弱点。</strong>「確実に釣れる」管理釣り場が市内になく、郊外は車が必要（指宿の鱒乃家は冬の営業が未確認）。空港から市内まで40〜55分。</p>
+    </div>
+  </div>
+
+  <h3>(2) 父1人で行くなら ── 砂むしと温泉銭湯</h3>
+  <div class="plan solo">
+    <div class="plan-head solo"><span class="who-tag">父1人</span><h4>1泊2日（1〜2月）</h4><span class="span">▲1.3万</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/kg_ibusuki_suna.jpg" alt="指宿の砂むし温泉で砂に埋まる人たち" loading="lazy"><figcaption><b>指宿の砂むし</b>砂むし会館「砂楽」1,500円。サウナと水風呂もある<span class="cred">© NY066 / CC BY-SA 3.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ul class="plain">
+        <li>たまて箱で指宿 → <strong>砂むし</strong> → 指宿泊 → 翌日、市内の<strong>温泉銭湯</strong>（ほぼすべてが温泉・460円）。<strong>たぬき湯</strong>は露天＋洞窟サウナ＋外気浴</li>
+        <li>黒豚しゃぶと焼酎。2泊にするなら霧島（硫黄谷の14源泉・日帰り1,200円）も入る</li>
+        <li>総額 約5.7万（航空券2.2万・宿2.2万・現地1.3万）→ 割引後 <strong>約4.4万</strong>（▲1.3万）</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>(3) 判定</h3>
+  <div class="judge">
+    <div><span class="mark m-b">◯</span><span class="j-lab">家族で</span><p class="j-txt"><strong>冬の2回目として十分。</strong>水族館・フェリー・観光列車が車なしでつながる。湯布院の代わりではなく、大分の「次」。</p></div>
+    <div><span class="mark m-b">◯</span><span class="j-lab">父1人で</span><p class="j-txt">熊本に次ぐ。熊本が12/25で終わるので、年明けに1人で行くならこちら。</p></div>
+  </div>
+
+  <p class="note" style="margin-top:22px"><strong>宮崎について。</strong>OTAは9/25の<strong>10:00</strong>開始（大分より2時間早い）、12/25まで、50%。フェニックス自然動物園（遊園地の9機種乗り放題）や青島はあるが、鹿児島より優先する材料は見つからなかった。熊本か鹿児島と組み合わせた周遊商品なら60%になるが、扱う旅行会社を確認できていない。</p>
+</section>
+
+<!-- ══════════ Ⅸ ══════════ -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">Ⅸ</span><h2>組み合わせるなら</h2><span class="sec-kicker">大分の本命にどう足すか</span></div>
+
+  <h3>(1) 11月の大分に、福岡を足すかどうか</h3>
+  <div class="tbl-scroll">
+    <table class="t-wide">
+      <thead><tr><th>形</th><th>泊まる場所</th><th>中身</th><th>手放すもの</th><th class="num">割引</th><th class="num">払う額</th><th>予約の機会</th></tr></thead>
+      <tbody>
+        <tr class="pick"><td><strong>本編 v3.1</strong><br><small>大分だけ</small></td><td>杉乃井 1泊<br>＋夢想園 1泊</td><td>ホーバークラフト、うみたまご、高崎山、棚湯・アクアガーデン、地獄めぐり、フクロウ、サファリ</td><td>─</td><td class="num">▲6.0万</td><td class="num">19.8万</td><td>9/25 に2件（宿泊のみの場合）</td></tr>
+        <tr><td><strong>案C</strong><br><small>福岡から入る</small></td><td>福岡 1泊<br>＋湯布院 1泊</td><td>マリンワールド、動物の森、高速船、ゆふいんの森、フクロウ、サファリ</td><td>ホーバークラフト、うみたまご、高崎山、杉乃井（父の棚湯、母子のアクアガーデン）、地獄めぐり</td><td class="num">▲5.5万</td><td class="num">20.1万</td><td>9/24 と 9/25 に1件ずつ</td></tr>
+      </tbody>
+      <caption>金額は推定で、同じ置き方で計算した。差は数千円で、お金ではなく中身で選ぶ。</caption>
+    </table>
+  </div>
+  <div class="callout" style="margin-top:14px">
+    <h4>決め方の提案</h4>
+    <p><strong>本編のままでよい。</strong>大分側の中身（ホーバークラフト・高崎山・うみたまご・杉乃井）は、福岡の水族館とゆふいんの森を足しても置き換えられないほど厚い。</p>
+    <p>福岡が効くのは2つの場合だけです。<strong>①9/25に夢想園か杉乃井が取れなかったとき</strong>は、取れなかった夜を福岡に替えて案Cにする（福岡は9/24から始まり、予算が大分の約2倍なので枠が残りやすい）。<strong>②次男をどうしてもゆふいんの森に乗せたいとき</strong>は、9/24正午に福岡の宿を取って案Cで行く。</p>
+  </div>
+
+  <h3>(2) 半年の並べ方</h3>
+  <ol class="actions">
+    <li><span class="when">10月／12月前半</span><span class="what">父1人・熊本（湯らっくす＋黒川）</span><span class="why">60%。湯らっくすの休館（11/16–20）と家族旅行（11/20–22）を外す。熊本は12/25まで</span></li>
+    <li class="now"><span class="when">11/20–22</span><span class="what">家族・大分（本編v3.1。受け皿は案C）</span><span class="why">本命。予約は9/25（大分）。案Cにするなら9/24（福岡）も</span></li>
+    <li><span class="when">2027年1–2月</span><span class="what">家族・鹿児島 または 父1人・鹿児島</span><span class="why">60%・2/28まで。候補は1/10–11（日・月祝）、2/21–23（日〜火祝）</span></li>
+    <li><span class="when">2027/3/20–22</span><span class="what">三十路会（佐賀・福岡）</span><span class="why">割引の対象外。予定どおりでよい</span></li>
+  </ol>
+  <p class="note" style="margin-top:14px">父1人の旅は、その間に妻が1人で子ども2人を見ることになり、土曜なら習い事の送迎も重なります。割引額（1〜2万円）より、この負担のほうが大きいかもしれません。行くなら、妻の1人時間とセットで相談するのがよさそうです。</p>
+</section>
+
+<!-- ══════════ Ⅹ ══════════ -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">Ⅹ</span><h2>次にやること</h2><span class="sec-kicker">9/23 → 10月</span></div>
+  <ol class="actions">
+    <li class="now"><span class="when">今日 9/23</span><span class="what">本編のままか、案C（福岡から入る）にするかを決める</span><span class="why">迷うなら本編のまま。案Cは「ゆふいんの森に乗せたい」ときの選択肢。</span></li>
+    <li class="now"><span class="when">9/24 12:00ごろ</span><span class="what">福岡：案Cなら11/20の福岡の宿を「宿泊のみ」で取る。本編なら見るだけ</span><span class="why">子ども2人を宿泊人数に入れる。福岡のOTA名は9/23時点で未公開なので、正午前に県のキャンペーンサイトで確認。本編の場合は、楽天で<strong>楽パック2泊以上のクーポンが何名用まであるか</strong>を見ておく（翌日の大分の形が読める）。</span></li>
+    <li class="now"><span class="when">9/25 12:00</span><span class="what">大分：3名以上用の楽パッククーポンがあれば楽パック。なければ宿泊のみで夢想園 → 杉乃井</span><span class="why">11:50にクーポン一覧を見て決める。宿泊のみは、じゃらんならクーポンの獲得が要らず予約画面の同意チェックだけ。楽天なら1泊用クーポン（上限1人1泊2万円）を先に獲得。部屋数の少ない夢想園を先に。どちらかが取れなければ、その夜を福岡に替えて案Cへ。宮崎は同じ日の10:00開始（使わない）。</span></li>
+    <li><span class="when">9/25 宿の確定後</span><span class="what">（宿泊のみで取った場合）航空券を買う</span><span class="why">早いほど安い。本編は羽田⇔大分の往復、案Cは羽田→福岡と大分→羽田の片道を2本。</span></li>
+    <li><span class="when">9/28 10:00</span><span class="what">（長崎を考えるなら）宿の直販が始まる</span><span class="why">今回は見送りの判定。</span></li>
+    <li><span class="when">10月上旬</span><span class="what">鹿児島の開始日の発表を確認する</span><span class="why">10/9に県議会で採決。冬の2回目を考えるなら、ここで日程を決める。</span></li>
+    <li><span class="when">10/21 10:00</span><span class="what">（案C）ゆふいんの森1号・11/21乗車分の発売</span><span class="why">乗車1か月前の10:00。ボックス席は駅の窓口のみ。</span></li>
+    <li><span class="when">随時</span><span class="what">（父1人・熊本）黒川の参加宿へ直接予約</span><span class="why">県の特設サイトの宿泊施設一覧から。楽天・じゃらんの再開も随時あり得る。</span></li>
+  </ol>
+
+  <h3>まだ分かっていないこと</h3>
+  <ul class="plain">
+    <li><strong>大分の楽天クーポンの種類</strong>：熊本・長崎・佐賀と同じ形（宿泊1泊・2泊、楽パック1名・2名）か。<strong>3名以上用の楽パッククーポンがあれば、本編の楽パック案が生きる</strong>。9/25に公開</li>
+    <li><strong>福岡の参加OTA</strong>：9/23時点でバナーが未公開。9/24正午にどのサイトで売り出すか</li>
+    <li><strong>実際の宿泊料金・航空券</strong>：本資料の金額はすべて置いた値。11月の冬ダイヤ、4歳の運賃も未確認</li>
+    <li><strong>熊本の直販の開始時期</strong>、九州横断バスの運行状況、黒川の1人泊料金</li>
+    <li><strong>周遊型（上限3.5万円）を売る旅行会社</strong>：楽天・じゃらんは対象外で、扱う会社は見つからなかった</li>
+    <li><strong>鹿児島の正式な開始日</strong>と、指宿のたまて箱の12月以降の運転日（10月中旬発表）</li>
+  </ul>
+</section>
+
+<!-- ══════════ Ⅺ ══════════ -->
+<section id="s11">
+  <div class="sec-head"><span class="sec-num">Ⅺ</span><h2>出典</h2><span class="sec-kicker">確認日 2026/9/23</span></div>
+  <div class="src">
+    <ol>
+      <li>観光庁「九州ふっこう応援割」（2026/9/18更新）── 割引率・上限・各県の状況　mlit.go.jp/kankocho/page13_00002.html</li>
+      <li>九州ふっこう応援割お知らせサイト（九州観光機構）　fightkyushu.welcomekyushu.jp</li>
+      <li>福岡県 ふくおかキャンペーン 公式サイト・FAQ・事業者向けFAQ・要項（9/18）── 9/24正午ごろ開始、12/15まで、利用回数の制限なし、無料の幼児も人数に含む　fukuoka-fukkou-wari.jp</li>
+      <li>佐賀県 さがキャンペーン 公式サイト・FAQ（9/18）、佐賀県プレスリリース（9/11）　saga-ouen.jp ／ pref.saga.lg.jp</li>
+      <li>長崎県 ながさきキャンペーン 公式サイト・FAQ・要領（9/18）── 9/28施設直販、9/30旅行会社、12月分は11月中旬〜　nagasaki-fukkou-wari.jp</li>
+      <li>熊本県「熊本ふっこう応援割」県ページ（9/15）・特設サイトの宿泊施設一覧（9/19）・FAQ・宿泊施設マニュアル（無料幼児を含む上限計算の例）　pref.kumamoto.jp ／ kumamoto-ouenwari.com</li>
+      <li>大分県 おおいたキャンペーン 公式サイト・要領、大分県発表資料（9/15）　oita-fukkou-wari.jp ／ pref.oita.jp</li>
+      <li>宮崎県 報道発表（9/16）── 9/25 10:00開始、ひなタビ第2期は1/4〜　pref.miyazaki.lg.jp</li>
+      <li>トラベルWatch「鹿児島県『九州ふっこう応援割』10月中旬から開始見込み。最長2027年2月末まで」（9/18）ほか、福岡（9/18）・佐賀の楽天740枚（9/18）・長崎（9/7、9/14）・ハウステンボス（9/17）の各記事　travel.watch.impress.co.jp</li>
+      <li>楽天トラベル 九州ふっこう応援割（熊本・長崎・佐賀の各クーポン条件、周遊型は対象外）　travel.rakuten.co.jp/special/kyushuouen/</li>
+      <li>じゃらんnet 九州ふっこう応援割 ── じゃらんパックは対象外、1予約1人2万円、回数制限なし　jalan.net/kyushu-shien/</li>
+      <li>西日本新聞「20分で完売も…熊本県は『まだまだあります』」（9/18）、同 9/7記事（各県の予算）　nishinippon.co.jp</li>
+      <li>朝日新聞「九州ふっこう応援割、開始20分で完売も 順次拡大予定」（9/19）、FNN（9/18）　news.yahoo.co.jp</li>
+      <li>航空便：駅探の羽田⇔福岡・長崎・熊本・佐賀・大分の時刻表（9/23時点のダイヤ）、トラベリスト・トラベルコ・エアトリの運賃（9/23取得）</li>
+      <li>福岡：マリンワールド海の中道、海の中道海浜公園、福岡市海づり公園、JR九州「ゆふいんの森」、筑紫野 天拝の郷、サウナイキタイ</li>
+      <li>佐賀：御船山楽園ホテル（日帰り・宿泊・FAQ）、呼子 海中展望船ジーラ、唐津観光協会（仮屋湾遊漁センター）、唐津シーサイドホテル、初音荘、佐賀インターナショナルバルーンフェスタ</li>
+      <li>長崎：ハウステンボス（チケット）、安田産業汽船（空港⇔ハウステンボス高速船）、九十九島パールシーリゾート（遊覧船・海きらら・森きらら）、長崎ペンギン水族館、稲佐山温泉ふくの湯、サウナイキタイ（雲仙）</li>
+      <li>熊本：熊本城公式（9/18）、熊本県観光サイト（天草・阿蘇・人吉の営業状況）、天草観光ドルフィンクルーズ、シークルーズ、湯らっくす、黒川温泉観光旅館協同組合（入湯手形）、JR九州 運行情報</li>
+      <li>鹿児島：いおワールドかごしま水族館、鹿児島市（桜島フェリー）、指宿市観光協会（砂むし会館・長崎鼻パーキングガーデン）、JR九州「指宿のたまて箱」、指宿白水館、気象庁（桜島の火山活動・平年値）</li>
+      <li>三十路会の日程・宿・費用：Artifact「三十路会 佐賀・福岡」（しおり ver.02、2026/9/11）</li>
+    </ol>
+  </div>
+  <footer>
+    <p class="credits">写真はすべてWikimedia Commonsの自由利用可能なライセンスによる。<br>Marine World Umi no Nakamichi 2011 02.jpg（project Kei／CC BY-SA 4.0）、Nakasu Yatai Stalls (19979437930).jpg（Yoshikazu TAKADA from Tokyo, Japan／CC BY 2.0）、JRK Kiha72 Yufuin-no-mori.jpg（MaedaAkihiko／CC BY-SA 4.0）、Rhincodon typus Io-world.jpg（Totti／CC BY-SA 4.0）、Sakurajima Island (20010915309).jpg（桜島フェリーと桜島）（Yoshikazu TAKADA from Tokyo, Japan／CC BY 2.0）、Ibusuki-Sand-Bath.JPG（NY066／CC BY-SA 3.0）、Sakurajima Island (20203192341).jpg（Yoshikazu TAKADA from Tokyo, Japan／CC BY 2.0）、JRK Kiha 47 Ibusuki no Tamatebako Kagoshima-Chuo 2017-02-18 (32503245443).jpg（Gordon Cheung from Hong Kong／CC BY 2.0）、Dorphin-watching Amakusa.jpg（Totti／CC BY-SA 4.0）、Kumamoto Castle 06s5s4272.jpg（663highland／CC BY 2.5）、Kurokawa-Onsen Light-up.jpg（MaedaAkihiko／CC0）、Museum molen.jpg（STA3816／CC BY-SA 3.0）、Rope way cabin - panoramio.jpg（長崎ロープウェイ／稲佐山のゴンドラ）（Masoud Akbari／CC BY-SA 3.0）、Sasebo Kujukushima Islands 2010-08.JPG（At by At／CC BY-SA 3.0）、Nagasaki penguin aquarium, Japan (4577433688).jpg（pelican from Tokyo, Japan／CC BY-SA 2.0）、140322 Unzen Onsen Jigoku Unzen Nagasaki pref Japan13o.JPG（663highland／CC BY 2.5）、Saga balloon fiesta sky view 2009 3.jpg（jewell willett／CC BY 2.0）、Karatsu Castle (38299875212).jpg（SuperTaiyaki from Osaka, Japan／CC BY 2.0）、Azalea Valley in Mifuneyama Garden and Mount Mifuneyama 5.jpg（そらみみ／CC BY-SA 4.0）、Gate of Takeo Hot Spring.jpg（そらみみ／CC BY-SA 4.0）、Ureshino Onsen Siebold-no-yu.jpg（STA3816／CC BY-SA 4.0）、Squid on a line near Yobuko asaichi - Nov 2017.jpg（呼子朝市近くのイカの天日干し）（nesnad／CC BY 3.0）、Lake Kinrinko from northwest lakeside.JPG（そらみみ／CC BY-SA 4.0）</p>
+    <p class="credits">大分 家族旅行 検討メモ 別冊 ── 2026年9月23日（水・祝）作成。本編は<a href="https://claude.ai/artifact/KF46TrBNtYdfauiPYRSYn1">「大分に行く価値はあるか」</a>（v3.1、同日訂正）。金額はすべて推定で、実際の宿泊料金・航空券価格は確認していない。</p>
+  </footer>
+</section>
+
+</div>
