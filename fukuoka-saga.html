@@ -1,0 +1,624 @@
+<title>福岡・佐賀は単体で行けるか</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#f1f4f4; --paper-2:#ffffff; --paper-3:#e5ebeb; --paper-4:#dae3e3;
+  --ink:#16181c; --ink-2:#3d474a; --ink-3:#6d7b7e;
+  --line:#ccd8d8; --line-2:#b3c3c3;
+  --accent:#1b7a8c; --accent-deep:#12525e; --accent-wash:#dcebee;
+  --hot:#a63a2b; --hot-wash:#f7e5e2;
+  --ochre:#9a6f24; --ochre-wash:#f4ecd9;
+  --good:#3f6f44; --good-wash:#e2eee3;
+  --sea:#cfe1e5; --sea-2:#bcd6dc; --land:#e9eeec;
+  --shadow:0 1px 2px rgba(22,24,28,.05), 0 6px 20px -12px rgba(22,24,28,.22);
+  --c1:#00809c; --c2:#c08a2a;
+  --serif:"Zen Old Mincho",'Hiragino Mincho ProN','Yu Mincho',serif;
+  --sans:"Zen Kaku Gothic New",'Hiragino Sans','Yu Gothic',system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1416; --paper-2:#161e21; --paper-3:#1e282b; --paper-4:#263236;
+    --ink:#e8eeee; --ink-2:#aebdbf; --ink-3:#7d8f92;
+    --line:#2b373a; --line-2:#3a494d;
+    --accent:#5cbdd0; --accent-deep:#8ed6e4; --accent-wash:#123239;
+    --hot:#e8836f; --hot-wash:#33201c;
+    --ochre:#d6a95d; --ochre-wash:#2d2617;
+    --good:#83bb88; --good-wash:#1a2a1c;
+    --sea:#16323a; --sea-2:#1d414a; --land:#1a2325;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+    --c1:#1b9ab5; --c2:#b3872f; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1416; --paper-2:#161e21; --paper-3:#1e282b; --paper-4:#263236;
+  --ink:#e8eeee; --ink-2:#aebdbf; --ink-3:#7d8f92;
+  --line:#2b373a; --line-2:#3a494d;
+  --accent:#5cbdd0; --accent-deep:#8ed6e4; --accent-wash:#123239;
+  --hot:#e8836f; --hot-wash:#33201c;
+  --ochre:#d6a95d; --ochre-wash:#2d2617;
+  --good:#83bb88; --good-wash:#1a2a1c;
+  --sea:#16323a; --sea-2:#1d414a; --land:#1a2325;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+    --c1:#1b9ab5; --c2:#b3872f; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.85;
+  -webkit-font-smoothing:antialiased; letter-spacing:.01em;
+}
+.wrap{max-width:940px; margin:0 auto; padding-inline:20px; padding-block:0 88px}
+h1,h2,h3,h4{font-family:var(--serif); text-wrap:balance; line-height:1.4; margin:0}
+p{margin:0}
+a{color:var(--accent-deep); text-underline-offset:3px}
+:focus-visible{outline:2.5px solid var(--accent); outline-offset:3px; border-radius:3px}
+img{max-width:100%; display:block}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+.masthead{border-bottom:1px solid var(--line); background:var(--paper-2)}
+.masthead-in{max-width:940px; margin:0 auto; padding:0 20px}
+.hero-img{position:relative; margin:0 -20px; aspect-ratio:21/8; overflow:hidden; background:var(--paper-3)}
+.hero-img img{width:100%; height:100%; object-fit:cover; object-position:50% 62%}
+.hero-img figcaption{
+  position:absolute; right:8px; bottom:6px; font-size:10px; letter-spacing:.03em;
+  color:#fff; background:rgba(0,0,0,.42); padding:2px 7px; border-radius:2px;
+}
+.title-block{padding:30px 0 26px; display:flex; flex-direction:column; gap:14px}
+.eyebrow{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; flex-wrap:wrap; gap:10px 16px; align-items:baseline;
+}
+.eyebrow b{color:var(--hot); font-weight:600}
+h1{font-size:clamp(30px,6.4vw,50px); font-weight:700; letter-spacing:.02em}
+.standfirst{font-size:clamp(15px,2.2vw,17px); color:var(--ink-2); max-width:60ch}
+
+/* ---------- sections ---------- */
+section{margin-top:66px; scroll-margin-top:20px}
+.sec-head{display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--ink); padding-bottom:10px; margin-bottom:26px}
+.sec-num{font-family:var(--serif); font-size:26px; color:var(--accent); font-weight:700; line-height:1}
+.sec-head h2{font-size:clamp(20px,3.6vw,26px); font-weight:700; flex:1}
+.sec-kicker{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--ink-3); text-align:right}
+h3{font-size:17.5px; font-weight:700; margin:34px 0 12px; display:flex; align-items:baseline; gap:9px}
+h3::before{content:""; width:9px; height:9px; background:var(--accent); flex:none; transform:translateY(-1px)}
+h4{font-size:15.5px; font-weight:700; margin:22px 0 8px}
+.stack{display:flex; flex-direction:column; gap:16px}
+
+/* ---------- verdict ---------- */
+.verdict{
+  background:var(--paper-2); border:1px solid var(--line); border-top:5px solid var(--accent);
+  padding:26px 26px 24px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:18px;
+}
+.verdict-lead{font-family:var(--serif); font-size:clamp(19px,3.4vw,25px); font-weight:700; line-height:1.55}
+.verdict-lead em{font-style:normal; color:var(--accent-deep); border-bottom:3px solid var(--accent); padding-bottom:1px}
+.verdict-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(178px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.vcell{background:var(--paper-2); padding:14px 16px; display:flex; flex-direction:column; gap:3px}
+.vcell dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.11em; color:var(--ink-3); text-transform:uppercase}
+.vcell dd{margin:0; font-family:var(--serif); font-size:21px; font-weight:700; line-height:1.3}
+.vcell dd small{font-family:var(--sans); font-size:12px; font-weight:400; color:var(--ink-2); display:block; letter-spacing:0; line-height:1.6; margin-top:2px}
+.vcell .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- generic blocks ---------- */
+.note{
+  border-left:3px solid var(--line-2); padding:2px 0 2px 16px; color:var(--ink-2); font-size:14.5px;
+}
+.note.warn{border-left-color:var(--hot)}
+.note.warn strong{color:var(--hot)}
+.note.ok{border-left-color:var(--good)}
+.callout{background:var(--paper-3); border:1px solid var(--line); padding:18px 20px; display:flex; flex-direction:column; gap:9px}
+.callout.hot{background:var(--hot-wash); border-color:color-mix(in srgb,var(--hot) 34%, transparent)}
+.callout.ochre{background:var(--ochre-wash); border-color:color-mix(in srgb,var(--ochre) 40%, transparent)}
+.callout h4{margin:0; font-size:15px}
+.callout.hot h4{color:var(--hot)}
+.callout.ochre h4{color:var(--ochre)}
+.callout p, .callout li{font-size:14.5px; color:var(--ink-2)}
+.callout strong{color:var(--ink)}
+
+/* ---------- tables ---------- */
+.tbl-scroll{overflow-x:auto; border:1px solid var(--line); background:var(--paper-2)}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:14px}
+caption{caption-side:bottom; text-align:left; font-size:12.5px; color:var(--ink-3); padding:9px 2px 0; line-height:1.7}
+th,td{padding:10px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.7}
+thead th{
+  background:var(--paper-3); font-family:var(--mono); font-size:11px; letter-spacing:.07em;
+  font-weight:600; color:var(--ink-2); text-transform:uppercase; border-bottom:1.5px solid var(--line-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap}
+.nb{white-space:nowrap}
+table.t-route td:first-child{min-width:8.5em}
+table.t-opt td:first-child{min-width:8em}
+tr.pick td{background:var(--ochre-wash)}
+tr.pick td:first-child{box-shadow:inset 3px 0 0 var(--ochre)}
+td strong{font-weight:700}
+.verd{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.05em; padding:2px 7px; border-radius:2px; white-space:nowrap; display:inline-block}
+.verd.no{background:var(--hot-wash); color:var(--hot)}
+.verd.mid{background:var(--paper-4); color:var(--ink-2)}
+.verd.yes{background:var(--good-wash); color:var(--good)}
+.verd.best{background:var(--ochre); color:#fff}
+:root[data-theme="dark"] .verd.best{color:#17120a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verd.best{color:#17120a}}
+
+/* ---------- figures ---------- */
+figure{margin:0}
+.fig{border:1px solid var(--line); background:var(--paper-2); overflow:hidden}
+.fig img{width:100%; aspect-ratio:3/2; object-fit:cover}
+.fig figcaption{padding:10px 13px 11px; font-size:12.5px; color:var(--ink-2); line-height:1.65; border-top:1px solid var(--line)}
+.fig figcaption b{color:var(--ink); font-weight:700; font-size:13.5px; display:block; font-family:var(--serif)}
+.fig figcaption .cred{display:block; margin-top:5px; font-size:10px; color:var(--ink-3); letter-spacing:.02em; font-family:var(--mono)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(248px,1fr)); gap:16px}
+.grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px}
+
+/* ---------- map ---------- */
+.mapbox{border:1px solid var(--line); background:var(--paper-2); padding:6px 6px 0}
+.mapbox svg{width:100%; height:auto; display:block}
+.mapcap{padding:11px 10px 12px; font-size:12.5px; color:var(--ink-2); border-top:1px solid var(--line); margin-top:6px; line-height:1.7}
+.legend{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:8px; font-size:12px; color:var(--ink-2); font-family:var(--mono)}
+.legend span{display:inline-flex; align-items:center; gap:7px}
+.lg-swatch{width:22px; height:0; border-top-width:3px; flex:none}
+
+/* ---------- itinerary rail ---------- */
+.day{border:1px solid var(--line); background:var(--paper-2); box-shadow:var(--shadow)}
+.day-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; padding:15px 20px; background:var(--paper-3); border-bottom:1px solid var(--line)}
+.day-head .d-no{font-family:var(--mono); font-size:11px; letter-spacing:.13em; color:var(--accent-deep); font-weight:600}
+.day-head h4{font-family:var(--serif); font-size:19px; margin:0}
+.day-head .d-sum{font-size:12.5px; color:var(--ink-3); margin-left:auto; font-family:var(--mono)}
+.rail{padding:6px 20px 20px}
+.slot{display:grid; grid-template-columns:64px 1fr; gap:0 18px; position:relative}
+.slot .t{
+  font-family:var(--mono); font-size:12.5px; font-variant-numeric:tabular-nums;
+  color:var(--ink-2); padding-top:15px; text-align:right; white-space:nowrap;
+}
+.slot .b{border-left:2px solid var(--line); padding:14px 0 14px 20px; position:relative}
+.slot:last-child .b{border-left-color:transparent}
+.slot .b::before{
+  content:""; position:absolute; left:-6px; top:20px; width:10px; height:10px;
+  background:var(--paper-2); border:2px solid var(--line-2); border-radius:50%;
+}
+.slot.key .b::before{background:var(--accent); border-color:var(--accent)}
+.slot.onsen .b::before{background:var(--hot); border-color:var(--hot)}
+.slot.move .b::before{background:var(--paper-2); border-color:var(--accent); border-style:dashed}
+.slot .b h5{margin:0 0 3px; font-size:15.5px; font-weight:700; font-family:var(--sans); line-height:1.6}
+.slot .b .who{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--accent-deep); background:var(--accent-wash); padding:1px 6px; border-radius:2px; margin-left:7px; vertical-align:2px; white-space:nowrap; display:inline-block}
+.slot .b .who.hot{color:var(--hot); background:var(--hot-wash)}
+.slot .b p{font-size:14px; color:var(--ink-2); margin-top:3px}
+.slot .b .cost{font-family:var(--mono); font-size:12px; color:var(--ink-3); margin-top:5px; display:block}
+
+/* ---------- family fit ---------- */
+.fitgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(212px,1fr)); gap:14px}
+.fit{border:1px solid var(--line); background:var(--paper-2); padding:17px 18px; display:flex; flex-direction:column; gap:8px}
+.fit .name{font-family:var(--serif); font-size:17px; font-weight:700; display:flex; align-items:baseline; gap:8px}
+.fit .name small{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); font-weight:400; letter-spacing:.04em}
+.fit ul{margin:0; padding-left:17px; font-size:13.5px; color:var(--ink-2); display:flex; flex-direction:column; gap:6px}
+.fit .risk{font-size:12.5px; color:var(--hot); border-top:1px dashed var(--line-2); padding-top:8px; margin-top:auto}
+
+/* ---------- checklist ---------- */
+ol.actions{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line)}
+ol.actions li{background:var(--paper-2); padding:14px 18px; display:grid; grid-template-columns:auto 1fr; gap:4px 15px; align-items:baseline}
+ol.actions .when{font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:#fff; background:var(--ink-2); padding:2px 8px; white-space:nowrap; border-radius:2px}
+ol.actions li.now .when{background:var(--hot)}
+ol.actions .what{font-weight:700; font-size:14.5px}
+ol.actions .why{grid-column:2; font-size:13.5px; color:var(--ink-2)}
+ul.plain{margin:0; padding-left:19px; display:flex; flex-direction:column; gap:7px; font-size:14.5px; color:var(--ink-2)}
+ul.plain strong{color:var(--ink)}
+ul.plain li::marker{color:var(--accent)}
+
+/* ---------- sources ---------- */
+.src{font-size:12.5px; color:var(--ink-2); line-height:1.85}
+.src ol{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:5px}
+.src li::marker{font-family:var(--mono); color:var(--ink-3); font-size:11px}
+.credits{font-size:11px; color:var(--ink-3); line-height:1.8; font-family:var(--mono)}
+footer{margin-top:60px; border-top:1px solid var(--line); padding-top:22px; display:flex; flex-direction:column; gap:12px}
+
+@media (max-width:560px){
+  .slot{grid-template-columns:52px 1fr; gap:0 12px}
+  .slot .b{padding-left:15px}
+  .day-head .d-sum{margin-left:0; width:100%}
+  .hero-img{aspect-ratio:16/9}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+/* ================= この別冊で足した部品 ================= */
+.mosaic{display:grid; grid-template-columns:repeat(5,1fr); gap:3px; margin:0 -20px; background:var(--paper-2)}
+.mosaic figure{position:relative; aspect-ratio:3/4; overflow:hidden; background:var(--paper-3)}
+.mosaic img{width:100%; height:100%; object-fit:cover}
+.mosaic figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:26px 10px 9px;
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62));
+  color:#fff; font-family:var(--serif); font-weight:700; font-size:clamp(14px,2.4vw,19px); line-height:1.3;
+}
+.mosaic figcaption small{display:block; font-family:var(--mono); font-weight:400; font-size:10px; letter-spacing:.08em; opacity:.88; margin-top:2px}
+@media (max-width:560px){
+  .mosaic{grid-template-columns:repeat(6,1fr)}
+  .mosaic figure{aspect-ratio:4/5}
+  .mosaic figure:nth-child(-n+3){grid-column:span 2}
+  .mosaic figure:nth-child(n+4){grid-column:span 3; aspect-ratio:16/10}
+}
+
+/* 状況チップ */
+.chip{display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.05em; padding:3px 9px; border-radius:2px; white-space:nowrap; line-height:1.5}
+.chip::before{content:""; width:7px; height:7px; border-radius:50%; background:currentColor; flex:none}
+.chip.pre{background:var(--ochre-wash); color:var(--ochre)}
+.chip.out{background:var(--hot-wash); color:var(--hot)}
+.chip.open{background:var(--good-wash); color:var(--good)}
+.chip.home{background:var(--accent-wash); color:var(--accent-deep)}
+
+/* 判定の記号 */
+.mark{display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; font-family:var(--serif); font-weight:700; font-size:17px; line-height:1; flex:none}
+.mark.m-a{background:var(--good); color:#fff}
+.mark.m-b{background:var(--good-wash); color:var(--good); box-shadow:inset 0 0 0 1.5px var(--good)}
+.mark.m-c{background:var(--paper-4); color:var(--ink-2)}
+.mark.m-d{background:var(--hot-wash); color:var(--hot)}
+:root[data-theme="dark"] .mark.m-a{color:#0f1416}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mark.m-a{color:#0f1416}}
+td .mark{width:26px; height:26px; font-size:15px; vertical-align:middle}
+.mark-row{display:flex; align-items:center; gap:9px}
+
+/* 県の見出し */
+.pref-head{display:grid; grid-template-columns:1.25fr 1fr; gap:0; border:1px solid var(--line); background:var(--paper-2); box-shadow:var(--shadow)}
+.pref-head .ph-img{position:relative; min-height:260px; background:var(--paper-3)}
+.pref-head .ph-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.pref-head .ph-img figcaption{position:absolute; right:8px; bottom:6px; font-size:10px; color:#fff; background:rgba(0,0,0,.45); padding:2px 7px; border-radius:2px; font-family:var(--mono)}
+.pref-facts{padding:18px 20px 16px; display:flex; flex-direction:column; gap:12px}
+.pref-facts .pf-top{display:flex; flex-wrap:wrap; align-items:center; gap:8px}
+.pref-facts dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:6px 14px; font-size:13.5px}
+.pref-facts dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; color:var(--ink-3); padding-top:3px; white-space:nowrap}
+.pref-facts dd{margin:0; color:var(--ink); line-height:1.6}
+.pref-facts dd b{font-family:var(--mono); font-variant-numeric:tabular-nums}
+.pref-facts .pf-say{font-family:var(--serif); font-size:16px; font-weight:700; line-height:1.6; border-top:1px solid var(--line); padding-top:11px; margin-top:auto}
+@media (max-width:700px){
+  .pref-head{grid-template-columns:1fr}
+  .pref-head .ph-img{min-height:0; aspect-ratio:16/9}
+}
+
+/* プラン（家族／父1人）*/
+.plan{border:1px solid var(--line); background:var(--paper-2); display:flex; flex-direction:column}
+.plan-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; padding:14px 18px; background:var(--paper-3); border-bottom:1px solid var(--line)}
+.plan-head .who-tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:var(--accent-deep); font-weight:600}
+.plan-head.solo .who-tag{color:var(--hot)}
+.plan-head h4{margin:0; font-size:17px}
+.plan-head .span{margin-left:auto; font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+.plan-photos{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:3px; background:var(--paper-2)}
+.plan-photos figure{position:relative}
+.plan-photos img{width:100%; aspect-ratio:3/2; object-fit:cover}
+.plan-photos figcaption{padding:7px 12px 8px; font-size:12px; color:var(--ink-2); line-height:1.55}
+.plan-photos figcaption b{color:var(--ink); font-family:var(--serif); font-size:13.5px}
+.plan-photos figcaption .cred{display:block; font-family:var(--mono); font-size:9.5px; color:var(--ink-3); margin-top:2px}
+.plan-body{padding:14px 18px 18px; display:flex; flex-direction:column; gap:14px}
+.steps{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0}
+.steps li{display:grid; grid-template-columns:4.6em 1fr; gap:0 14px; padding:8px 0; border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:none}
+.steps .when{font-family:var(--mono); font-size:11.5px; color:var(--accent-deep); padding-top:2px; font-weight:600; white-space:nowrap}
+.plan-head.solo + .plan-photos + .plan-body .steps .when, .plan.solo .steps .when{color:var(--hot)}
+.steps .what{font-size:14px; color:var(--ink-2); line-height:1.7}
+.steps .what b{color:var(--ink)}
+.steps .what .fee{display:block; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); margin-top:2px}
+
+/* 金額表（小） */
+table.money{min-width:520px; font-size:13.5px}
+table.money td.num b{font-size:14.5px}
+table.money td.save{color:var(--good); font-weight:600}
+table.money tr.sum td{background:var(--paper-3); font-weight:700}
+.two-col{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr)); gap:16px; align-items:start}
+
+/* 判定のまとめ行 */
+.judge{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.judge > div{background:var(--paper-2); padding:14px 16px; display:grid; grid-template-columns:auto 1fr; gap:4px 12px; align-items:start}
+.judge .j-lab{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--ink-3); grid-column:2}
+.judge .j-txt{grid-column:2; font-size:14px; color:var(--ink-2); line-height:1.7}
+.judge .j-txt b{color:var(--ink)}
+.judge .mark{grid-row:1 / span 2}
+
+/* 時間軸チャート */
+.chart{border:1px solid var(--line); background:var(--paper-2); padding:14px 12px 6px}
+.chart-scroll{overflow-x:auto}
+.chart svg{display:block; width:100%; min-width:640px; height:auto}
+.chart svg text{font-family:var(--sans)}
+.chart .c-grid{stroke:var(--line); stroke-width:1}
+.chart .c-axis{fill:var(--ink-3); font-family:var(--mono); font-size:11px}
+.chart .c-pref{fill:var(--ink); font-size:13.5px; font-weight:700}
+.chart .c-note{fill:var(--ink-2); font-size:11.5px}
+.chart .c-bar{fill:var(--c1)}
+.chart .c-net{fill:var(--c1)}
+.chart .c-disc{fill:var(--c2)}
+.chart .c-val{fill:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:600}
+.chart .c-sale{fill:var(--c2); stroke:var(--paper-2); stroke-width:2}
+.chart .c-sold{fill:var(--hot); stroke:var(--paper-2); stroke-width:2}
+.chart .c-today{stroke:var(--hot); stroke-width:1.5}
+.chart .c-trip{fill:var(--ink); opacity:.10}
+.chart .c-trip-l{fill:var(--ink-2); font-family:var(--mono); font-size:10.5px}
+.chart .c-today-l{fill:var(--hot); font-family:var(--mono); font-size:11px; font-weight:600}
+.chart .hit:hover .c-bar, .chart .hit:focus .c-bar{opacity:.85}
+.chart-legend{display:flex; flex-wrap:wrap; gap:6px 18px; padding:10px 6px 8px; font-size:12px; color:var(--ink-2); font-family:var(--mono)}
+.chart-legend span{display:inline-flex; align-items:center; gap:7px}
+.chart-legend i{display:block; flex:none}
+.lg-bar{width:22px; height:9px; border-radius:0 3px 3px 0; background:var(--c1)}
+.lg-dot{width:10px; height:10px; border-radius:50%}
+
+/* 大きめの数字行 */
+.big-num{font-family:var(--mono); font-variant-numeric:tabular-nums; font-weight:600}
+.pill-row{display:flex; flex-wrap:wrap; gap:8px}
+
+/* 表の幅と折り返し */
+.tbl-scroll td:first-child{white-space:nowrap}
+table.t-rank{min-width:720px}
+table.t-rank td:nth-child(2){min-width:11em}
+table.t-rank .mark-row{min-width:9.5em}
+table.t-wide{min-width:820px}
+table.t-wide td:nth-child(4){min-width:14em}
+.plan-photos figure:only-child img{aspect-ratio:21/9}
+
+.gallery{grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr)); border:1px solid var(--line)}
+</style>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="mosaic">
+      <figure><img src="assets/photos/kyushu/fk_marineworld.jpg" alt="マリンワールド海の中道のイルカが博多湾を背に跳ぶ"><figcaption>福岡<small>水族館と餌やり</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/fk_umizuri.jpg" alt="福岡市海づり公園の桟橋"><figcaption>福岡<small>真鯛の釣り堀</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/fk_railway_museum.jpg" alt="九州鉄道記念館に並ぶ機関車"><figcaption>福岡<small>鉄道記念館</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_airport.jpg" alt="九州佐賀国際空港のターミナル"><figcaption>佐賀<small>1,000円レンタカー</small></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_zeela.jpg" alt="呼子大橋と呼子の海"><figcaption>佐賀<small>呼子の海</small></figcaption></figure>
+    </div>
+    <div class="title-block">
+      <div class="eyebrow">
+        <span>検討メモ 別冊2</span><span>9月23日（水・祝）夜</span>
+        <b>福岡・佐賀 9/24（木）正午 開始</b>
+      </div>
+      <h1>福岡・佐賀は単体で行けるか</h1>
+      <p class="standfirst">県をまたがない前提で、福岡だけ・佐賀だけの家族旅行を調べ直した。前回の別冊では「大分の受け皿」「家族には不向き」と判定したが、<strong>1泊2日に絞ると、どちらも独立した候補になる</strong>。航空券の買い方と、明日の正午にやることもまとめた。金額はすべて推定。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">Ⅰ</span><h2>要約</h2><span class="sec-kicker">前回の判定を改める</span></div>
+  <div class="verdict">
+    <p class="verdict-lead">前回の判定は<em>2泊3日で大分と比べた結果</em>で、福岡・佐賀には厳しすぎました。<strong>1泊2日なら、福岡は車なしで、佐賀はレンタカーありで、4歳と2歳が満足できる旅になります。</strong>さらに楽天の「航空券＋宿の1泊クーポン」が取れれば、<em>航空券代にも50%が効き</em>、割引は大分の2泊（約6万円）を上回る可能性があります。</p>
+    <dl class="verdict-grid">
+      <div class="vcell"><dt>福岡 1泊2日</dt><dd class="num">◯<small>車なし。水族館の餌やり、アンパンマンミュージアム、ほぼ確実に釣れる真鯛の釣り堀が1泊に入る</small></dd></div>
+      <div class="vcell"><dt>佐賀 1泊2日</dt><dd class="num">◯<small>空港の24時間1,000円レンタカーが前提。「100%釣れる」ニジマス釣り堀、船、子連れ特化の宿</small></dd></div>
+      <div class="vcell"><dt>割引（航空券込み）</dt><dd class="num">最大▲8万<small>ANA楽パック1泊クーポンの場合（有料4人×2万円）。ただし佐賀は全体で25枚、福岡は枚数未公開</small></dd></div>
+      <div class="vcell"><dt>割引（宿泊のみ）</dt><dd class="num">▲2〜4万<small>航空券は割引なし。枚数は多く、取れる確率は高い</small></dd></div>
+    </dl>
+    <div class="callout hot">
+      <h4>行ける日はかなり限られる</h4>
+      <p>土曜は習い事、11/20–22は大分。<strong>休暇なしで行ける1泊2日は10/11（日）–12（月・祝）だけ</strong>です。ほかは月曜に有給が1日要ります（11/1–2、11/8–9、12/13–14）。11/22–23は大分と重なります。<strong>大分と別にもう1回行くかどうか</strong>が、先に決めるべきことです。</p>
+    </div>
+    <div class="callout">
+      <h4>新しく分かった訂正（ANAの2歳）</h4>
+      <p>ANAは2026年5月19日の運賃改定で、膝上無料の幼児を「2歳未満」に変えました。<strong>2歳の次男はANAでは座席が要り、大人の約75%の運賃がかかります。</strong>JALとスカイマークは3歳未満の膝上無料が続いています。本編（大分）の該当箇所も直しました。</p>
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">Ⅱ</span><h2>航空券はどう買うか</h2><span class="sec-kicker">往復か片道か</span></div>
+  <p class="note ok"><strong>答え：県をまたがないなら、同じ空港の往復で、同じ会社の「往復」としてまとめて買う。</strong>ANAは2026年5月から往復運賃ができ、片道2本より安くなります。JALの「往復セイバー」は各運賃から5%引き、スターフライヤーの「往復割」も5%相当引きです。スカイマークだけは往復割引がなく、片道2本でも値段は同じです。</p>
+  <h3>(1) 会社ごとの違い</h3>
+  <div class="tbl-scroll">
+    <table class="t-wide">
+      <thead><tr><th>会社</th><th>往復割引</th><th>2歳の次男</th><th>4歳の長男</th><th>行ける空港</th><th>買う時期</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ANA</strong></td><td>往復運賃あり（片道2本より安い。片道だけの払い戻し不可）</td><td><strong>座席が要る</strong>（小児・大人の約75%）</td><td>大人の約75%</td><td>福岡・佐賀</td><td>45日前・28日前で値段が上がる</td></tr>
+        <tr class="pick"><td><strong>JAL</strong></td><td>往復セイバー（各5%引き）</td><td>膝上なら無料</td><td>大人の75%</td><td>福岡のみ（佐賀は就航なし）</td><td>早いほど安い</td></tr>
+        <tr class="pick"><td><strong>スカイマーク</strong></td><td>なし（片道単位）</td><td>膝上なら無料</td><td>大人と同じ「いま得」か小児普通運賃の安い方</td><td>福岡のみ</td><td>11/20–24はピーク期</td></tr>
+        <tr><td><strong>スターフライヤー</strong></td><td>往復割（5%相当）</td><td>座席が要る（無料は2歳未満）</td><td>小人運賃</td><td>福岡のみ</td><td>11/20–23はピーク期①</td></tr>
+      </tbody>
+      <caption>ANA・JAL・スカイマーク・スターフライヤー各社の運賃規則（9/23確認）。JALの一次ページはアクセス拒否で開けず、検索結果の要約で確認した。</caption>
+    </table>
+  </div>
+  <h3>(2) 値段の目安と、買う時期</h3>
+  <ul class="plain">
+    <li>ANA公式の「48時間以内に検索された最安」（大人1人往復）：羽田⇔福岡 <strong>21,796円〜</strong>、羽田⇔佐賀 <strong>24,304円〜</strong>（いずれも11月）。</li>
+    <li>直前は大きく上がる。羽田⇔福岡の例で、10/17発 26,960円 → 10/13発 31,465円 → 10/5発 44,115円。</li>
+    <li>ANAのシンプル／スタンダードは<strong>45日前</strong>に値段の段が変わる。11/22発なら<strong>10/8</strong>、10/11発はすでに過ぎている。</li>
+    <li><strong>家族4人の航空券の目安（往復）</strong>：福岡をJALかスカイマークで取ると大人2＋4歳で約7万円（2歳は膝上で無料）。ANAだと2歳も有料で約9万円。佐賀はANAしかないので約9.5万円。</li>
+  </ul>
+  <p class="note warn"><strong>ただし、楽パック1泊クーポン（第Ⅲ章）を狙うなら、航空券を先に買わない。</strong>航空券と宿をまとめて予約したときだけ、航空券代にも割引が効くため。</p>
+</section>
+
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">Ⅲ</span><h2>割引をどう取るか</h2><span class="sec-kicker">1泊なら航空券にも効く</span></div>
+  <p class="note">前回は「交通付きのクーポンは定額で当てにできない」と書いたが、それは<strong>2泊以上</strong>の話でした。<strong>1泊用</strong>の楽パッククーポンは％型で、人数も「1名以上」。家族4人でも使えます。</p>
+  <div class="tbl-scroll">
+    <table class="t-wide">
+      <thead><tr><th>取り方</th><th>割引の効く範囲</th><th>上限（この家族）</th><th>枚数</th><th>向いている場合</th></tr></thead>
+      <tbody>
+        <tr><td><strong>宿泊のみ</strong>（じゃらん・楽天）＋航空券は別に往復で</td><td>宿代の50%</td><td>2万円×4人＝8万円（まず届かない）</td><td>多い（佐賀の楽天は620枚、じゃらんは獲得不要）</td><td>確実に取りたい</td></tr>
+        <tr class="pick"><td><strong>ANA楽パック 1泊</strong>（航空券＋宿）</td><td><strong>航空券＋宿の合計の50%</strong></td><td>2万円×<strong>4人</strong>＝8万円（2歳も有料なので4人）</td><td><strong>佐賀は25枚</strong>。福岡は未公開</td><td>割引額を最大にしたい。福岡・佐賀とも使える</td></tr>
+        <tr><td><strong>JAL楽パック 1泊</strong></td><td>同上</td><td>2万円×<strong>3人</strong>＝6万円（2歳は無料幼児で数えない）</td><td>同じ枠を共有</td><td>福岡のみ。航空券自体が安い</td></tr>
+        <tr><td>楽パック 2泊以上</td><td>定額</td><td>「1名」「2名」の旅行のみ → <strong>4人家族は対象外</strong></td><td>佐賀は計25枚</td><td>使えない</td></tr>
+      </tbody>
+      <caption>楽天トラベル 佐賀県クーポン（9/24 12:00開始、予約は12/21まで）の原文による。熊本・長崎の楽パック1泊クーポンも同じ形（熊本60%・120枚、長崎50%・50枚）。福岡県のクーポンは9/23夜の時点で楽天に未掲載。</caption>
+    </table>
+  </div>
+  <h3>(1) 1泊2日の総額と割引（推定）</h3>
+  <div class="tbl-scroll">
+    <table class="money">
+      <thead><tr><th>案</th><th class="num">航空券</th><th class="num">宿</th><th class="num">現地</th><th class="num">総額</th><th class="num">割引</th><th class="num">払う額</th></tr></thead>
+      <tbody>
+        <tr><td>福岡・宿泊のみ（JALかSKYで往復）</td><td class="num">7.2万</td><td class="num">7.3万</td><td class="num">4.5万</td><td class="num">19.0万</td><td class="num save">▲3.7万</td><td class="num">15.4万</td></tr>
+        <tr class="pick"><td>福岡・ANA楽パック1泊</td><td class="num">9.1万</td><td class="num">7.3万</td><td class="num">4.5万</td><td class="num">20.9万</td><td class="num save">▲8.0万</td><td class="num"><b>12.9万</b></td></tr>
+        <tr><td>福岡・JAL楽パック1泊</td><td class="num">7.2万</td><td class="num">7.3万</td><td class="num">4.5万</td><td class="num">19.0万</td><td class="num save">▲6.0万</td><td class="num">13.0万</td></tr>
+        <tr><td>佐賀・宿泊のみ（ANAで往復）</td><td class="num">9.5万</td><td class="num">4.5万</td><td class="num">3.0万</td><td class="num">17.0万</td><td class="num save">▲2.3万</td><td class="num">14.7万</td></tr>
+        <tr class="pick"><td>佐賀・ANA楽パック1泊</td><td class="num">9.5万</td><td class="num">4.5万</td><td class="num">3.0万</td><td class="num">17.0万</td><td class="num save">▲7.0万</td><td class="num"><b>10.0万</b></td></tr>
+        <tr class="sum"><td>参考：大分 本編（2泊3日・宿泊のみ）</td><td class="num">8.3万</td><td class="num">12.0万</td><td class="num">5.5万</td><td class="num">25.8万</td><td class="num save">▲6.0万</td><td class="num">19.8万</td></tr>
+      </tbody>
+      <caption>航空券は大人往復2.6万円（福岡）・2.7万円（佐賀）と置き、4歳は75%、2歳はANAのみ75%で有料。宿は福岡がザ・ルイガンズ本館朝食付（11/22の楽天表示7.3万円）、佐賀が嬉野・初音荘（大人2人で約4.4万円＋幼児の食事無料）。現地は入場料・体験・食事・交通（佐賀はレンタカー1,000円＋燃料）。大分の航空券は2歳を膝上無料とした9/23までの前提で、ANAなら2歳の座席代（約2万円）が上乗せになる。</caption>
+    </table>
+  </div>
+  <p class="note ok"><strong>読み取り：</strong>1泊用の楽パッククーポンが取れれば、福岡・佐賀の1泊2日は<strong>払う額が10〜13万円</strong>で、割引額（7〜8万円）は大分の2泊3日より大きい。取れなければ宿泊のみで、割引は2〜4万円にとどまる。</p>
+</section>
+
+<section id="fukuoka2">
+  <div class="sec-head"><span class="sec-num">Ⅳ</span><h2>福岡だけで行く</h2><span class="sec-kicker">車なし・1泊2日</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/fk_marineworld.jpg" alt="マリンワールドのイルカ" loading="lazy"><figcaption>© project Kei / CC BY-SA 4.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip pre">9/24 正午ごろ開始</span><span class="chip home">50%・12/15宿泊まで</span></div>
+      <dl>
+        <dt>移動</dt><dd>羽田⇔福岡の往復だけ。福岡空港から博多まで地下鉄2駅。レンタカー不要</dd>
+        <dt>予算</dt><dd><b>19.6億円</b>（大分の約2倍）。宿の直販も同時に開始（参加施設一覧は準備中）</dd>
+        <dt>注意</dt><dd>大相撲九州場所（11/8–22）で11月の市内の宿は高く、日航・二日市の大丸別荘は楽天で空室なし</dd>
+      </dl>
+      <p class="pf-say">「車なし」「移動が短い」「長男の釣りと餌やり」「次男のアンパンマンと乗り物」が1泊でそろう。</p>
+    </div>
+  </div>
+
+  <h3>(1) モデル行程 ── 日曜〜月曜（祝日）</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>10/11（日）–12（月・祝）など 1泊2日</h4><span class="span">ルイガンズ泊</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/fk_anpanman.jpg" alt="博多リバレインモールの外観" loading="lazy"><figcaption><b>アンパンマンこどもミュージアム</b>博多リバレインモール5–6階。地下鉄中洲川端駅に直結。1歳以上2,000〜2,200円<span class="cred">© Geraldshields11 / CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/fk_uminaka_park.jpg" alt="海の中道海浜公園の観覧車と花畑" loading="lazy"><figcaption><b>海の中道海浜公園</b>動物の森でモルモットを膝に抱っこ、ヤギ・ヒツジに餌（1個100円）。中学生以下無料<span class="cred">© そらみみ (Soramimi) / CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/fk_umizuri.jpg" alt="福岡市海づり公園の桟橋" loading="lazy"><figcaption><b>福岡市海づり公園</b>海の釣り堀で真鯛。1尾1kg前後、買い取りは約2,000〜3,000円。柵付きの桟橋。火曜休園<span class="cred">© STA3816 / CC BY-SA 4.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1 日</span><span class="what">朝の便で福岡 → 地下鉄で中洲川端 → <b>アンパンマンこどもミュージアム</b>（2〜3時間・次男の本命）<span class="fee">4人で約8,000〜8,800円。11月の休館日は未確認</span></span></li>
+        <li><span class="when">午後</span><span class="what">ベイサイドプレイスから<b>高速船うみなかライン</b>で海の中道（約20分）→ <b>マリンワールド</b>。日曜なので<b>イルカの餌やり（12:30）</b>、<b>サメタッチ（13:30）</b>、アザラシの餌やりができる<span class="fee">船：大人1,300円・未就学児は大人1人につき1人無料／水族館：大人2,500円・3歳以上700円・2歳無料／イルカ1,000円（付き添いも1,000円）・サメタッチ1,500円（同）・アザラシ500円。いずれも3歳から。イルカとサメは2週間前から販売</span></span></li>
+        <li><span class="when">夜</span><span class="what"><b>ザ・ルイガンズ</b>泊（水族館まで徒歩5分）。宿泊者用の大浴場＋サウナ、屋外のコンテナサウナ<span class="fee">本館 朝食付 約7.3万（11/22の表示）。未就学児は添い寝無料</span></span></li>
+        <li><span class="when">DAY2 月祝</span><span class="what">案A：<b>海の中道海浜公園</b>の動物の森（モルモット抱っこ13:10〜）と遊具 → JRで博多（約35分）→ 博多駅屋上の<b>つばめ電車</b> → 午後の便<br>案B：<b>海づり公園で真鯛</b>（9:30〜）→ 筑肥線が地下鉄直通なので、乗り換えなしで福岡空港へ</span></li>
+      </ol>
+      <p class="note warn"><strong>弱点。</strong>餌やりやサメタッチは3歳からで、次男は見ているだけの場面がある。父の「露天＋サウナ」を満たす宿（原鶴・脇田）は郊外で車が要る。ルイガンズの大浴場に露天があるかは未確認。釣った真鯛を持ち帰るには保冷箱が要る。</p>
+    </div>
+  </div>
+
+  <h3>(2) 検証材料 ── ほかの候補</h3>
+  <div class="plan-photos gallery">
+    <figure><img src="assets/photos/kyushu/fk_zoo.jpg" alt="福岡市動物園のニホンザル" loading="lazy"><figcaption><b>福岡市動物園</b>大人600円・中学生以下無料。月曜休園（祝日は開園）<span class="cred">© pelican from Tokyo, Japan / CC BY-SA 2.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_railway_museum.jpg" alt="九州鉄道記念館の機関車" loading="lazy"><figcaption><b>九州鉄道記念館</b>ミニ鉄道を自分で運転（1台300円・3人まで）。500円・4歳250円・2歳無料。門司港は博多から遠い<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_shiokaze.jpg" alt="門司港の潮風号" loading="lazy"><figcaption><b>潮風号</b>門司港レトロの観光列車。片道500円・未就学児無料。11月末までの土日祝<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_dazaifu_yuen.jpg" alt="だざいふ遊園地" loading="lazy"><figcaption><b>だざいふ遊園地</b>土日祝のみ。2歳は乗り物無料（付き添いは有料）。隣の九州国立博物館「あじっぱ」も無料<span class="cred">© Photaro / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_kyuhaku.jpg" alt="九州国立博物館" loading="lazy"><figcaption><b>九州国立博物館</b>体験展示「あじっぱ」は無料。太宰府天満宮の隣<span class="cred">© Suicasmo / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_seahawk.jpg" alt="ヒルトン福岡シーホークと福岡ドーム" loading="lazy"><figcaption><b>ヒルトン福岡シーホーク</b>4人部屋 素泊まり7.2万〜（11/22）。岩風呂は有料で内湯のみ<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_momochi.jpg" alt="シーサイドももちと福岡タワー" loading="lazy"><figcaption><b>シーサイドももち</b>砂浜と福岡タワー。高速船の乗り場もある<span class="cred">© Hirho / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_harazuru.jpg" alt="筑後川と原鶴温泉の旅館" loading="lazy"><figcaption><b>原鶴温泉</b>露天・サウナ・家族風呂の宿（パーレンス小野屋 2食5.0万〜）。福岡市から車60分で、車なしでは遠い<span class="cred">© STA3816 / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_futsukaichi.jpg" alt="二日市温泉の御前湯" loading="lazy"><figcaption><b>二日市温泉</b>博多から電車20分。大丸別荘は11月の週末が楽天で空室なし<span class="cred">© STA3816 / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_yanagawa.jpg" alt="柳川の川下り" loading="lazy"><figcaption><b>柳川の川下り</b>約1時間座ったまま。4歳・2歳には退屈の恐れ<span class="cred">© Thomas Au / CC BY 2.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_ramen.jpg" alt="豚骨ラーメン" loading="lazy"><figcaption><b>博多ラーメン</b>細麺で幼児も食べやすい<span class="cred">© Guilhem Vellut from Paris, France / CC BY 2.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/fk_airport.jpg" alt="福岡空港の国内線ターミナル" loading="lazy"><figcaption><b>福岡空港</b>博多まで地下鉄2駅・約6分。子連れには最大の利点<span class="cred">© Nkmr844 / CC BY-SA 4.0</span></figcaption></figure>
+  </div>
+</section>
+
+<section id="saga2">
+  <div class="sec-head"><span class="sec-num">Ⅴ</span><h2>佐賀だけで行く</h2><span class="sec-kicker">レンタカー・1泊2日</span></div>
+
+  <div class="pref-head">
+    <figure class="ph-img"><img src="assets/photos/kyushu/sg_airport.jpg" alt="九州佐賀国際空港" loading="lazy"><figcaption>© Pekachu / CC BY-SA 4.0</figcaption></figure>
+    <div class="pref-facts">
+      <div class="pf-top"><span class="chip pre">OTA 9/24 正午</span><span class="chip home">50%・12/25宿泊まで</span></div>
+      <dl>
+        <dt>移動</dt><dd>羽田⇔佐賀はANAのみ1日5往復（7:15発→9:10着、帰り15:45発→17:30着が現実的）</dd>
+        <dt>車</dt><dd><b>24時間1,000円レンタカー</b>（県の事業・11月も対象・到着便の搭乗券と前日までの電話予約が必要）。チャイルドシートの料金は未確認</dd>
+        <dt>車なし</dt><dd>空港から乗合タクシーで嬉野・武雄・太良へ家族約8,000円</dd>
+        <dt>予算</dt><dd><b>2.3億円</b>（最少）。楽天は計740枚、楽パック1泊は25枚</dd>
+      </dl>
+      <p class="pf-say">車を使えば、長男の「確実に釣れる」がいちばん確実に叶う県。</p>
+    </div>
+  </div>
+
+  <h3>(1) モデル行程 ── 日曜〜月曜（祝日）</h3>
+  <div class="plan">
+    <div class="plan-head"><span class="who-tag">家族4人</span><h4>10/11（日）–12（月・祝）など 1泊2日</h4><span class="span">嬉野・初音荘泊</span></div>
+    <div class="plan-photos">
+      <figure><img src="assets/photos/kyushu/sg_yobuko_ika.jpg" alt="呼子の港で干されるイカ" loading="lazy"><figcaption><b>呼子</b>海中展望船ジーラ（40分・幼児は大人1人につき1人無料）とイカの活き造り<span class="cred">© nesnad / CC BY 3.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_ureshino_river.jpg" alt="嬉野温泉の通り" loading="lazy"><figcaption><b>嬉野温泉・初音荘</b>子連れ特化の宿。未就学児の食事が大人1人につき1人無料、畳敷きの大浴場、家族風呂、キッズルーム。サウナはない<span class="cred">© Peka / CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="assets/photos/kyushu/sg_yumeginga.jpg" alt="佐賀県立宇宙科学館の入口" loading="lazy"><figcaption><b>宇宙科学館ゆめぎんが</b>大人520円・4歳100円・3歳以下無料。魚の餌やり（10:30・15:30）。月曜休館（祝日は開館）<span class="cred">© ハポニアラ / CC BY 4.0</span></figcaption></figure>
+    </div>
+    <div class="plan-body">
+      <ol class="steps">
+        <li><span class="when">DAY1 日</span><span class="what">7:15 羽田 → 9:10 佐賀（ANA）→ <b>1,000円レンタカー</b>（チャイルドシート2台）→ <b>フィッシングパークひらの</b>（唐津市厳木）の「ワクワク釣り堀」。公式は「どなたでも100％釣れます」。釣ったニジマスをその場で塩焼き（秋季は10〜15時）<span class="fee">えさ釣り1セット2,000円（ニジマス3匹まで持ち帰り）。プール型で足場がしっかりしている。車でしか行けない</span></span></li>
+        <li><span class="when">午後</span><span class="what"><b>呼子</b>へ（車）→ <b>海中展望船ジーラ</b> → 嬉野へ（車）→ <b>初音荘</b>泊<span class="fee">ジーラ 大人2,200円。初音荘 楽天表示で1人21,780〜27,720円（2名利用時）</span></span></li>
+        <li><span class="when">DAY2 月祝</span><span class="what"><b>三瀬どんぐり村</b>でヤギ・馬に餌やり（土日祝のみ営業・2027年秋に閉園予定）または武雄の<b>ゆめぎんが</b> → 吉野ヶ里の遊具 → 空港で返却 → 15:45 佐賀 → 17:30 羽田<span class="fee">どんぐり村：大人600円・4歳300円・3歳以下無料、餌1個100円／吉野ヶ里：中学生以下無料</span></span></li>
+      </ol>
+      <p class="note warn"><strong>弱点。</strong>運転が前提（初日だけで約3時間）。動物園・水族館はなく、生き物体験は小さな施設の組み合わせ。11月の有明海の干潟体験・ムツゴロウはシーズン外。唐津シーサイドホテルの屋上インフィニティと屋外キッズプールは夏季限定（露天とサウナは通年）。御船山楽園ホテルは小学生以上のみ。<strong>車なしだと</strong>「温泉宿＋科学館＋小さな遊園地」止まりで弱い。</p>
+    </div>
+  </div>
+
+  <h3>(2) 検証材料 ── ほかの候補</h3>
+  <div class="plan-photos gallery">
+    <figure><img src="assets/photos/kyushu/sg_zeela.jpg" alt="呼子大橋" loading="lazy"><figcaption><b>呼子大橋</b>呼子の港から見える。イカ丸（七ツ釜遊覧船）もある<span class="cred">© KishujiRapid / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_karatsu.jpg" alt="唐津城" loading="lazy"><figcaption><b>唐津</b>海上釣り堀「仮屋湾遊漁センター」は4時間単位で幼児には長い。唐津シーサイドホテルは展望露天・サウナ・屋内プール<span class="cred">© SuperTaiyaki from Osaka, Japan / CC BY 2.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_niji.jpg" alt="虹の松原" loading="lazy"><figcaption><b>虹の松原</b>唐津の海沿いの松林。ドライブの途中に<span class="cred">© Pekachu / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_yoshinogari.jpg" alt="吉野ヶ里遺跡の全景" loading="lazy"><figcaption><b>吉野ヶ里歴史公園</b>ローラー滑り台・ふわふわドーム。中学生以下無料。空港から車約30分<span class="cred">© Saigen Jiro / CC0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_balloon.jpg" alt="佐賀のバルーンフェスタ" loading="lazy"><figcaption><b>バルーンフェスタ</b>10/30–11/3。午後の競技（15〜17時）なら早起き不要。宿は混む<span class="cred">© jewell willett / CC BY 2.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_mutsugoro.jpg" alt="干潟のムツゴロウ" loading="lazy"><figcaption><b>有明海の干潟</b>干潟体験は4〜10月。11月はシーズン外<span class="cred">© Donald Hobern from Copenhagen, Denmark / CC BY 2.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_takeo_romon.jpg" alt="武雄温泉の楼門" loading="lazy"><figcaption><b>武雄温泉</b>武雄温泉⇔嬉野温泉は西九州新幹線で1駅。次男の乗り物に<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_takeo_library.jpg" alt="武雄市図書館" loading="lazy"><figcaption><b>武雄市図書館</b>雨の日の逃げ場になる<span class="cred">© Asturio Cantabrio / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_yutoku.jpg" alt="紅葉の祐徳稲荷神社" loading="lazy"><figcaption><b>祐徳稲荷神社</b>11月は紅葉。鹿島市。子どもへの刺さりは弱い<span class="cred">© Underbar dk / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_arita.jpg" alt="有田ポーセリンパーク" loading="lazy"><figcaption><b>有田ポーセリンパーク</b>入園無料。親向け<span class="cred">© mahlervv / CC BY 3.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_karatsu_kunchi.jpg" alt="唐津くんちの曳山" loading="lazy"><figcaption><b>唐津くんち</b>11/2–4。曳山は通年、展示場で見られる<span class="cred">© Pekachu / CC BY-SA 4.0</span></figcaption></figure>
+    <figure><img src="assets/photos/kyushu/sg_mifuneyama.jpg" alt="御船山楽園" loading="lazy"><figcaption><b>御船山楽園</b>庭園は子連れで日中入園できる（紅葉まつり 大人600円・幼児無料の例）。ホテルは小学生以上のみ<span class="cred">© そらみみ / CC BY-SA 4.0</span></figcaption></figure>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">Ⅵ</span><h2>大分と比べてどうか</h2><span class="sec-kicker">判定</span></div>
+  <div class="tbl-scroll">
+    <table class="t-wide">
+      <thead><tr><th></th><th>福岡 1泊2日</th><th>佐賀 1泊2日</th><th>大分 本編 2泊3日</th></tr></thead>
+      <tbody>
+        <tr><td>長男（生き物・釣り）</td><td>◎ 水族館の餌やり3種・サメタッチ・モルモット・真鯛</td><td>◎ 100%釣れる釣り堀と塩焼き、ヤギ</td><td>◎ サル・タッチプール・フクロウ・サファリの餌やり</td></tr>
+        <tr><td>次男（乗り物）</td><td>◎ アンパンマン・高速船・地下鉄・つばめ電車</td><td>◯ 船・新幹線1駅</td><td>◎ ホーバークラフト・ケーブル・モノレール</td></tr>
+        <tr><td>父（露天・サウナ）</td><td>△ ルイガンズの大浴場＋サウナ（露天は未確認）</td><td>△ 初音荘はサウナなし（唐津シーサイドなら◯）</td><td>◎ 杉乃井の棚湯・夢想園の大露天</td></tr>
+        <tr><td>母（湯布院の希望）</td><td>✕</td><td>✕</td><td>◎</td></tr>
+        <tr><td>車</td><td>不要</td><td>必要（1,000円）</td><td>2・3日目のみ</td></tr>
+        <tr><td>割引（最大）</td><td>▲8万（楽パック1泊）／▲3.7万（宿泊のみ）</td><td>▲7万（楽パック1泊）／▲2.3万</td><td>▲6万（宿泊のみ）</td></tr>
+        <tr><td>払う額</td><td>約13〜15万</td><td>約10〜15万</td><td>約20万</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ochre" style="margin-top:14px">
+    <h4>判定</h4>
+    <p><strong>福岡・佐賀とも「大分の代わり」にはならないが、「大分とは別のもう1回」としては十分に成り立つ。</strong>中身は福岡の方が車なしで濃く、宿の選択肢も多い。佐賀は運転できるなら、釣りの成功体験が最も確実。</p>
+    <p>ただし期待しすぎないでほしい点が2つ。①一番得をする楽パック1泊クーポンは、佐賀で25枚、福岡は枚数も種類もまだ分からず、<strong>正午の数分で消える前提</strong>。②行ける日が少ない（休暇なしは10/11–12のみ）。</p>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">Ⅶ</span><h2>明日 9/24 正午にやること</h2><span class="sec-kicker">行くと決めた場合</span></div>
+  <ol class="actions">
+    <li class="now"><span class="when">今夜</span><span class="what">奥様と「大分とは別にもう1回行くか」「行くなら福岡か佐賀か、どの日か」を決める</span><span class="why">日付と県が決まっていないと、正午に動けない。迷うなら今回は見送り、大分に集中するのが無難。</span></li>
+    <li class="now"><span class="when">今夜</span><span class="what">楽天トラベルにログインし、ANA楽パックで同じ条件（大人2・幼児2〜5歳が2人）を一度検索しておく</span><span class="why">ルイガンズ（福岡）か初音荘（佐賀）の在庫と総額を見ておく。航空券は先に買わない。</span></li>
+    <li class="now"><span class="when">9/24 11:55</span><span class="what">楽天の九州ふっこう応援割ページで、福岡・佐賀の楽パック1泊クーポンを獲得</span><span class="why">佐賀は25枚。福岡は正午ごろ公開予定で、種類・枚数は開いてみないと分からない。</span></li>
+    <li class="now"><span class="when">9/24 12:00</span><span class="what">ANA楽パックで確定。取れなければ宿泊のみ（じゃらんは獲得不要）に切り替え、航空券は往復で別に買う</span><span class="why">宿泊のみでも割引は2〜4万円。航空券は福岡ならJALかスカイマーク（2歳が膝上で無料）が安い。</span></li>
+    <li><span class="when">佐賀の場合</span><span class="what">レンタカー会社に電話で「24時間1,000円キャンペーン」を予約（前日まで）</span><span class="why">チャイルドシート2台と料金をその電話で確認。楽パックにレンタカーを付けると1,000円の対象外になる。</span></li>
+    <li><span class="when">9/25 12:00</span><span class="what">大分（本編）は予定どおり</span><span class="why">福岡・佐賀を取っても、大分の予約には影響しない（県ごとに別の予算・別の予約）。</span></li>
+  </ol>
+  <h3>まだ分かっていないこと</h3>
+  <ul class="plain">
+    <li>福岡の楽天クーポンの種類と枚数、参加OTA（9/24正午に公開）</li>
+    <li>10/11–12の宿の空きと料金（今回の宿の料金は11/22泊の表示）</li>
+    <li>ルイガンズの大浴場に露天があるか、アンパンマンミュージアムの休館日</li>
+    <li>佐賀のレンタカーのチャイルドシート料金と、24時間を超えた分の料金</li>
+    <li>11月の冬ダイヤでの便の時刻</li>
+  </ul>
+</section>
+
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">Ⅷ</span><h2>出典</h2><span class="sec-kicker">確認日 2026/9/23</span></div>
+  <div class="src"><ol>
+    <li>楽天トラベル 九州ふっこう応援割 佐賀県（楽パック1泊：旅行代金の50%・1人泊2万円・1名以上・無料幼児を含まない・25枚／楽パック2泊以上は1名・2名のみ）　travel.rakuten.co.jp/special/kyushuouen/saga/</li>
+    <li>楽天 ANA楽パック 小児・幼児区分の変更（2026/5/19〜、無料幼児は2歳未満）　travel.rakuten.co.jp/package/ana/info/2025-2026_changes/child_age/</li>
+    <li>ANA 国内線運賃（往復運賃・小児25%割引・45/28日前の期限）、羽田→福岡・佐賀の運賃ページ　ana.co.jp</li>
+    <li>JAL 往復セイバー・子どもの運賃FAQ、スカイマーク 運賃一覧・冬ダイヤ運賃表、スターフライヤー 往復割</li>
+    <li>福岡県 ふくおかキャンペーン公式　fukuoka-fukkou-wari.jp ／ 佐賀県 さがキャンペーン公式　saga-ouen.jp</li>
+    <li>マリンワールド海の中道（料金・体験）、海の中道海浜公園（動物の森・休園日）、福岡市海づり公園（釣り堀）、福岡市動物園、九州鉄道記念館、門司港レトロ観光列車、だざいふ遊園地、アンパンマンこどもミュージアムinモール　各公式</li>
+    <li>楽天トラベルの宿泊プラン表示（ザ・ルイガンズ、ヒルトン福岡シーホーク、ドーミーイン、ホテル日航福岡、大丸別荘、パーレンス小野屋、楠水閣、初音荘。9/23夜取得）</li>
+    <li>佐賀県 九州佐賀国際空港「24時間1,000円レンタカー」・リムジンタクシー・時刻表　pref.saga.lg.jp/airport/</li>
+    <li>フィッシングパークひらの、呼子 海中展望船ジーラ、佐賀県立宇宙科学館、三瀬どんぐり村、吉野ヶ里歴史公園、唐津シーサイドホテル、御船山楽園ホテルFAQ　各公式</li>
+  </ol></div>
+  <footer>
+    <p class="credits">写真はすべてWikimedia Commonsの自由利用可能なライセンスによる。<br>Fukuoka Airport Domestic Terminal.jpg（Nkmr844／CC BY-SA 4.0）、Hakata Riverain Mall.jpg（代替：アンパンマンこどもミュージアムが入る博多リバレインモール外観）（Geraldshields11／CC BY-SA 4.0）、Dazaifu Amuzement Park 20150815.jpg（Photaro／CC BY-SA 4.0）、Gozen-yu 20180613.jpg（二日市温泉・御前湯）（STA3816／CC BY-SA 4.0）、Chikugo River and Harazuru Onsen 01.jpg（STA3816／CC BY-SA 4.0）、Kyushu National Museum 20170225.jpg（Suicasmo／CC BY-SA 4.0）、Marine World Umi no Nakamichi 2011 02.jpg（project Kei／CC BY-SA 4.0）、Seaside Momochi Seaside Park Jigyōhama Chūō-ku Momochihama Sawara-ku Fukuoka City 20221225.jpg（Hirho／CC BY-SA 4.0）、View of locomotives in front of Kyushu Railway History Museum.jpg（そらみみ／CC BY-SA 4.0）、Tonkotsu Ramen Special, Hakata Choten, Paris 001.jpg（博多ラーメン店「博多長天」の豚骨ラーメン、パリ店）（Guilhem Vellut from Paris, France／CC BY 2.0）、Hilton Fukuoka Sea Hawk Hotel and Fukuoka Dome.jpg（そらみみ／CC BY-SA 4.0）、Torokko Train &quot;Shiokaze&quot; at Kyushu Tetsudo Kinenkan (Kyushu Railway History Museum) Station.jpg（そらみみ／CC BY-SA 4.0）、Ferris wheel and nemophila in Umino Nakamichi Seaside Park.JPG（そらみみ (Soramimi)／CC BY-SA 4.0）、Fukuoka City Umizuri Marine Park.jpg（上部の空をトリミング）（STA3816／CC BY-SA 4.0）、橋が低いので伏せる 柳川川下り (19016709711).jpg（柳川川下り）（Thomas Au／CC BY 2.0）、Fukuoka city zoological garden, Japan (3666522687).jpg（福岡市動物園のニホンザル）（pelican from Tokyo, Japan／CC BY-SA 2.0）、Terminal building of Saga Airport February 2016.jpg（Pekachu／CC BY-SA 4.0）、Zwinger Palace (Arita Porcelain Park).jpg（有田ポーセリンパーク）（mahlervv／CC BY 3.0）、Saga balloon fiesta sky view 2009 3.jpg（jewell willett／CC BY 2.0）、Karatsu Castle (38299875212).jpg（SuperTaiyaki from Osaka, Japan／CC BY 2.0）、Displayed Karatsu Kunchi Hikiyama 2016.jpg（曳山展示場の唐津くんち曳山）（Pekachu／CC BY-SA 4.0）、Azalea Valley in Mifuneyama Garden and Mount Mifuneyama 5.jpg（そらみみ／CC BY-SA 4.0）、Boleophthalmus pectinirostris (30832085388).jpg（ムツゴロウ）（Donald Hobern from Copenhagen, Denmark／CC BY 2.0）、Nijinomatsubara from Hamasaki beach.jpg（浜崎海岸から見た虹の松原）（Pekachu／CC BY-SA 4.0）、Takeo City Library exterior ac (1).jpg（Asturio Cantabrio／CC BY-SA 4.0）、Gate of Takeo Hot Spring.jpg（そらみみ／CC BY-SA 4.0）、Ureshino Onsen Hondori 20230610 02.jpg（嬉野温泉本通り）（Peka／CC BY-SA 4.0）、Squid on a line near Yobuko asaichi - Nov 2017.jpg（呼子朝市近くのイカの天日干し）（nesnad／CC BY 3.0）、Yoshinogari-iseki zenkei.JPG（Saigen Jiro／CC0）、佐賀県立宇宙科学館玄関.jpg（ハポニアラ／CC BY 4.0）、Yūtoku Inari Shrine sanmon and main hall.JPG（Underbar dk／CC BY-SA 4.0）、Yobuko Ohashi Bridge.jpg（呼子大橋）（KishujiRapid／CC BY-SA 4.0）</p>
+    <p class="credits">大分 家族旅行 検討メモ 別冊2 ── 2026年9月23日（水・祝）夜作成。本編<a href="https://claude.ai/artifact/KF46TrBNtYdfauiPYRSYn1">「大分に行く価値はあるか」</a>、別冊<a href="https://claude.ai/artifact/3RW43jpQFZYVapRTQwzLJQ">「大分以外に行く価値はあるか」</a>。金額はすべて推定。</p>
+  </footer>
+</section>
+</div>
