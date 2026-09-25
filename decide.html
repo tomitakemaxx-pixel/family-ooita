@@ -1,4 +1,4 @@
-<title>大分・福岡 判断シート</title>
+<title>大分旅行 判断シート</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
@@ -93,9 +93,19 @@ ol.steps li.now .when{background:var(--risk)}
 ol.steps .what{font-weight:700; font-size:14.5px}
 ol.steps .why{grid-column:2; font-size:13.5px; color:var(--ink-2)}
 
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14px}
+.tw{overflow-x:auto; border:1px solid var(--line); background:var(--card)}
+th,td{padding:9px 12px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.65}
+thead th{background:var(--card-2); font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--ink-2); font-weight:600; white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.lab{white-space:nowrap; color:var(--ink-3); font-size:13px}
+td.win{background:var(--pick-wash)}
 .links{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:4px 18px; font-size:13.5px; margin:0; padding-left:1.2em}
 footer{font-size:12px; color:var(--ink-3); border-top:1px solid var(--line); padding-top:14px}
 @media (max-width:520px){
+  .tw table{min-width:0; font-size:13px}
+  .tw th,.tw td{padding:8px 8px}
+  td.lab{white-space:normal; width:4.2em}
   ol.steps li{grid-template-columns:1fr}
   ol.steps .why{grid-column:1}
 }
@@ -104,10 +114,10 @@ footer{font-size:12px; color:var(--ink-3); border-top:1px solid var(--line); pad
 <div class="wrap">
 
 <header>
-  <div class="eyebrow"><span>2026年9月24日（木）22:45 時点</span><b>大分の予約開始 9/25（金）12:00</b></div>
-  <h1>大分・福岡 判断シート</h1>
-  <div class="route" aria-label="旅程"><span>11/20 杉乃井</span><i>→</i><span>11/21 由布院</span><i>→</i><span>11/22 福岡</span><i>→</i><span>11/23 福岡空港から帰宅</span></div>
-  <p class="lead">決めていただくのは3つだけです。それ以外は、第Ⅲ章の「私のおすすめ」のまま進めます。料金は4人（大人2・4歳・2歳）1室の税込合計で、楽天で確認した値です。</p>
+  <div class="eyebrow"><span>2026年9月25日（金）09:20 時点</span><b>大分の予約開始 今日 12:00</b></div>
+  <h1>大分旅行 判断シート</h1>
+  <div class="route" aria-label="おすすめの旅程"><span>11/20 杉乃井</span><i>→</i><span>11/21 別府（亀の井ホテル）</span><i>→</i><span>11/22 由布院</span><i>→</i><span>11/23 大分空港から帰宅</span></div>
+  <p class="lead">福岡は外しました。別府2泊・由布院1泊（3泊4日）と、別府1泊・由布院1泊（2泊3日）を比べています。料金は4人（大人2・4歳・2歳）1室、2食付き、税込の合計で、楽天の宿ページで今朝確かめた値です。</p>
 </header>
 
 <!-- Ⅰ -->
@@ -115,77 +125,82 @@ footer{font-size:12px; color:var(--ink-3); border-top:1px solid var(--line); pad
   <h2><span class="no">Ⅰ</span>要約</h2>
   <div class="sum">
     <ul>
-      <li><b>この旅程は無理なく成り立ちます。</b>3日目の移動は特急「ゆふいんの森」1本（由布院→博多 2時間18分）で、11/22は専用車両で走る日です。</li>
-      <li>前回「かなり疲れる」と書いたのは言い過ぎでした。宿を毎日移る手間はありますが、特別な問題ではありません。</li>
-      <li>注意が要るのは次の3点です。<span class="risk">① 福岡の宿</span>（3連休の中日で、4人で泊まれる部屋が減っている）<span class="risk">② ゆふいんの森の指定席</span>（10/22 10時発売）<span class="risk">③ 福岡の応援割</span>（楽天・じゃらんでは、9/24 22:35の時点でまだ「準備中」）</li>
+      <li><b>おすすめは、別府2泊・由布院1泊の3泊4日です。</b>1日に動くのが1か所ずつになり、子どもの負担がいちばん小さくなります。2日目はサファリと地獄めぐりのあと別府の同じ宿に戻り、3日目は特急「ゆふいんの森」で1時間20分だけ移動します。</li>
+      <li>2泊3日は、<b>費用</b>と<b>帰宅翌日の休み</b>を優先する場合の案です。そのかわり2日目に、サファリ・地獄めぐり・由布院への移動が重なります。</li>
+      <li><span class="risk">杉乃井は11/21（土）が満室になりました。</span>11/20（金）も、昨夜から今朝までに1タイプ売れています。どちらの案でも、12時は杉乃井から取ります。</li>
     </ul>
   </div>
 </section>
 
 <!-- Ⅱ -->
 <section id="s2">
-  <h2><span class="no">Ⅱ</span>決めること（3つ）</h2>
-
-  <div class="q">
-    <div class="q-head"><h3>(1) 由布院の宿（11/21・土）の順番</h3><p>奥様と、第1〜第3候補の順番を決めてください。どれも残りわずかなので、9/25の12時は上から順に取りにいきます。</p></div>
-    <div class="opt pick"><span class="mk">①</span><div class="nm">Rakuten STAY VILLA 由布院温泉 <span class="chip p">おすすめ</span></div>
-      <p class="dt">73㎡のヴィラ。部屋に天然温泉とサウナがあり、食事も部屋でとれる。2026年1月開業、評価4.62。</p>
-      <p class="pr"><span>2食付き <b>124,500円</b></span><span>補助後 約<b>6.2万円</b></span><span>残り1〜4部屋</span></p></div>
-    <div class="opt"><span class="mk">②</span><div class="nm">山荘 四季庵</div>
-      <p class="dt">離れの和洋室50㎡（ベッド2台＋6畳）。評価4.62（口コミ710件）。</p>
-      <p class="pr"><span>2食付き <b>108,800円</b></span><span>補助後 約<b>5.4万円</b></span><span>各残り1部屋</span></p></div>
-    <div class="opt"><span class="mk">③</span><div class="nm">和モダン温泉館 湯布院あかりの宿</div>
-      <p class="dt">和洋室（最大4名）。露天風呂・貸切風呂・大浴場あり。評価4.75。</p>
-      <p class="pr"><span>2食付き <b>98,860円</b></span><span>補助後 約<b>4.9万円</b></span><span>残り2部屋</span></p></div>
-    <p class="note">3軒とも取れなかった場合は、御宿 由府両築（106,560円・残り1部屋）、柚富の郷 彩岳館（132,000円・残り1部屋）の順に取りにいきます。</p>
+  <h2><span class="no">Ⅱ</span>2つの案の比べ方</h2>
+  <div class="tw">
+    <table>
+      <thead><tr><th></th><th>別府2泊・由布院1泊（おすすめ）</th><th>別府1泊・由布院1泊</th></tr></thead>
+      <tbody>
+        <tr><td class="lab">日程</td><td class="win">11/20（金）〜23（月・祝）</td><td>11/20（金）〜22（日）</td></tr>
+        <tr><td class="lab">2日目</td><td class="win">サファリ → 地獄めぐり → 別府の宿へ戻る（別府駅から徒歩5分）</td><td>サファリ → 地獄めぐり → バスで由布院へ。バス4本と荷物の出し入れがある</td></tr>
+        <tr><td class="lab">3日目</td><td class="win">午前は別府でゆっくり → ゆふいんの森4号（別府14:36→由布院15:56）</td><td>由布院で辻馬車・フクロウ → 13:40のバスで空港 → 帰宅</td></tr>
+        <tr><td class="lab">4日目</td><td class="win">由布院で辻馬車・フクロウ → 13:40のバスで空港 → 帰宅</td><td>─（11/23は家で休める）</td></tr>
+        <tr><td class="lab">宿代（補助後）</td><td>約<b class="num">16.5万円</b></td><td class="win">約<b class="num">12.2万円</b></td></tr>
+        <tr><td class="lab">帰宅翌日</td><td>11/24（火）から仕事・保育園</td><td class="win">11/23（祝）に休める</td></tr>
+        <tr><td class="lab">今日12時の予約</td><td>3件</td><td class="win">2件</td></tr>
+      </tbody>
+    </table>
   </div>
-
-  <div class="q">
-    <div class="q-head"><h3>(2) 福岡の宿（11/22・日）</h3><p>雰囲気で選ぶか、移動の楽さで選ぶかの二択です。</p></div>
-    <div class="opt pick"><span class="mk">①</span><div class="nm">ザ・ルイガンズ（海の中道のリゾート） <span class="chip p">おすすめ</span></div>
-      <p class="dt">評価4.35（口コミ2,256件）。家族向けの部屋「バラガンキディ」、宿泊者専用の屋外サウナ（1人2,000円）がある。翌朝は隣の海の中道海浜公園やマリンワールドで遊べる。博多駅から徒歩5分の「HEARTSバスステーション博多」から無料シャトル（先着順）、空港までは車で約30分。</p>
-      <p class="pr"><span>朝食付き <b>83,260円</b>（49㎡・4名まで）</span><span>補助後 約<b>4.2万円</b></span><span>楽天で残り2部屋</span></p>
-      <p class="dt"><span class="chip w">応援割は公式サイトのみ</span> 公式予約ページの「九州ふっこう応援割 専用プラン」で販売中です。支払いは現地で、割引はホテルからの連絡で確定します。電話予約は割引の対象外です。</p></div>
-    <div class="opt"><span class="mk">②</span><div class="nm">ANAクラウンプラザホテル福岡（博多駅から徒歩5分）</div>
-      <p class="dt">評価4.43（口コミ2,428件）。移動がいちばん楽で、翌朝は福岡市動物園にも行きやすく、空港まで地下鉄5分。部屋はツイン（ベッド幅120cm）で、子ども2人は添い寝。</p>
-      <p class="pr"><span>朝食付き <b>60,330円</b>（36㎡）</span><span>補助後 約<b>3.0万円</b></span><span>残り2部屋</span></p>
-      <p class="dt"><span class="chip w">割引は開始待ち</span> 福岡県の参加施設です。楽天・じゃらんで福岡の割引が始まってから予約します。</p></div>
-    <p class="note">安さと温泉を優先するなら、二日市温泉 大観荘（和室・最大4名・かけ流し温泉、朝食付き23,300円・残り8部屋、博多からJRで約15分＋車5分）もあります。昨日候補にしたザ ロイヤルパークホテル 福岡は、福岡県の参加施設一覧（9/24 15:49版）に載っていないので外しました。</p>
-  </div>
-
-  <div class="q">
-    <div class="q-head"><h3>(3) 杉乃井の部屋（11/20・金）</h3><p>広さと浴槽を取るか、安さを取るか。昨夜あった浴槽付きの「低層階 宙館デラックス」は、今夜は売り切れていました。</p></div>
-    <div class="opt pick"><span class="mk">①</span><div class="nm">星館 ジュニアスイート和洋室（海側） <span class="chip p">おすすめ</span></div>
-      <p class="dt">71㎡。ベッド2台＋布団4組なので、子どもはベッドから落ちる心配のない布団で寝られる。浴槽あり、海が見える。</p>
-      <p class="pr"><span>2食付き <b>119,250円</b></span><span>補助後 約<b>6.0万円</b></span><span>残り2部屋</span></p></div>
-    <div class="opt"><span class="mk">②</span><div class="nm">星館 スタンダード洋室（山側）</div>
-      <p class="dt">35㎡・最大4名。浴槽はなくシャワーのみ。</p>
-      <p class="pr"><span>2食付き <b>84,500円</b></span><span>補助後 約<b>4.2万円</b></span><span>残り3部屋</span></p></div>
-  </div>
-
-  <p class="plain" style="padding-left:0">宿代の合計（補助後の推定）は、おすすめの組み合わせで<b class="num">約16.4万円</b>、安い組み合わせ（杉乃井②・由布院③・大観荘）で<b class="num">約10.3万円</b>です。</p>
+  <p class="plain" style="padding-left:0">宿代は、下の第1候補どうしで計算しました。3泊4日は宿代のほか、1日分の食事・入場料と、3連休最終日の帰りの便の差がかかります（航空券は未確認）。</p>
 </section>
 
 <!-- Ⅲ -->
 <section id="s3">
-  <h2><span class="no">Ⅲ</span>私のおすすめで進めること</h2>
-  <ul class="plain">
-    <li><b>由布院→博多：ゆふいんの森2号</b>（由布院12:01→博多14:19）。午前に辻馬車かフクロウを1つ入れて、午後は福岡でゆっくりします。指定席は<span class="num">10/22 10:00</span>に発売です。取れなければ特急「ゆふ」4号（由布院14:15発）か、高速バス「ゆふいん号」（約2時間25分・大人3,250円・予約制）にします。</li>
-    <li><b>飛行機はJAL</b>にします。ANAは2歳の浩希くんにも座席が要ります（9/23夜の訂正）。行きはJAL661（羽田08:05→大分09:45）、帰りは福岡→羽田の午後の便です。宿が3件そろってから買います。</li>
-    <li><b>宿は3件とも「宿泊のみ」で別々に予約</b>します。応援割は宿ごとに、宿代の半分がつきます。</li>
-  </ul>
+  <h2><span class="no">Ⅲ</span>12時に取る宿（上から順に）</h2>
+
+  <div class="q">
+    <div class="q-head"><h3>(1) 11/20（金）杉乃井ホテル</h3><p>両方の案で同じです。4人で泊まれるのは、この2タイプだけになりました。</p></div>
+    <div class="opt pick"><span class="mk">①</span><div class="nm">星館 ジュニアスイート和洋室（海側） <span class="chip p">第1候補</span></div>
+      <p class="dt">71㎡。ベッド2台＋布団4組、浴槽あり、海が見える。</p>
+      <p class="pr"><span><b>119,250円</b></span><span>補助後 約<b>6.0万円</b></span><span>残り2部屋</span></p></div>
+    <div class="opt"><span class="mk">②</span><div class="nm">宙館 プレミアムスタンダード（海側）</div>
+      <p class="dt">33㎡。ベッド2台＋エキストラベッド2台で4名。シャワーのみ。</p>
+      <p class="pr"><span><b>89,750円</b></span><span>補助後 約<b>4.5万円</b></span><span>残り3部屋</span></p></div>
+  </div>
+
+  <div class="q">
+    <div class="q-head"><h3>(2) 由布院の宿</h3><p>3泊4日なら11/22（日）、2泊3日なら11/21（土）に泊まります。日曜のほうが空きが多く、少し安くなっています。</p></div>
+    <div class="opt pick"><span class="mk">①</span><div class="nm">Rakuten STAY VILLA 由布院温泉 <span class="chip p">第1候補</span></div>
+      <p class="dt">73㎡のヴィラ。部屋に天然温泉とサウナ、食事は部屋で。評価4.62。</p>
+      <p class="pr"><span>11/22 <b>117,750円</b>（残り2〜4部屋）</span><span>11/21 <b>124,500円</b>（残り1〜4部屋）</span></p></div>
+    <div class="opt"><span class="mk">②</span><div class="nm">山荘 四季庵</div>
+      <p class="dt">全棟が部屋風呂付きの離れ。評価4.62（口コミ710件）。</p>
+      <p class="pr"><span>11/22 <b>98,800円</b>（残り2部屋）</span><span>11/21 <b>108,800円</b>（50㎡・各残り1部屋）</span></p></div>
+    <div class="opt"><span class="mk">③</span><div class="nm">和モダン温泉館 湯布院あかりの宿</div>
+      <p class="dt">和洋室。露天風呂・貸切風呂・大浴場あり。評価4.75。</p>
+      <p class="pr"><span>11/22 <b>98,860円</b>（最大5名・残り2部屋）</span><span>11/21 <b>98,860円</b>（残り2部屋）</span></p></div>
+  </div>
+
+  <div class="q">
+    <div class="q-head"><h3>(3) 11/21（土）別府の2泊目（3泊4日の場合だけ）</h3><p>杉乃井は満室なので、別府駅の近くに移ります。サファリ行きのバスも、3日目のゆふいんの森も別府駅から出ます。</p></div>
+    <div class="opt pick"><span class="mk">①</span><div class="nm">亀の井ホテル 別府 <span class="chip p">第1候補</span></div>
+      <p class="dt">別府駅から徒歩5分。評価4.01（口コミ5,307件）。デラックスフォース42㎡・4名まで。</p>
+      <p class="pr"><span><b>93,450円</b></span><span>補助後 約<b>4.7万円</b></span><span>残り4部屋</span></p>
+      <p class="dt">同じホテルのスタンダードフォース（31㎡）なら83,475円・残り4部屋です。</p></div>
+    <div class="opt"><span class="mk">②</span><div class="nm">別府最大級の露天風呂の宿 おにやまホテル（鉄輪）</div>
+      <p class="dt">地獄めぐりの中心にあり、大きな露天風呂がある。評価4.46。別府駅からタクシーで15分。</p>
+      <p class="pr"><span><b>139,425円〜</b></span><span>残り1部屋ずつ</span></p></div>
+  </div>
 </section>
 
 <!-- Ⅳ -->
 <section id="s4">
-  <h2><span class="no">Ⅳ</span>予約の順番</h2>
+  <h2><span class="no">Ⅳ</span>今日の動き方</h2>
   <ol class="steps">
-    <li class="now"><span class="when">今夜〜9/25朝</span><span class="what">決めること3つを決める</span><span class="why">福岡をルイガンズにする場合は、公式サイトの「九州ふっこう応援割 専用プラン」で先に予約します（現地払い）。ANAクラウンプラザにする場合は、楽天・じゃらんで福岡の割引が始まるのを待ちます。</span></li>
-    <li class="now"><span class="when">9/25 11:50</span><span class="what">PCとスマホで待機し、割引の条件を読む</span><span class="why">じゃらん・楽天にログインしておきます。子ども2人も必ず宿泊人数に入れます。</span></li>
-    <li class="now"><span class="when">9/25 12:00</span><span class="what">由布院の宿 → 杉乃井（11/20）の順に1件ずつ取る</span><span class="why">空きが少ない由布院を先に取ります。最後の確認画面で、応援割が効いているかを必ず確かめてから確定します。</span></li>
-    <li><span class="when">宿がそろったら</span><span class="what">航空券（JAL）を買う</span><span class="why">行きは羽田→大分、帰りは福岡→羽田の片道ずつです。</span></li>
+    <li class="now"><span class="when">11:30まで</span><span class="what">3泊4日か2泊3日かを決める</span><span class="why">由布院の宿の順番も、奥様と確認しておきます。</span></li>
+    <li class="now"><span class="when">11:50</span><span class="what">PCとスマホで待機し、割引の条件を読む</span><span class="why">じゃらん・楽天にログインしておきます。子ども2人も必ず宿泊人数に入れます（和希は幼児・食事布団付き、浩希は幼児・食事布団なし）。</span></li>
+    <li class="now"><span class="when">12:00</span><span class="what">杉乃井（11/20）→ 由布院 → 別府の2泊目の順に1件ずつ取る</span><span class="why">宿泊のみで取ります。最後の確認画面で、応援割が効いているかを必ず確かめてから確定します。</span></li>
+    <li><span class="when">宿がそろったら</span><span class="what">航空券（JAL）を買う</span><span class="why">行きはJAL661（羽田08:05→大分09:45）、帰りはJAL672（大分16:45発）。ANAだと浩希くんにも座席が要ります。</span></li>
     <li><span class="when">10/21</span><span class="what">ホーバークラフトを予約する</span><span class="why">乗る日の30日前から、LINE公式か専用アプリで予約できます。</span></li>
-    <li><span class="when">10/22 10:00</span><span class="what">ゆふいんの森2号の指定席を取る</span><span class="why">3連休なので、発売と同時に取ります。</span></li>
+    <li><span class="when">10/22 10:00</span><span class="what">ゆふいんの森4号の指定席を取る（3泊4日の場合）</span><span class="why">11/22の別府14:36発。この日は専用車両で走ります。</span></li>
   </ol>
 </section>
 
@@ -198,16 +213,15 @@ footer{font-size:12px; color:var(--ink-3); border-top:1px solid var(--line); pad
     <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/195540">Rakuten STAY VILLA 由布院温泉（楽天）</a></li>
     <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/41833">山荘 四季庵（楽天）</a></li>
     <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179191">湯布院あかりの宿（楽天）</a></li>
-    <li><a href="https://www.luigans.com/topics/fukuoka-fukkou-wari/">ザ・ルイガンズ 応援割の案内（公式）</a></li>
-    <li><a href="https://www.luigans.com/access/">ザ・ルイガンズ 無料シャトルの時刻（公式）</a></li>
-    <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/345">ANAクラウンプラザホテル福岡（楽天）</a></li>
-    <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/80686">二日市温泉 大観荘（楽天）</a></li>
-    <li><a href="https://fukuoka-fukkou-wari.jp/">福岡の応援割（公式）</a></li>
+    <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/4807">亀の井ホテル 別府（楽天）</a></li>
+    <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5543">おにやまホテル（楽天）</a></li>
+    <li><a href="https://travel.rakuten.co.jp/special/kyushuouen/">楽天トラベル 九州ふっこう応援割</a></li>
+    <li><a href="https://www.jalan.net/kyushu-shien/">じゃらん 九州ふっこう応援割</a></li>
     <li><a href="https://www.jrkyushu.co.jp/trains/yufuinnomori/">特急ゆふいんの森（JR九州）</a></li>
     <li><a href="https://claude.ai/artifact/KF46TrBNtYdfauiPYRSYn1">詳しい資料（長い版）</a></li>
   </ul>
 </section>
 
-<footer>空き・料金は2026年9月24日22:35〜22:45に楽天トラベルの宿ページで確認したもので、予約時には変わっています。補助後の金額は宿代の半分として計算した推定値です（1予約の上限は4人で8万円）。ゆふいんの森の運転日はJR九州の運転日カレンダー（2026年8月21日時点）によります。</footer>
+<footer>空き・料金は2026年9月25日09:15〜09:25に楽天トラベルの宿ページで確認したもので、予約時には変わっています。補助後の金額は宿代の半分として計算した推定値です（1予約の上限は4人で8万円）。応援割が効くかどうかは、12時に各サイトの確認画面で表示されます。</footer>
 
 </div>
